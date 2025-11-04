@@ -46,21 +46,24 @@ export default function HeroSection() {
                 At InSafety Services, we view safety not as a regulatory burden, but as a core design principle and a driver of operational excellence. Founded and led by Mr. Chandarsingh Mehta, a global safety professional with over 34 years of international experience, we deliver comprehensive and practical solutions through Health, Safety, Security, Environment, Fire, and Risk Management (HSSEF).
             </p>
 
-            {/* CTA Button: Yellow accent color for consistency (matching the footer) */}
-            <a href="#contact" style={{ 
-    // existing button styling...
-    display: 'inline-block', // Crucial for button styling on anchor tag
-    padding: '15px 30px',
-    backgroundColor: '#007bff', // Assuming this is the blue color
-    color: 'white',
-    textDecoration: 'none',
-    borderRadius: '6px',
-    fontSize: '1.1em',
-    fontWeight: 'bold',
-    transition: 'background-color 0.3s'
-}}>
-    Request a Free Compliance Review
-</a>
+            {/* CTA Button: FIXED SCROLL LINK */}
+            <a 
+                href="#contact-form-anchor" // <-- FIX: Changed from "#contact" to the correct anchor ID
+                style={{ 
+                    // existing button styling...
+                    display: 'inline-block', // Crucial for button styling on anchor tag
+                    padding: '15px 30px',
+                    backgroundColor: buttonBlue, // Using the defined blue variable
+                    color: 'white',
+                    textDecoration: 'none',
+                    borderRadius: '6px',
+                    fontSize: '1.1em',
+                    fontWeight: 'bold',
+                    transition: 'background-color 0.3s'
+                }}
+            >
+                Request a Free Compliance Review
+            </a>
             
         </section>
     );
