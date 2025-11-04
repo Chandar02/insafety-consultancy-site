@@ -3,22 +3,19 @@
 import Link from 'next/link';
 import Image from 'next/image'; 
 
-// Assuming a default primary color (dark blue) and accent colors
+// Define colors once for clean maintenance
 const primaryColor = '#1e3a62'; // Dark Blue background
-const secondaryColor = '#2a4d79'; // Slightly lighter dark blue for hover/borders
+const secondaryColor = '#2a4d79'; // Slightly lighter dark blue for container
 const whiteText = '#ffffff';
 const yellowAccent = '#ffc107'; // Yellow for accents/highlights
-
-// This function component likely takes props if used across different pages, 
-// but we'll focus on the static content shown in the image.
+const linkColor = '#80bfff'; // A brighter blue for links against the dark background
 
 export default function ContactFooter() {
 
     const handleSubmit = async (e) => {
-        // Implement the contact form submission logic here (similar to route.js API call)
-        // ... (This logic is usually handled by the parent page or form component)
+        // Form submission logic would go here
         e.preventDefault();
-        // Since the form is not the focus, we'll keep the visual HTML structure clean.
+        // Placeholder functionality: In a real app, this would use the /api/contact/route.js
     };
 
     return (
@@ -26,7 +23,7 @@ export default function ContactFooter() {
             backgroundColor: primaryColor, 
             color: whiteText, 
             padding: '50px 5%', 
-            borderTop: '5px solid #007bff' // Assuming blue header/theme line
+            borderTop: '5px solid #007bff'
         }}>
             <div style={{ 
                 maxWidth: '1200px', 
@@ -39,11 +36,10 @@ export default function ContactFooter() {
                 
                 {/* Column 1: Company Info & Address */}
                 <div>
-                    {/* Logo (Centered and separate from text) */}
+                    {/* FIXED: Logo display with proper margin */}
                     <div style={{ marginBottom: '15px', width: '80px', height: '80px', position: 'relative' }}>
-                         {/* Ensure you have a clean logo SVG or PNG in your public folder */}
                         <Image 
-                            src="/InSafety_Logo_Full.svg" // Example: Use a single, clean logo path
+                            src="/InSafety_Logo_Full.svg" // Assuming this is the correct path in the public folder
                             alt="InSafety Services Logo"
                             layout="fill"
                             objectFit="contain"
@@ -54,9 +50,10 @@ export default function ContactFooter() {
                         InSafety Services
                     </h3>
                     
+                    {/* FIXED: Highlighting 'safety is built-in, not bolted on.' */}
                     <p style={{ lineHeight: '1.6', color: whiteText, marginBottom: '20px' }}>
-                        InSafety Services provides strategic HSSEF expertise across the globe, ensuring safety is 
-                        <span style={{ fontWeight: 'bold', color: yellowAccent }}> built-in, not bolted on.</span>
+                        InSafety Services provides strategic HSSEF expertise across the globe, ensuring 
+                        <span style={{ fontWeight: 'bold', color: yellowAccent }}> safety is built-in, not bolted on.</span>
                     </p>
                     
                     <p style={{ fontWeight: 'bold', color: yellowAccent, marginBottom: '5px' }}>
@@ -78,6 +75,7 @@ export default function ContactFooter() {
                     </p>
 
                     <form onSubmit={handleSubmit}>
+                        {/* Note: I'm keeping placeholder text simple as the input field names are not explicitly provided */}
                         <input type="text" placeholder="Your Name" style={formInputStyle} />
                         <input type="email" placeholder="Work Email" style={formInputStyle} />
                         <input type="text" placeholder="Mobile / Whatsapp" style={formInputStyle} />
@@ -85,9 +83,9 @@ export default function ContactFooter() {
                         <button type="submit" style={buttonStyle}>
                             Request Consultation
                         </button>
-                        {/* Status Message (Example) */}
+                        {/* Placeholder for success/error message */}
                         <p style={{ color: yellowAccent, textAlign: 'center', marginTop: '10px', fontSize: '0.9em' }}>
-                            Success! Your request has been sent.
+                             {/* You can implement dynamic message display here */}
                         </p>
                     </form>
                 </div>
@@ -98,20 +96,20 @@ export default function ContactFooter() {
                         Direct Contact
                     </h3>
                     
-                    {/* FIXED: Removed asterisks and styled labels white/link blue */}
-                    <p style={{ margin: '5px 0', color: whiteText }}>
+                    {/* FIXED: Removed ALL asterisks. Labels are bold/white. Links are light blue. */}
+                    <p style={{ margin: '8px 0', color: whiteText }}>
                         <span style={{ fontWeight: 'bold', color: whiteText, marginRight: '5px' }}>Email:</span> 
-                        <Link href="mailto:chandarsingh@live.com" style={{ color: whiteText, textDecoration: 'none' }}>chandarsingh@live.com</Link>
+                        <Link href="mailto:chandarsingh@live.com" style={{ color: linkColor, textDecoration: 'none' }}>chandarsingh@live.com</Link>
                     </p>
-                    <p style={{ margin: '5px 0', color: whiteText }}>
+                    <p style={{ margin: '8px 0', color: whiteText }}>
                         <span style={{ fontWeight: 'bold', color: whiteText, marginRight: '5px' }}>Mobile:</span> +91 90827 66847
                     </p>
-                    <p style={{ margin: '5px 0', color: whiteText }}>
+                    <p style={{ margin: '8px 0', color: whiteText }}>
                         <span style={{ fontWeight: 'bold', color: whiteText, marginRight: '5px' }}>WhatsApp:</span> +91 90827 66847
                     </p>
-                    <p style={{ margin: '5px 0', color: whiteText }}>
+                    <p style={{ margin: '8px 0', color: whiteText }}>
                         <span style={{ fontWeight: 'bold', color: whiteText, marginRight: '5px' }}>LinkedIn:</span> 
-                        <Link href="https://linkedin.com/in/chandarsingh-mehta-3232516" target="_blank" rel="noopener noreferrer" style={{ color: yellowAccent, textDecoration: 'none' }}>View Profile</Link>
+                        <Link href="https://linkedin.com/in/chandarsingh-mehta-3232516" target="_blank" rel="noopener noreferrer" style={{ color: linkColor, textDecoration: 'none' }}>View Profile</Link>
                     </p>
 
                     <h3 style={{ fontSize: '1.4em', marginBottom: '15px', color: whiteText, borderBottom: `2px solid ${yellowAccent}`, paddingBottom: '5px', marginTop: '30px' }}>
