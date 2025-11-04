@@ -1,55 +1,58 @@
 // components/ContactFooter.js
-"use client";
+
+"use client"; // CRITICAL: Fixes the Vercel build failure
+
 import Link from 'next/link';
-import Image from 'next/image'; 
 
 // Define colors once for clean maintenance
 const primaryColor = '#1e3a62'; // Dark Blue background
-const secondaryColor = '#2a4d79'; // Slightly lighter dark blue for container
+const secondaryColor = '#2a4d79'; 
 const whiteText = '#ffffff';
-const yellowAccent = '#ffc107'; // Yellow for accents/highlights
-const linkColor = '#80bfff'; // A brighter blue for links against the dark background
+const yellowAccent = '#ffc107'; 
+const linkColor = '#80bfff'; 
 
 export default function ContactFooter() {
 
     const handleSubmit = async (e) => {
-        // Form submission logic would go here
         e.preventDefault();
     };
 
     return (
-        <footer style={{ 
-            backgroundColor: primaryColor, 
-            color: whiteText, 
-            padding: '50px 5%', 
-            borderTop: '5px solid #007bff'
-        }}>
+        <footer 
+            id="contact-form-anchor" // CRITICAL: Anchor for scrolling navigation
+            style={{ 
+                backgroundColor: primaryColor, 
+                color: whiteText, 
+                padding: '50px 5%', 
+                borderTop: '5px solid #007bff'
+            }}
+        >
             <div style={{ 
                 maxWidth: '1200px', 
                 margin: '0 auto', 
                 display: 'grid', 
-                gridTemplateColumns: '1fr 1.2fr 1fr', // Layout: Info | Form | Contact
+                gridTemplateColumns: '1fr 1.2fr 1fr',
                 gap: '50px', 
                 textAlign: 'left' 
             }}>
                 
-                {/* Column 1: Company Info & Address */}
+                {/* Column 1: Header Text (Logo Removed) */}
                 <div>
-                    {/* FIXED: Logo is displayed alone, followed by text. */}
-                    <div style={{ marginBottom: '15px', width: '80px', height: '80px', position: 'relative' }}>
-                        <Image 
-                            src="/InSafety_Logo_Full.svg" // Adjust path if needed
-                            alt="InSafety Services Logo"
-                            layout="fill"
-                            objectFit="contain"
-                        />
-                    </div>
-                    
-                    <h3 style={{ fontSize: '1.4em', marginBottom: '10px', color: whiteText }}>
+                    {/* LOGO REMOVED: Start directly with text headings */}
+                    <h3 style={{ fontSize: '1.8em', marginBottom: '5px', color: whiteText, fontWeight: '700' }}>
                         InSafety Services
                     </h3>
+                    {/* Tagline added, styled yellow */}
+                    <p style={{ 
+                        fontSize: '0.85em', 
+                        color: yellowAccent, 
+                        marginBottom: '20px', 
+                        lineHeight: '1.2' 
+                    }}>
+                        SOLUTIONS FOR TODAY'S CHALLENGES, ASSURANCE FOR TOMORROW
+                    </p>
                     
-                    {/* FIXED: Highlighting 'safety is built-in, not bolted on.' */}
+                    {/* Fixed: Highlighting 'safety is built-in, not bolted on.' */}
                     <p style={{ lineHeight: '1.6', color: whiteText, marginBottom: '20px' }}>
                         InSafety Services provides strategic HSSEF expertise across the globe, ensuring 
                         <span style={{ fontWeight: 'bold', color: yellowAccent }}> safety is built-in, not bolted on.</span>
@@ -64,10 +67,11 @@ export default function ContactFooter() {
                     </p>
                 </div>
 
-                {/* Column 2: Contact Form */}
+                {/* Column 2: Contact Form (New Heading) */}
                 <div style={{ backgroundColor: secondaryColor, padding: '25px', borderRadius: '8px' }}>
+                    {/* New Heading: Contact InSafety Services Today */}
                     <h3 style={{ fontSize: '1.4em', marginBottom: '15px', color: whiteText, borderBottom: `2px solid ${yellowAccent}`, paddingBottom: '5px' }}>
-                        Start Your Safety Transformation
+                        Contact InSafety Services Today
                     </h3>
                     <p style={{ color: whiteText, marginBottom: '20px', fontSize: '0.9em' }}>
                         Get in touch for a confidential consultation on your risk and compliance challenges.
@@ -84,13 +88,14 @@ export default function ContactFooter() {
                     </form>
                 </div>
 
-                {/* Column 3: Direct Contact & Compliances */}
+                {/* Column 3: Direct Contact & Compliance (New Headings) */}
                 <div>
+                    {/* New Heading: Contact US */}
                     <h3 style={{ fontSize: '1.4em', marginBottom: '15px', color: whiteText, borderBottom: `2px solid ${yellowAccent}`, paddingBottom: '5px' }}>
-                        Direct Contact
+                        Contact US
                     </h3>
                     
-                    {/* FIXED: Removed asterisks and used standard text/link tags. */}
+                    {/* Fixed: Removed ALL asterisks and styled correctly */}
                     <p style={{ margin: '8px 0', color: whiteText }}>
                         <span style={{ fontWeight: 'bold', color: whiteText, marginRight: '5px' }}>Email:</span> 
                         <Link href="mailto:chandarsingh@live.com" style={{ color: linkColor, textDecoration: 'none' }}>chandarsingh@live.com</Link>
@@ -106,8 +111,9 @@ export default function ContactFooter() {
                         <Link href="https://linkedin.com/in/chandarsingh-mehta-3232516" target="_blank" rel="noopener noreferrer" style={{ color: linkColor, textDecoration: 'none' }}>View Profile</Link>
                     </p>
 
+                    {/* New Heading: Request a Free Compliance Review */}
                     <h3 style={{ fontSize: '1.4em', marginBottom: '15px', color: whiteText, borderBottom: `2px solid ${yellowAccent}`, paddingBottom: '5px', marginTop: '30px' }}>
-                        Regulatory Compliances:
+                        Request a Free Compliance Review
                     </h3>
                     <p style={{ margin: '5px 0', color: whiteText, fontSize: '0.9em' }}>
                         Shop & Establishment License: 2510 2003 2043 0562
@@ -130,7 +136,6 @@ export default function ContactFooter() {
     );
 }
 
-// Inline styles for form elements
 const formInputStyle = {
     width: '100%',
     padding: '12px',

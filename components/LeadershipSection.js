@@ -88,20 +88,21 @@ export default function LeadershipSection() {
                     <ul style={{ listStyleType: 'none', paddingLeft: 0 }}>
                         {specializations.map((item, index) => (
                             <li 
-                                key={index} 
-                                style={{ 
-                                    marginBottom: '10px', 
-                                    paddingLeft: '30px', // INCREASED PADDING to create space
-                                    position: 'relative', 
-                                    color: primaryTextColor,
-                                    lineHeight: '1.4' // Added line height for better spacing
-                                }}
-                            >
-                                <span style={{ position: 'absolute', left: 0, color: accentColor, fontSize: '1.2em' }}>
-                                    ✅
-                                </span>
-                                {item}
-                            </li>
+    key={index} 
+    style={{ 
+        marginBottom: '10px', 
+        paddingLeft: '30px', // FIX: Increased padding for alignment
+        position: 'relative', 
+        // Ensure you use your existing text color variable here:
+        color: 'yourPrimaryTextColorVariable', 
+        lineHeight: '1.4' 
+    }}
+>
+    <span style={{ position: 'absolute', left: 0, color: 'yourAccentColorVariable', fontSize: '1.2em' }}>
+        ✅
+    </span>
+    {item}
+</li>
                         ))}
                     </ul>
                 </div>
