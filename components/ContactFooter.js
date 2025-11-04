@@ -1,27 +1,22 @@
 // components/ContactFooter.js
-
-"use client"; // Confirmed to be present, but included for completeness
+// This file is a Server Component.
 
 import Link from 'next/link';
-// We don't need to import Image, as the logo is being removed.
+import ContactForm from './ContactForm'; // <-- Imports the client form component
 
-// Define colors once for clean maintenance
-const primaryColor = '#1e3a62'; // Dark Blue background
+// --- Define Colors and Styles (for the layout only) ---
+const primaryColor = '#1e3a62'; 
 const secondaryColor = '#2a4d79'; 
 const whiteText = '#ffffff';
 const yellowAccent = '#ffc107'; 
 const linkColor = '#80bfff'; 
+// ---------------------------------------------------
 
 export default function ContactFooter() {
 
-    const handleSubmit = async (e) => {
-        // Form submission logic remains here
-        e.preventDefault();
-    };
-
     return (
         <footer 
-            id="contact-form-anchor" // CRITICAL: This is the anchor the header buttons will scroll to
+            id="contact-form-anchor" 
             style={{ 
                 backgroundColor: primaryColor, 
                 color: whiteText, 
@@ -38,13 +33,11 @@ export default function ContactFooter() {
                 textAlign: 'left' 
             }}>
                 
-                {/* Column 1: Header Text (Logo Removed and Tagline Added) */}
+                {/* Column 1: Header Text */}
                 <div>
-                    {/* LOGO REMOVED: Start directly with text headings */}
                     <h3 style={{ fontSize: '1.8em', marginBottom: '5px', color: whiteText, fontWeight: '700' }}>
                         InSafety Services
                     </h3>
-                    {/* Tagline added, styled yellow */}
                     <p style={{ 
                         fontSize: '0.85em', 
                         color: yellowAccent, 
@@ -54,7 +47,6 @@ export default function ContactFooter() {
                         SOLUTIONS FOR TODAY'S CHALLENGES, ASSURANCE FOR TOMORROW
                     </p>
                     
-                    {/* FIXED: Highlighting 'safety is built-in, not bolted on.' (No asterisks needed here) */}
                     <p style={{ lineHeight: '1.6', color: whiteText, marginBottom: '20px' }}>
                         InSafety Services provides strategic HSSEF expertise across the globe, ensuring 
                         <span style={{ fontWeight: 'bold', color: yellowAccent }}> safety is built-in, not bolted on.</span>
@@ -69,35 +61,24 @@ export default function ContactFooter() {
                     </p>
                 </div>
 
-                {/* Column 2: Contact Form (Updated Heading) */}
+                {/* Column 2: Contact Form (Renders the isolated client component) */}
                 <div style={{ backgroundColor: secondaryColor, padding: '25px', borderRadius: '8px' }}>
-                    {/* FIXED HEADING: Contact InSafety Services Today */}
-                    <h3 style={{ fontSize: '1.4em', marginBottom: '15px', color: whiteText, borderBottom: `2px solid ${yellowAccent}`, paddingBottom: '5px' }}>
+                    <h3 style={{ fontSize: '1.4em', marginBottom: '15px', color: whiteText, borderBottom: `2px solid ${yellowAccent}`, paddingBottom: '5px` }}>
                         Contact InSafety Services Today
                     </h3>
                     <p style={{ color: whiteText, marginBottom: '20px', fontSize: '0.9em' }}>
                         Get in touch for a confidential consultation on your risk and compliance challenges.
                     </p>
 
-                    <form onSubmit={handleSubmit}>
-                        <input type="text" placeholder="Your Name" style={formInputStyle} />
-                        <input type="email" placeholder="Work Email" style={formInputStyle} />
-                        <input type="text" placeholder="Mobile / Whatsapp" style={formInputStyle} />
-                        <textarea placeholder="Tell us about your project or challenge..." rows="4" style={formInputStyle} />
-                        <button type="submit" style={buttonStyle}>
-                            Request Consultation
-                        </button>
-                    </form>
+                    <ContactForm />
                 </div>
 
-                {/* Column 3: Direct Contact & Compliance (Updated Headings and No Asterisks) */}
+                {/* Column 3: Direct Contact & Compliance */}
                 <div>
-                    {/* FIXED HEADING: Contact US */}
-                    <h3 style={{ fontSize: '1.4em', marginBottom: '15px', color: whiteText, borderBottom: `2px solid ${yellowAccent}`, paddingBottom: '5px' }}>
+                    <h3 style={{ fontSize: '1.4em', marginBottom: '15px', color: whiteText, borderBottom: `2px solid ${yellowAccent}`, paddingBottom: '5px` }}>
                         Contact US
                     </h3>
                     
-                    {/* FIXED: Removed ALL asterisks from contact details */}
                     <p style={{ margin: '8px 0', color: whiteText }}>
                         <span style={{ fontWeight: 'bold', color: whiteText, marginRight: '5px' }}>Email:</span> 
                         <Link href="mailto:chandarsingh@live.com" style={{ color: linkColor, textDecoration: 'none' }}>chandarsingh@live.com</Link>
@@ -113,7 +94,6 @@ export default function ContactFooter() {
                         <Link href="https://linkedin.com/in/chandarsingh-mehta-3232516" target="_blank" rel="noopener noreferrer" style={{ color: linkColor, textDecoration: 'none' }}>View Profile</Link>
                     </p>
 
-                    {/* FIXED HEADING: Request a Free Compliance Review */}
                     <h3 style={{ fontSize: '1.4em', marginBottom: '15px', color: whiteText, borderBottom: `2px solid ${yellowAccent}`, paddingBottom: '5px', marginTop: '30px' }}>
                         Request a Free Compliance Review
                     </h3>
@@ -137,24 +117,3 @@ export default function ContactFooter() {
         </footer>
     );
 }
-
-const formInputStyle = {
-    width: '100%',
-    padding: '12px',
-    marginBottom: '15px',
-    border: 'none',
-    borderRadius: '4px',
-    boxSizing: 'border-box'
-};
-
-const buttonStyle = {
-    width: '100%',
-    padding: '15px',
-    backgroundColor: yellowAccent,
-    color: primaryColor,
-    border: 'none',
-    borderRadius: '4px',
-    fontWeight: 'bold',
-    cursor: 'pointer',
-    transition: 'background-color 0.3s'
-};
