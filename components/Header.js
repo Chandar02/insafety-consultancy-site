@@ -1,18 +1,20 @@
 // components/Header.js
+
 "use client";
 
 import Link from 'next/link';
+import { useState } from 'react';
 
 export default function Header() {
     // --- Define Color Variables and Constants ---
     const primaryTextColor = 'white';
     const accentColor = '#ffc107'; 
-    const backgroundColor = '#1f3e66'; 
     const primaryColor = '#1f3e66'; 
-
-    const HEADER_HEIGHT = '90px'; 
     
-    // Navigation Items (unchanged)
+    // State to manage the mobile menu open/close status
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
     const navItems = [
         { name: 'Home', href: '#home' },
         { name: 'Services', href: '#services' },
@@ -25,71 +27,53 @@ export default function Header() {
     ];
 
     return (
-        <header
-            style={{
-                backgroundColor: backgroundColor,
-                color: primaryTextColor,
-                padding: '10px 5%',
-                height: HEADER_HEIGHT, 
-                boxShadow: '0 2px 10px rgba(0,0,0,0.1)',
-                position: 'fixed',
-                top: 0,
-                width: '100%',
-                zIndex: 1000,
-                display: 'flex',
-                justifyContent: 'space-between',
-                alignItems: 'center',
-            }}
-        >
-            {/* New Text Logo Section (Replaces Image) */}
+        <header className="main-header">
+            {/* Logo and Tagline */}
             <Link 
                 href="#home" 
-                style={{ 
-                    textDecoration: 'none', 
-                    display: 'block',
-                    lineHeight: '1.2', // IMPROVED: Line height for better spacing
-                    padding: '5px 0' 
-                }}
+                className="header-logo-link"
+                style={{ textDecoration: 'none' }}
             >
-                <div style={{ color: primaryTextColor, fontSize: '1.4em', fontWeight: 'bold' }}>
+                <div className="site-title" style={{ color: primaryTextColor, fontWeight: 'bold' }}>
                     InSafety Services
                 </div>
-                <div style={{ fontSize: '0.65em', color: accentColor, letterSpacing: '0.5px', textTransform: 'uppercase' }}>
+                <div className="site-tagline" style={{ color: accentColor }}>
                     Solutions for Today's Challenges, Assurance for Tomorrow
                 </div>
             </Link>
 
-            {/* Navigation Section (Center/Right) */}
-            <nav>
-                <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', alignItems: 'center' }}>
+            {/* Mobile Menu Button - CRITICAL for triggering the menu */}
+            <button 
+                onClick={toggleMenu} 
+                className="mobile-menu-button"
+                aria-expanded={isMenuOpen}
+                style={{ color: primaryTextColor }}
+            >
+                {isMenuOpen ? '✕' : '☰'} 
+            </button>
+
+            {/* Navigation Section */}
+            <nav className={`main-nav ${isMenuOpen ? 'nav-open' : ''}`}>
+                <ul className="nav-list">
                     {navItems.map((item) => (
-                        <li key={item.name} style={{ marginLeft: '30px' }}>
+                        <li key={item.name} className="nav-item">
                             <Link
                                 href={item.href}
-                                style={{
-                                    color: primaryTextColor,
-                                    textDecoration: 'none',
-                                    fontSize: '1em',
-                                    transition: 'color 0.3s',
-                                    whiteSpace: 'nowrap',
-                                }}
+                                className="nav-link"
+                                style={{ color: primaryTextColor }}
                             >
                                 {item.name}
                             </Link>
                         </li>
                     ))}
                     {/* Contact Us Button/Link */}
-                    <li style={{ marginLeft: '40px' }}>
+                    <li className="nav-item contact-button-wrapper">
                         <a 
-    href="#contact-form-anchor" // <--- MUST BE THIS EXACT VALUE
+                            href="#contact-form-anchor"
+                            className="contact-button"
                             style={{ 
-                                padding: '8px 15px', 
                                 backgroundColor: accentColor, 
                                 color: primaryColor, 
-                                borderRadius: '4px', 
-                                textDecoration: 'none', 
-                                fontWeight: 'bold',
-                                whiteSpace: 'nowrap',
                             }}
                         >
                             Contact Us
