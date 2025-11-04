@@ -10,13 +10,10 @@ const dbName = 'InSafetyDB';
 
 // --- NODEMAILER SETUP (FOR SENDGRID) ---
 const transporter = nodemailer.createTransport({
-    // SendGrid SMTP details
-    host: 'smtp.sendgrid.net',
-    port: 587,
-    secure: false, // Use false for port 587
+    service: 'SendGrid', // <--- Use the service name here!
     auth: {
-        user: process.env.EMAIL_USER, // The value 'apikey' from Vercel
-        pass: process.env.EMAIL_PASS, // The SendGrid API Key from Vercel
+        user: process.env.EMAIL_USER, // The value 'apikey'
+        pass: process.env.EMAIL_PASS, // The SendGrid API Key
     },
 });
 
