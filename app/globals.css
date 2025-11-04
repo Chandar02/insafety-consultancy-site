@@ -77,10 +77,10 @@ a {
 
 /* Navigation List (Desktop Layout) */
 .mobile-menu-button {
-  display: none !important; /* Hides on desktop */
+  display: none; /* Cleaned: Removed !important */
 }
 .nav-list {
-  list-style: none !important; /* FIX: Removes bullet points everywhere */
+  list-style: none !important; /* Kept !important to ensure no browser bullets appear */
   padding: 0;
   margin: 0;
   display: flex; 
@@ -97,7 +97,7 @@ a {
 }
 
 /* ======================================= */
-/* --- 3. Mobile Media Query (The Final Fix!) --- */
+/* --- 3. Mobile Media Query (Cleaned Fix) --- */
 /* ======================================= */
 
 @media (max-width: 992px) {
@@ -109,15 +109,15 @@ a {
 
     /* 2. Shrink Logo/Tagline Text */
     .site-title {
-        font-size: 1.1em;
+        font-size: 1.1em; /* Cleaned: Removed !important */
     }
     .site-tagline {
-        font-size: 0.55em; 
+        font-size: 0.55em; /* Cleaned: Removed !important */
     }
 
     /* 3. Mobile Menu Button */
     .mobile-menu-button {
-        display: block !important; /* CRITICAL: Force the button to show */
+        display: block; /* Cleaned: Removed !important */
         font-size: 1.8em;
         cursor: pointer;
         background: none;
@@ -126,10 +126,10 @@ a {
         line-height: 1; 
     }
 
-    /* 4. Navigation Menu Styling - Use max-height for smooth transition */
+    /* 4. Navigation Menu Styling */
     .main-nav {
         position: absolute;
-        top: 100%; /* Position right below the header */
+        top: 100%;
         left: 0;
         width: 100%;
         background-color: var(--primary-blue);
@@ -143,7 +143,7 @@ a {
     
     /* 5. Show Navigation When State is Open */
     .main-nav.nav-open {
-        max-height: 500px; /* Opens the menu */
+        max-height: 500px; 
     }
     
     /* 6. Stack Navigation Items Vertically */
