@@ -91,12 +91,13 @@ export default function LeadershipSection() {
                                 key={index} 
                                 style={{ 
                                     marginBottom: '10px', 
-                                    paddingLeft: '20px', 
+                                    paddingLeft: '30px', // INCREASED PADDING to create space
                                     position: 'relative', 
-                                    color: primaryTextColor 
+                                    color: primaryTextColor,
+                                    lineHeight: '1.4' // Added line height for better spacing
                                 }}
                             >
-                                <span style={{ position: 'absolute', left: 0, color: accentColor }}>
+                                <span style={{ position: 'absolute', left: 0, color: accentColor, fontSize: '1.2em' }}>
                                     ✅
                                 </span>
                                 {item}

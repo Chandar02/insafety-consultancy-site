@@ -15,7 +15,6 @@ export default function ContactFooter() {
     const handleSubmit = async (e) => {
         // Form submission logic would go here
         e.preventDefault();
-        // Placeholder functionality: In a real app, this would use the /api/contact/route.js
     };
 
     return (
@@ -36,10 +35,10 @@ export default function ContactFooter() {
                 
                 {/* Column 1: Company Info & Address */}
                 <div>
-                    {/* FIXED: Logo display with proper margin */}
+                    {/* FIXED: Logo is displayed alone, followed by text. */}
                     <div style={{ marginBottom: '15px', width: '80px', height: '80px', position: 'relative' }}>
                         <Image 
-                            src="/InSafety_Logo_Full.svg" // Assuming this is the correct path in the public folder
+                            src="/InSafety_Logo_Full.svg" // Adjust path if needed
                             alt="InSafety Services Logo"
                             layout="fill"
                             objectFit="contain"
@@ -75,7 +74,6 @@ export default function ContactFooter() {
                     </p>
 
                     <form onSubmit={handleSubmit}>
-                        {/* Note: I'm keeping placeholder text simple as the input field names are not explicitly provided */}
                         <input type="text" placeholder="Your Name" style={formInputStyle} />
                         <input type="email" placeholder="Work Email" style={formInputStyle} />
                         <input type="text" placeholder="Mobile / Whatsapp" style={formInputStyle} />
@@ -83,10 +81,6 @@ export default function ContactFooter() {
                         <button type="submit" style={buttonStyle}>
                             Request Consultation
                         </button>
-                        {/* Placeholder for success/error message */}
-                        <p style={{ color: yellowAccent, textAlign: 'center', marginTop: '10px', fontSize: '0.9em' }}>
-                             {/* You can implement dynamic message display here */}
-                        </p>
                     </form>
                 </div>
 
@@ -96,7 +90,7 @@ export default function ContactFooter() {
                         Direct Contact
                     </h3>
                     
-                    {/* FIXED: Removed ALL asterisks. Labels are bold/white. Links are light blue. */}
+                    {/* FIXED: Removed asterisks and used standard text/link tags. */}
                     <p style={{ margin: '8px 0', color: whiteText }}>
                         <span style={{ fontWeight: 'bold', color: whiteText, marginRight: '5px' }}>Email:</span> 
                         <Link href="mailto:chandarsingh@live.com" style={{ color: linkColor, textDecoration: 'none' }}>chandarsingh@live.com</Link>
