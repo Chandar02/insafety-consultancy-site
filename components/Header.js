@@ -81,7 +81,7 @@ export default function Header() {
                     {/* Contact Us Button/Link */}
                     <li style={{ marginLeft: '40px' }}>
                         <a 
-                            href="#contact-form-anchor" // <--- ENSURE THIS IS CORRECT
+    href="#contact-form-anchor" // <--- MUST BE THIS EXACT VALUE
                             style={{ 
                                 padding: '8px 15px', 
                                 backgroundColor: accentColor, 

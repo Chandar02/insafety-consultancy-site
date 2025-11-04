@@ -1,8 +1,9 @@
 // components/ContactFooter.js
 
-"use client"; // CRITICAL: Fixes the Vercel build failure
+"use client"; // Confirmed to be present, but included for completeness
 
 import Link from 'next/link';
+// We don't need to import Image, as the logo is being removed.
 
 // Define colors once for clean maintenance
 const primaryColor = '#1e3a62'; // Dark Blue background
@@ -14,12 +15,13 @@ const linkColor = '#80bfff';
 export default function ContactFooter() {
 
     const handleSubmit = async (e) => {
+        // Form submission logic remains here
         e.preventDefault();
     };
 
     return (
         <footer 
-            id="contact-form-anchor" // CRITICAL: Anchor for scrolling navigation
+            id="contact-form-anchor" // CRITICAL: This is the anchor the header buttons will scroll to
             style={{ 
                 backgroundColor: primaryColor, 
                 color: whiteText, 
@@ -36,7 +38,7 @@ export default function ContactFooter() {
                 textAlign: 'left' 
             }}>
                 
-                {/* Column 1: Header Text (Logo Removed) */}
+                {/* Column 1: Header Text (Logo Removed and Tagline Added) */}
                 <div>
                     {/* LOGO REMOVED: Start directly with text headings */}
                     <h3 style={{ fontSize: '1.8em', marginBottom: '5px', color: whiteText, fontWeight: '700' }}>
@@ -52,7 +54,7 @@ export default function ContactFooter() {
                         SOLUTIONS FOR TODAY'S CHALLENGES, ASSURANCE FOR TOMORROW
                     </p>
                     
-                    {/* Fixed: Highlighting 'safety is built-in, not bolted on.' */}
+                    {/* FIXED: Highlighting 'safety is built-in, not bolted on.' (No asterisks needed here) */}
                     <p style={{ lineHeight: '1.6', color: whiteText, marginBottom: '20px' }}>
                         InSafety Services provides strategic HSSEF expertise across the globe, ensuring 
                         <span style={{ fontWeight: 'bold', color: yellowAccent }}> safety is built-in, not bolted on.</span>
@@ -67,9 +69,9 @@ export default function ContactFooter() {
                     </p>
                 </div>
 
-                {/* Column 2: Contact Form (New Heading) */}
+                {/* Column 2: Contact Form (Updated Heading) */}
                 <div style={{ backgroundColor: secondaryColor, padding: '25px', borderRadius: '8px' }}>
-                    {/* New Heading: Contact InSafety Services Today */}
+                    {/* FIXED HEADING: Contact InSafety Services Today */}
                     <h3 style={{ fontSize: '1.4em', marginBottom: '15px', color: whiteText, borderBottom: `2px solid ${yellowAccent}`, paddingBottom: '5px' }}>
                         Contact InSafety Services Today
                     </h3>
@@ -88,14 +90,14 @@ export default function ContactFooter() {
                     </form>
                 </div>
 
-                {/* Column 3: Direct Contact & Compliance (New Headings) */}
+                {/* Column 3: Direct Contact & Compliance (Updated Headings and No Asterisks) */}
                 <div>
-                    {/* New Heading: Contact US */}
+                    {/* FIXED HEADING: Contact US */}
                     <h3 style={{ fontSize: '1.4em', marginBottom: '15px', color: whiteText, borderBottom: `2px solid ${yellowAccent}`, paddingBottom: '5px' }}>
                         Contact US
                     </h3>
                     
-                    {/* Fixed: Removed ALL asterisks and styled correctly */}
+                    {/* FIXED: Removed ALL asterisks from contact details */}
                     <p style={{ margin: '8px 0', color: whiteText }}>
                         <span style={{ fontWeight: 'bold', color: whiteText, marginRight: '5px' }}>Email:</span> 
                         <Link href="mailto:chandarsingh@live.com" style={{ color: linkColor, textDecoration: 'none' }}>chandarsingh@live.com</Link>
@@ -111,7 +113,7 @@ export default function ContactFooter() {
                         <Link href="https://linkedin.com/in/chandarsingh-mehta-3232516" target="_blank" rel="noopener noreferrer" style={{ color: linkColor, textDecoration: 'none' }}>View Profile</Link>
                     </p>
 
-                    {/* New Heading: Request a Free Compliance Review */}
+                    {/* FIXED HEADING: Request a Free Compliance Review */}
                     <h3 style={{ fontSize: '1.4em', marginBottom: '15px', color: whiteText, borderBottom: `2px solid ${yellowAccent}`, paddingBottom: '5px', marginTop: '30px' }}>
                         Request a Free Compliance Review
                     </h3>
