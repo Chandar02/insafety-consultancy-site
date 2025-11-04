@@ -75,24 +75,24 @@ export default function WhyChooseUs() {
                 ))}
             </div>
 
-            {/* Optional Call to Action */}
+            {/* Optional Call to Action (FIXED SCROLL LINK) */}
             <div style={{ textAlign: 'center', margin: '40px 0' }}>
-    <a 
-        href="#contact" // FIXED: Links to the footer ID
-        style={{ 
-            display: 'inline-block',
-            padding: '15px 40px', 
-            backgroundColor: '#007bff', 
-            color: 'white', 
-            textDecoration: 'none',
-            borderRadius: '6px', 
-            fontSize: '1.1em', 
-            fontWeight: 'bold',
-            transition: 'background-color 0.3s'
-        }}
-    >
-        Contact InSafety Services Today
-    </a>
+                <a 
+                    href="#contact-form-anchor" // <-- FIX: Changed from "#contact" to "#contact-form-anchor"
+                    style={{ 
+                        display: 'inline-block',
+                        padding: '15px 40px', 
+                        backgroundColor: '#007bff', 
+                        color: 'white', 
+                        textDecoration: 'none',
+                        borderRadius: '6px', 
+                        fontSize: '1.1em', 
+                        fontWeight: 'bold',
+                        transition: 'background-color 0.3s'
+                    }}
+                >
+                    Contact InSafety Services Today
+                </a>
             </div>
         </section>
     );

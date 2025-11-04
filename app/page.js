@@ -1,35 +1,23 @@
 // app/page.js
 import React from 'react';
-import Header from '../components/Header'; // Assuming Header is used elsewhere (if not, add it back)
+import Header from '../components/Header'; 
 
-// 1. Core Component Imports (Standardized and Cleaned)
+// 1. Core Component Imports
 import HeroSection from "../components/HeroSection"; 
 import VisionMissionSection from "../components/VisionMissionSection"; 
 import LeadershipSection from "../components/LeadershipSection"; 
 import IndustriesSection from "../components/IndustriesSection"; 
 import ServicesSection from "../components/ServicesSection"; 
 import ContactFooter from '@/components/ContactFooter'; 
-
-// Use the external component name for Why Choose Us (based on our earlier steps)
 import WhyChooseUs from '../components/WhyChooseUs'; 
-
-// Use the external component name for Methodology (based on our earlier steps)
 import Methodology from '../components/Methodology';
-
-
-// --- NOTE: The large, internal MethodologySection function and data 
-// --- from your original file have been REMOVED here because they now 
-// --- live fully in the external component: 'components/Methodology.js'. 
-
 
 // This is the main content component for the homepage (the "/") route
 export default function Home() {
-    // Assuming the Header component handles its own height/padding logic.
-    // If you use a fixed header, ensure you have a spacer element or padding on the main tag.
     const HEADER_HEIGHT = '90px'; 
     
     return (
-        <div id="home-wrapper"> {/* Use a div wrapper for the whole page */}
+        <div id="home-wrapper"> 
             <Header />
 
             {/* Spacer to prevent content from being hidden under the fixed header */}
@@ -43,7 +31,6 @@ export default function Home() {
                 <VisionMissionSection />
                 
                 {/* ------------------- SECTION 2: SERVICES & SOLUTIONS ------------------- */}
-                {/* ID wrapper added here as per previous practice, even if the component might contain the ID */}
                 <section id="services"> 
                     <ServicesSection />
                 </section>
@@ -53,12 +40,10 @@ export default function Home() {
                     <IndustriesSection />
                 </section>
 
-                {/* ------------------- SECTION 4: WHY CHOOSE US (NEW) ------------------- */}
-                {/* This uses the new external component file we prepared */}
+                {/* ------------------- SECTION 4: WHY CHOOSE US ------------------- */}
                 <WhyChooseUs />
 
-                {/* ------------------- SECTION 5: METHODOLOGY (NEW) ------------------- */}
-                {/* This uses the new external component file we prepared */}
+                {/* ------------------- SECTION 5: METHODOLOGY ------------------- */}
                 <Methodology />
 
                 {/* ------------------- SECTION 6: LEADERSHIP ------------------- */}
@@ -74,9 +59,28 @@ export default function Home() {
                     <h2 style={{ fontSize: '2.5em', color: '#1f3e66' }}>
                         Success Stories & Client Testimonials
                     </h2>
-                    <p style={{ fontSize: '1.2em', color: '#555', marginTop: '10px' }}>
+                    <p style={{ fontSize: '1.2em', color: '#555', marginTop: '10px', marginBottom: '30px' }}>
                         This section is reserved for client statements and acknowledgments.
                     </p>
+                    
+                    {/* ADDED LINK HERE - ASSUMING THIS IS WHERE THE LINK WAS PLACED */}
+                    <a 
+                        href="#contact-form-anchor" // <-- FIX: Scroll link to footer contact form
+                        style={{ 
+                            display: 'inline-block',
+                            padding: '15px 40px', 
+                            backgroundColor: '#ffc107', // Accent Color
+                            color: '#1f3e66', // Primary Color
+                            textDecoration: 'none',
+                            borderRadius: '6px', 
+                            fontSize: '1.1em', 
+                            fontWeight: 'bold',
+                            transition: 'background-color 0.3s'
+                        }}
+                    >
+                        Request a Free Compliance Review {/* <-- ADDED LINK TEXT HERE */}
+                    </a>
+
                 </section>
                 
                 {/* ------------------- PLACEHOLDERS FOR FUTURE CONTENT (Resources) ------------------- */}
