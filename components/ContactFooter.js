@@ -63,7 +63,8 @@ export default function ContactFooter() {
 
                 {/* Column 2: Contact Form (Renders the isolated client component) */}
                 <div style={{ backgroundColor: secondaryColor, padding: '25px', borderRadius: '8px' }}>
-                    <h3 style={{ fontSize: '1.4em', marginBottom: '15px', color: whiteText, borderBottom: `2px solid ${yellowAccent}`, paddingBottom: '5px` }}>
+                    {/* **FIXED LINE** - ensures paddingBottom uses single quote ' */}
+                    <h3 style={{ fontSize: '1.4em', marginBottom: '15px', color: whiteText, borderBottom: `2px solid ${yellowAccent}`, paddingBottom: '5px' }}> 
                         Contact InSafety Services Today
                     </h3>
                     <p style={{ color: whiteText, marginBottom: '20px', fontSize: '0.9em' }}>
@@ -75,7 +76,8 @@ export default function ContactFooter() {
 
                 {/* Column 3: Direct Contact & Compliance */}
                 <div>
-                    <h3 style={{ fontSize: '1.4em', marginBottom: '15px', color: whiteText, borderBottom: `2px solid ${yellowAccent}`, paddingBottom: '5px` }}>
+                    {/* **FIXED LINE** - ensures paddingBottom uses single quote ' */}
+                    <h3 style={{ fontSize: '1.4em', marginBottom: '15px', color: whiteText, borderBottom: `2px solid ${yellowAccent}`, paddingBottom: '5px' }}>
                         Contact US
                     </h3>
                     
@@ -95,7 +97,7 @@ export default function ContactFooter() {
                     </p>
 
                     <h3 style={{ fontSize: '1.4em', marginBottom: '15px', color: whiteText, borderBottom: `2px solid ${yellowAccent}`, paddingBottom: '5px', marginTop: '30px' }}>
-                        Request a Free Compliance Review
+                        Regulatory Compliances
                     </h3>
                     <p style={{ margin: '5px 0', color: whiteText, fontSize: '0.9em' }}>
                         Shop & Establishment License: 2510 2003 2043 0562

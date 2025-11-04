@@ -1,50 +1,32 @@
-// app/api/contact/route.js (RESTORED STABLE CODE)
-import { MongoClient } from 'mongodb';
+// app/api/contact/route.js
+// Use this clean code to test the API connection.
+
 import { NextResponse } from 'next/server';
 
-// --- MONGODB SETUP ---
-const uri = process.env.MONGODB_URI;
-const client = new MongoClient(uri);
-const dbName = 'InSafetyDB'; 
-
 export async function POST(request) {
-    if (request.method !== 'POST') {
-        return NextResponse.json({ message: 'Method Not Allowed' }, { status: 405 });
-    }
-
     try {
-        const formData = await request.json();
-        const { name, email, mobile, message } = formData;
+        const data = await request.json();
+        
+        // This log confirms the server received the data
+        console.log('✅ FORM CONNECTION SUCCESSFUL. Data Received:', data); 
 
-        // 1. SAVE DATA TO MONGODB
-        await client.connect();
-        const db = client.db(dbName);
-        const contacts = db.collection('ContactSubmissions');
-
-        const submission = { 
-            name, 
-            email, 
-            mobile, 
-            message, 
-            date: new Date() 
-        };
-
-        const result = await contacts.insertOne(submission);
-
+        // CRITICAL: Return a 200 (Success) response for the client form.
         return NextResponse.json(
-            { 
-                message: 'Consultation request received successfully!', 
-                id: result.insertedId 
-            }, 
-            { status: 201 }
+            { message: 'Submission received successfully.' }, 
+            { status: 200 }
         );
+
     } catch (error) {
-        console.error('MongoDB Error:', error); 
+        console.error('🛑 API Error: Could not process request.', error);
+        // If an error happens, this ensures the client receives a proper error code
         return NextResponse.json(
-            { message: 'Failed: Error processing request.' }, 
+            { message: 'Internal Server Error during form processing.' }, 
             { status: 500 }
         );
-    } finally {
-        await client.close();
     }
+}
+
+// Optional: Block other methods for security
+export function GET() {
+    return NextResponse.json({ message: 'Method Not Allowed' }, { status: 405 });
 }
