@@ -7,14 +7,17 @@ export default function VisionMissionSection() {
 
     return (
         <section id="vision-mission" style={{ padding: '80px 5%', backgroundColor: 'white', textAlign: 'center' }}>
-            <div style={{ 
-                maxWidth: '1200px', 
-                margin: '0 auto', 
-                display: 'grid', 
-                gridTemplateColumns: '1fr 1fr', 
-                gap: '40px',
-                textAlign: 'left'
-            }}>
+            <div 
+    className="two-column"
+    style={{ 
+        maxWidth: '1200px',
+        margin: '0 auto',
+        display: 'grid',
+        gridTemplateColumns: '1fr 1fr',
+        gap: '40px',
+        textAlign: 'left'
+    }}
+>
                 
                 {/* Left Column: Our Core Philosophy */}
                 <div style={{ paddingRight: '20px' }}>
