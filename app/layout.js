@@ -8,6 +8,8 @@ export default function RootLayout({ children }) {
   // Use a fallback of 'G-XXXXXXXXXX' if the variable isn't set (e.g., during a build).
   const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX';
 
+  // Final fix trigger for Vercel
+  
   return (
     <html lang="en">
       <body>
