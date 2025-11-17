@@ -1,12 +1,8 @@
 // components/HeroSection.js
-"use client"; 
+"use client";
 
 export default function HeroSection() {
     const primaryColor = '#1f3e66'; // Dark primary color for text
-    const accentColor = '#ffc107'; // Yellow accent for high-priority CTA
-    
-    // Using the blue color from your images for the button background
-    const buttonBlue = '#007bff'; 
 
     return (
         <section 
@@ -14,12 +10,9 @@ export default function HeroSection() {
             style={{ 
                 padding: '100px 5%',
                 textAlign: 'center', 
-                // --- VISUAL ENHANCEMENT: Background Image with Overlay ---
-                // Added a semi-transparent white gradient over the image for text clarity
                 backgroundImage: 'linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url("/background_safety.jpg")',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
-                // --------------------------------------------------------
                 minHeight: '60vh', 
                 color: primaryColor 
             }}
@@ -46,21 +39,10 @@ export default function HeroSection() {
                 At InSafety Services, we view safety not as a regulatory burden, but as a core design principle and a driver of operational excellence. Founded and led by Mr. Chandarsingh Mehta, a global safety professional with over 34 years of international experience, we deliver comprehensive and practical solutions through Health, Safety, Security, Environment, Fire, and Risk Management (HSSEF).
             </p>
 
-            {/* CTA Button: FIXED SCROLL LINK */}
+            {/* CTA BUTTON - Updated to global CTA styling */}
             <a 
-                href="#contact-form-anchor" // <-- FIX: Changed from "#contact" to the correct anchor ID
-                style={{ 
-                    // existing button styling...
-                    display: 'inline-block', // Crucial for button styling on anchor tag
-                    padding: '15px 30px',
-                    backgroundColor: buttonBlue, // Using the defined blue variable
-                    color: 'white',
-                    textDecoration: 'none',
-                    borderRadius: '6px',
-                    fontSize: '1.1em',
-                    fontWeight: 'bold',
-                    transition: 'background-color 0.3s'
-                }}
+                href="#contact-form-anchor"
+                className="cta-btn"
             >
                 Request a Free Compliance Review
             </a>

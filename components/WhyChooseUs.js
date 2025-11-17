@@ -3,7 +3,7 @@ import React from 'react';
 
 const primaryColor = '#1f3e66'; 
 const accentColor = '#ffc107'; 
-const lightBgColor = '#e9f1fa'; // Use a light background for contrast (light blue/gray)
+const lightBgColor = '#e9f1fa'; // Light background for cards
 
 const cardData = [
     {
@@ -34,15 +34,15 @@ export default function WhyChooseUs() {
             
             {/* Header */}
             <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-                <h2 style={{ fontSize: '2.5em', color: primaryColor, margin: '0 0 10px 0' }}>
+                <h2 style={{ fontSize: '2.5em', color: primaryColor, margin: 0 }}>
                     Why Choose InSafety Services?
                 </h2>
-                <p style={{ fontSize: '1.1em', color: '#555', maxWidth: '800px', margin: '0 auto' }}>
-                    Choosing a safety partner isn't just about compliance, it's about strategic advantage. Businesses worldwide choose InSafety Services because we transform your safety function into a driver of operational excellence.
+                <p style={{ fontSize: '1.1em', color: '#555', maxWidth: '800px', margin: '10px auto 0' }}>
+                    Choosing a safety partner isn't just about compliance — it's about strategic advantage. We transform your safety function into a driver of operational excellence.
                 </p>
             </div>
             
-            {/* 2x2 Grid of Value Cards */}
+            {/* Cards */}
             <div style={{ 
                 display: 'grid', 
                 gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', 
@@ -57,7 +57,7 @@ export default function WhyChooseUs() {
                             padding: '30px',
                             border: '1px solid #ddd',
                             borderRadius: '8px',
-                            backgroundColor: lightBgColor, 
+                            backgroundColor: lightBgColor,
                             boxShadow: '0 4px 10px rgba(0,0,0,0.05)',
                             transition: 'box-shadow 0.3s'
                         }}
@@ -65,7 +65,7 @@ export default function WhyChooseUs() {
                         <div style={{ fontSize: '2.5em', marginBottom: '15px' }}>
                             {card.icon}
                         </div>
-                        <h3 style={{ color: primaryColor, fontSize: '1.4em', marginTop: 0, marginBottom: '10px' }}>
+                        <h3 style={{ color: primaryColor, fontSize: '1.4em', marginTop: 0 }}>
                             {card.title}
                         </h3>
                         <p style={{ color: '#555', fontSize: '0.95em', lineHeight: '1.5' }}>
@@ -75,21 +75,11 @@ export default function WhyChooseUs() {
                 ))}
             </div>
 
-            {/* Optional Call to Action (FIXED SCROLL LINK) */}
-            <div style={{ textAlign: 'center', margin: '40px 0' }}>
+            {/* CTA BUTTON – using global CTA style */}
+            <div style={{ textAlign: 'center', margin: '50px 0' }}>
                 <a 
-                    href="#contact-form-anchor" // <-- FIX: Changed from "#contact" to "#contact-form-anchor"
-                    style={{ 
-                        display: 'inline-block',
-                        padding: '15px 40px', 
-                        backgroundColor: '#007bff', 
-                        color: 'white', 
-                        textDecoration: 'none',
-                        borderRadius: '6px', 
-                        fontSize: '1.1em', 
-                        fontWeight: 'bold',
-                        transition: 'background-color 0.3s'
-                    }}
+                    href="#contact-form-anchor"
+                    className="cta-btn"
                 >
                     Contact InSafety Services Today
                 </a>

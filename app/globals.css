@@ -295,3 +295,35 @@ nav a.active::after {
 .nav-link.active::after {
   width: 100%;
 }
+/* ===========================
+   GLOBAL CTA BUTTON STYLE
+   =========================== */
+
+.cta-btn {
+  display: inline-block;
+  background-color: #ffc107;   /* gold */
+  color: #1f3e66;              /* navy text */
+  padding: 14px 28px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1.05rem;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.25s ease, 
+              transform 0.25s ease,
+              box-shadow 0.25s ease;
+}
+
+/* Hover */
+.cta-btn:hover {
+  background-color: #d4a61f;   /* darker gold */
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18);
+}
+
+/* Clicked */
+.cta-btn:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
