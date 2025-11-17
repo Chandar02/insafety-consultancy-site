@@ -1,22 +1,22 @@
-// app/layout.js 
+export const dynamic = "force-dynamic"; // This is fine
 
-import './globals.css';
-import GoogleAnalytics from '../components/GoogleAnalytics'; // Import the new component
+import "./globals.css";
+import GoogleAnalytics from "../components/GoogleAnalytics";
 
 export default function RootLayout({ children }) {
-  // IMPORTANT: The Measurement ID is read from an environment variable for security.
-  // Use a fallback of 'G-XXXXXXXXXX' if the variable isn't set (e.g., during a build).
-  const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_MEASUREMENT_ID || 'G-XXXXXXXXXX';
+  // Read env variable
+  const GA_MEASUREMENT_ID =
+    process.env.NEXT_PUBLIC_MEASUREMENT_ID || "G-XXXXXXXXXX";
 
-  // Final fix trigger for Vercel
-  
+  // Debug log — IMPORTANT
+  console.log("GA from layout.js:", GA_MEASUREMENT_ID);
+
   return (
     <html lang="en">
       <body>
         {children}
-        
-        {/* Load Google Analytics component at the end of the body */}
-        {/* It only loads if NEXT_PUBLIC_GA_ID is present */}
+
+        {/* Pass the variable to your GA component */}
         <GoogleAnalytics measurementId={GA_MEASUREMENT_ID} />
       </body>
     </html>
