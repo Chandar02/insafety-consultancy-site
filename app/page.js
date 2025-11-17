@@ -65,21 +65,11 @@ export default function Home() {
                     
                     {/* ADDED LINK HERE - ASSUMING THIS IS WHERE THE LINK WAS PLACED */}
                     <a 
-                        href="#contact-form-anchor" // <-- FIX: Scroll link to footer contact form
-                        style={{ 
-                            display: 'inline-block',
-                            padding: '15px 40px', 
-                            backgroundColor: '#ffc107', // Accent Color
-                            color: '#1f3e66', // Primary Color
-                            textDecoration: 'none',
-                            borderRadius: '6px', 
-                            fontSize: '1.1em', 
-                            fontWeight: 'bold',
-                            transition: 'background-color 0.3s'
-                        }}
-                    >
-                        Request a Free Compliance Review {/* <-- ADDED LINK TEXT HERE */}
-                    </a>
+    href="#contact-form-anchor"
+    className="cta-btn"
+>
+    Request a Free Compliance Review
+</a>
 
                 </section>
                 
