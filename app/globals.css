@@ -167,3 +167,28 @@ a {
 html {
   scroll-behavior: smooth;
 }
+/* NAVIGATION LINK HOVER (smooth + subtle) */
+nav a {
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+nav a:hover {
+  color: #f2c321; /* Your gold brand color */
+  transform: translateY(-2px);
+}
+/* BUTTON HOVER EFFECT (corporate subtle lift) */
+button,
+.btn,
+a.button,
+a.btn {
+  transition: background-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+button:hover,
+.btn:hover,
+a.button:hover,
+a.btn:hover {
+  transform: translateY(-3px);
+  background-color: #d4a61f;   /* Slightly darker gold */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
