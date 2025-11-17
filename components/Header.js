@@ -60,12 +60,22 @@ export default function Header() {
   // MOBILE MENU
   // --------------------------
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
+  // ⭐ NEW FUNCTION — closes menu after selecting any link
+  const closeMenu = () => setIsMenuOpen(false);
 
   return (
     <header className="main-header">
+      
       {/* LOGO */}
-      <Link href="#home" className="header-logo-link" style={{ textDecoration: "none" }}>
+      <Link
+        href="#home"
+        className="header-logo-link"
+        onClick={closeMenu}
+        style={{ textDecoration: "none" }}
+      >
         <div className="site-title" style={{ color: primaryTextColor, fontWeight: "bold" }}>
           InSafety Services
         </div>
@@ -87,6 +97,8 @@ export default function Header() {
       {/* NAV BAR */}
       <nav className={`main-nav ${isMenuOpen ? "nav-open" : ""}`}>
         <ul className="nav-list">
+
+          {/* MAIN NAV LINKS */}
           {navItems.map((item) => (
             <li key={item.name} className="nav-item">
               <Link
@@ -95,6 +107,7 @@ export default function Header() {
                   activeSection === item.href.replace("#", "") ? "active" : ""
                 }`}
                 style={{ color: primaryTextColor }}
+                onClick={closeMenu}   // ⭐ AUTO-CLOSE ON TAP
               >
                 {item.name}
               </Link>
@@ -110,10 +123,12 @@ export default function Header() {
                 backgroundColor: accentColor,
                 color: primaryColor,
               }}
+              onClick={closeMenu}  // ⭐ AUTO-CLOSE ON TAP
             >
               Contact Us
             </a>
           </li>
+
         </ul>
       </nav>
     </header>
