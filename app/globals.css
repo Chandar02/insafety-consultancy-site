@@ -164,3 +164,6 @@ a {
         border-bottom: none;
     }
 }
+html {
+  scroll-behavior: smooth;
+}
