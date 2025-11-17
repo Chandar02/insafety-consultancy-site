@@ -2,14 +2,14 @@
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Explicitly expose the public environment variable
+  // Add this 'env' block to explicitly expose public variables
   env: {
-    // This line forces Next.js to read the variable set in Vercel 
-    // and bundle its value into the production code.
+    // This forces Next.js to read the variable set in Vercel 
+    // and bundle its value into the production code for client-side use.
     NEXT_PUBLIC_GA_ID: process.env.NEXT_PUBLIC_GA_ID,
   },
   
-  /* Add any other config options below this block if necessary */
+  /* You can add other config options here if needed later */
 };
 
 export default nextConfig;
