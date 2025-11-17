@@ -192,3 +192,106 @@ a.btn:hover {
   background-color: #d4a61f;   /* Slightly darker gold */
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
+/* NAVIGATION LINK HOVER: underline + color */
+nav a {
+  position: relative;
+  padding-bottom: 4px;
+  transition: color 0.25s ease;
+}
+
+nav a:hover {
+  color: #f2c321; /* gold */
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0%;
+  background-color: #f2c321;
+  transition: width 0.25s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+/* ACTIVE NAV LINK STATE */
+nav a.active {
+  color: #f2c321;
+  font-weight: 600;
+}
+
+nav a.active::after {
+  width: 100%;
+}
+/* NAVIGATION LINK HOVER (Header.js nav-link class) */
+.nav-link {
+  position: relative;
+  padding-bottom: 4px;
+  transition: color 0.25s ease;
+}
+
+.nav-link:hover {
+  color: #f2c321; /* your gold color */
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: #f2c321;
+  transition: width 0.25s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+/* ACTIVE SECTION HIGHLIGHT */
+.nav-link.active {
+  color: #f2c321 !important;
+  font-weight: 600;
+}
+
+.nav-link.active::after {
+  width: 100%;
+}
+/* NAV-LINK HOVER EFFECT */
+.nav-link {
+  position: relative;
+  padding-bottom: 4px;
+  transition: color 0.25s ease;
+}
+
+.nav-link:hover {
+  color: #f2c321 !important;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #f2c321;
+  transition: width 0.25s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* ACTIVE TAB STATE */
+.nav-link.active {
+  color: #f2c321 !important;
+  font-weight: 600;
+}
+
+.nav-link.active::after {
+  width: 100%;
+}
