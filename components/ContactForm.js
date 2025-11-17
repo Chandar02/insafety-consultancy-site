@@ -1,100 +1,112 @@
-// components/ContactForm.js
+"use client";
 
-"use client"; // CRITICAL: Enables interactivity (useState, onSubmit)
-
-import { useState } from 'react';
-
-// --- Form-Specific Styles (Inputs and Button) ---
-const primaryColor = '#1e3a62'; 
-const whiteText = '#ffffff';
-const yellowAccent = '#ffc107'; 
-
-const formInputStyle = {
-    width: '100%',
-    padding: '12px',
-    marginBottom: '15px',
-    border: 'none',
-    borderRadius: '4px',
-    boxSizing: 'border-box'
-};
-
-const buttonStyle = {
-    width: '100%',
-    padding: '15px',
-    backgroundColor: yellowAccent,
-    color: primaryColor,
-    border: 'none',
-    borderRadius: '4px',
-    fontWeight: 'bold',
-    cursor: 'pointer',
-    transition: 'background-color 0.3s'
-};
-// ------------------------------------------------
+import { useState } from "react";
 
 export default function ContactForm() {
     const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        mobile: '',
-        message: ''
+        name: "",
+        email: "",
+        mobile: "",
+        message: "",
     });
-    const [status, setStatus] = useState(null); // 'success', 'error', 'loading', or null
+
+    const [status, setStatus] = useState("");
 
     const handleChange = (e) => {
-        setFormData({ ...formData, [e.target.name]: e.target.value });
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value,
+        });
     };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        setStatus('loading');
+        setStatus("Sending...");
 
         try {
-            // Sends data to the API route (app/api/contact/route.js)
-            const response = await fetch('/api/contact', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
+            const res = await fetch("/api/contact", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(formData),
             });
 
-            if (response.ok) {
-                setStatus('success');
-                setFormData({ name: '', email: '', mobile: '', message: '' });
+            if (res.ok) {
+                setStatus("Message sent successfully!");
+                setFormData({ name: "", email: "", mobile: "", message: "" });
             } else {
-                const errorData = await response.json();
-                console.error("Submission API Error:", errorData);
-                setStatus('error');
+                setStatus("Failed to send message.");
             }
         } catch (error) {
-            console.error("Server Connection Error:", error);
-            setStatus('error');
+            console.error(error);
+            setStatus("Error sending message.");
         }
-    };
-
-    const renderStatusMessage = () => {
-        if (status === 'loading') {
-            return <p style={{ color: whiteText, textAlign: 'center', marginTop: '10px' }}>Processing request...</p>;
-        }
-        if (status === 'success') {
-            return <p style={{ color: yellowAccent, fontWeight: 'bold', textAlign: 'center', marginTop: '10px' }}>Success! Your request has been sent.</p>;
-        }
-        if (status === 'error') {
-            return <p style={{ color: '#ff4d4d', fontWeight: 'bold', textAlign: 'center', marginTop: '10px' }}>Failed: Error processing request.</p>;
-        }
-        return null;
     };
 
     return (
         <form onSubmit={handleSubmit}>
-            <input type="text" placeholder="Your Name" name="name" value={formData.name} onChange={handleChange} style={formInputStyle} required/>
-            <input type="email" placeholder="Work Email" name="email" value={formData.email} onChange={handleChange} style={formInputStyle} required/>
-            <input type="text" placeholder="Mobile / Whatsapp" name="mobile" value={formData.mobile} onChange={handleChange} style={formInputStyle} required/>
-            <textarea placeholder="Tell us about your project or challenge..." rows="4" name="message" value={formData.message} onChange={handleChange} style={formInputStyle} required/>
-            <button type="submit" style={buttonStyle} disabled={status === 'loading'}>
-                Request Consultation
+            {/* Name */}
+            <input
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+                style={inputStyle}
+            />
+
+            {/* Email */}
+            <input
+                type="email"
+                name="email"
+                placeholder="Work Email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+                style={inputStyle}
+            />
+
+            {/* Mobile */}
+            <input
+                type="text"
+                name="mobile"
+                placeholder="Mobile / WhatsApp"
+                value={formData.mobile}
+                onChange={handleChange}
+                style={inputStyle}
+            />
+
+            {/* Message */}
+            <textarea
+                name="message"
+                placeholder="Tell us about your project or challenge..."
+                value={formData.message}
+                onChange={handleChange}
+                rows="4"
+                style={{ ...inputStyle, resize: "none" }}
+            />
+
+            {/* ⭐ The CTA button — now unified */}
+            <button 
+                type="submit"
+                className="cta-btn"
+                style={{ width: "100%", marginTop: "10px" }}
+            >
+                Request a Free Compliance Review
             </button>
-            {renderStatusMessage()}
+
+            {/* Status message */}
+            <p style={{ marginTop: "10px", color: "white" }}>{status}</p>
         </form>
     );
 }
+
+// Shared input styling
+const inputStyle = {
+    width: "100%",
+    padding: "10px",
+    marginBottom: "10px",
+    border: "1px solid #ccc",
+    borderRadius: "4px",
+    boxSizing: "border-box",
+};
