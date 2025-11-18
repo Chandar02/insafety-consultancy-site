@@ -60,18 +60,16 @@ export default function WhyChooseUs() {
                 }}
             >
                 {cardData.map((card, index) => (
-                    <div
-                        key={index}
-                        style={{
-                            padding: '30px',
-                            border: '1px solid #ddd',
-                            borderRadius: '8px',
-                            backgroundColor: lightBgColor,
-                            boxShadow: '0 4px 10px rgba(0,0,0,0.05)',
-                            transition: 'box-shadow 0.3s'
-                        }}
-                        className="why-card"
-                    >
+                    <div 
+    key={index}
+    className="why-card"
+    style={{
+        padding: '30px',
+        border: '1px solid #ddd',
+        borderRadius: '8px',
+        backgroundColor: lightBgColor
+    }}
+>
                         <div style={{ fontSize: '2.5em', marginBottom: '15px' }}>{card.icon}</div>
                         
                         <h3 

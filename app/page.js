@@ -18,10 +18,8 @@ export default function Home() {
     
     return (
         <div id="home-wrapper"> 
-            <Header />
 
             {/* Spacer to prevent content from being hidden under the fixed header */}
-            <div style={{ height: HEADER_HEIGHT }}></div>
 
             {/* The main tag serves as the #home anchor */}
             <main id="home"> 
