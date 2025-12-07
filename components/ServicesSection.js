@@ -218,7 +218,17 @@ export default function ServicesSection() {
                     title: 'OT/IT Safety & Cyber-Physical Security',
                     description: 'Risk assessment for operational technology (OT) environments. Security integration of physical systems (CCTV, Access) with IT networks. SCADA/DCS system security review.',
                     items: [] // No list items here, description covers it
-                }
+                },
+                {
+    title: 'Fleet & Transportation Safety Management',
+    items: [
+        'Logistics Risk Assurance: Comprehensive safety and compliance audits for entire vehicle fleets, including maintenance standards, route risk analysis, and telematics integration.',
+        'Driver Competency & Wellness Programs: Development and delivery of high-impact training and evaluation for driver fitness, competency, and critical fatigue management.',
+        'Journey Management Planning (JMP): Creation of customized, mandatory protocols for high-risk routes, long-haul operations, and the specialized transport of dangerous or hazardous goods.',
+        'Vehicle Integrity & Regulatory Compliance: Verification of vehicle maintenance protocols (PUIs, PMs) and assurance of full adherence to all local and international motor carrier safety laws and transportation regulations.'
+    ],
+    description: 'Your transportation fleet is the backbone of your supply chain, but it is also one of your highest risk exposures. We provide specialized safety programs to secure your mobile assets, manage road risk, and ensure that every delivery, shipment, or journey is a compliant, efficient, and reliable step in your operations. We turn transportation risk into a reliable asset.'
+}
             ]
         },
     ];

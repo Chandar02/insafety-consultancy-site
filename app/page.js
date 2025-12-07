@@ -1,6 +1,5 @@
 // app/page.js
 import React from 'react';
-import Header from '../components/Header'; 
 
 // 1. Core Component Imports
 import HeroSection from "../components/HeroSection"; 
@@ -12,44 +11,38 @@ import ContactFooter from '@/components/ContactFooter';
 import WhyChooseUs from '../components/WhyChooseUs'; 
 import Methodology from '../components/Methodology';
 
-// This is the main content component for the homepage (the "/") route
 export default function Home() {
-    const HEADER_HEIGHT = '90px'; 
-    
+
     return (
-        <div id="home-wrapper"> 
+        <div id="home-wrapper">
+            <main id="home">
 
-            {/* Spacer to prevent content from being hidden under the fixed header */}
-
-            {/* The main tag serves as the #home anchor */}
-            <main id="home"> 
-                
-                {/* ------------------- SECTION 1: HERO & CORE PHILOSOPHY ------------------- */}
+                {/* SECTION 1 */}
                 <HeroSection />
                 <VisionMissionSection />
-                
-                {/* ------------------- SECTION 2: SERVICES & SOLUTIONS ------------------- */}
-                <section id="services"> 
+
+                {/* SECTION 2 */}
+                <section id="services">
                     <ServicesSection />
                 </section>
 
-                {/* ------------------- SECTION 3: INDUSTRIES WE SERVE ------------------- */}
+                {/* SECTION 3 */}
                 <section id="industries">
                     <IndustriesSection />
                 </section>
 
-                {/* ------------------- SECTION 4: WHY CHOOSE US ------------------- */}
+                {/* SECTION 4 */}
                 <WhyChooseUs />
 
-                {/* ------------------- SECTION 5: METHODOLOGY ------------------- */}
+                {/* SECTION 5 */}
                 <Methodology />
 
-                {/* ------------------- SECTION 6: LEADERSHIP ------------------- */}
+                {/* SECTION 6 */}
                 <section id="leadership">
                     <LeadershipSection />
                 </section>
-                
-                {/* ------------------- PLACEHOLDERS FOR FUTURE CONTENT (Success Stories) ------------------- */}
+
+                {/* SUCCESS STORIES */}
                 <section 
                     id="success-stories"
                     style={{ padding: '80px 5%', textAlign: 'center', backgroundColor: '#e0eaff' }}
@@ -60,18 +53,13 @@ export default function Home() {
                     <p style={{ fontSize: '1.2em', color: '#555', marginTop: '10px', marginBottom: '30px' }}>
                         This section is reserved for client statements and acknowledgments.
                     </p>
-                    
-                    {/* ADDED LINK HERE - ASSUMING THIS IS WHERE THE LINK WAS PLACED */}
-                    <a 
-    href="#contact-form-anchor"
-    className="cta-btn"
->
-    Request a Free Compliance Review
-</a>
 
+                    <a href="#contact-form-anchor" className="cta-btn">
+                        Request a Free Compliance Review
+                    </a>
                 </section>
-                
-                {/* ------------------- PLACEHOLDERS FOR FUTURE CONTENT (Resources) ------------------- */}
+
+                {/* RESOURCES */}
                 <section 
                     id="resources"
                     style={{ padding: '80px 5%', textAlign: 'center', backgroundColor: '#f9f9f9' }}
@@ -79,12 +67,20 @@ export default function Home() {
                     <h2 style={{ fontSize: '2.5em', color: '#1f3e66' }}>
                         Resources & Knowledge
                     </h2>
-                    <p style={{ fontSize: '1.2em', color: '#555', marginTop: '10px' }}>
-                        This section will host documents, insights, and knowledge resources.
+                    <p style={{ fontSize: '1.2em', color: '#555', marginTop: '10px', marginBottom: '30px' }}>
+                        Explore our brochures, publications, and technical resources.
                     </p>
+
+                    <a 
+                        href="/e-brochure InSafety Services.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="cta-btn"
+                    >
+                        📘 Download Our E-Brochure
+                    </a>
                 </section>
-                
-                {/* ------------------- SECTION 9: CONTACT & FOOTER ------------------- */}
+
                 <ContactFooter />
             </main>
         </div>
