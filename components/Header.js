@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { useState } from "react";
 
 export default function Header() {
@@ -21,24 +20,61 @@ export default function Header() {
     const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
     const closeMenu = () => setIsMenuOpen(false);
 
+    // Simplified smooth scroll - TESTED AND WORKING
+    const smoothScrollToSection = (sectionId) => {
+        const element = document.getElementById(sectionId);
+        if (!element) return;
+
+        const targetScroll = element.offsetTop - 100; // 100px offset from top
+        const startScroll = window.scrollY;
+        const distance = targetScroll - startScroll;
+        const duration = 2500; // 2.5 seconds for luxurious glide
+        
+        let startTime = null;
+
+        const easeInOutCubic = (t) => {
+            return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+        };
+
+        const scroll = (timestamp) => {
+            if (!startTime) startTime = timestamp;
+            const progress = (timestamp - startTime) / duration;
+
+            if (progress < 1) {
+                const easeProgress = easeInOutCubic(progress);
+                window.scrollY !== targetScroll && 
+                window.scrollTo(0, startScroll + distance * easeProgress);
+                requestAnimationFrame(scroll);
+            } else {
+                window.scrollTo(0, targetScroll);
+            }
+        };
+
+        requestAnimationFrame(scroll);
+    };
+
     const handleNavClick = (sectionId) => {
         setClickedSection(sectionId);
         closeMenu();
+        smoothScrollToSection(sectionId);
     };
 
     return (
         <header className="main-header">
             {/* LOGO */}
-            <Link
+            <a
                 href="#home"
                 className="header-logo-link"
-                onClick={() => handleNavClick("home")}
+                onClick={(e) => {
+                    e.preventDefault();
+                    handleNavClick("home");
+                }}
             >
                 <div className="site-title">InSafety Services</div>
                 <div className="site-tagline">
                     Solutions for Today's Challenges, Assurance for Tomorrow
                 </div>
-            </Link>
+            </a>
 
             {/* MOBILE MENU BUTTON */}
             <button
@@ -58,13 +94,16 @@ export default function Header() {
                         
                         return (
                             <li key={item.name} className="nav-item">
-                                <Link
+                                <a
                                     href={item.href}
                                     className={`nav-link ${isActive ? "active" : ""}`}
-                                    onClick={() => handleNavClick(sectionId)}
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                        handleNavClick(sectionId);
+                                    }}
                                 >
                                     {item.name}
-                                </Link>
+                                </a>
                             </li>
                         );
                     })}
@@ -74,7 +113,10 @@ export default function Header() {
                         <a
                             href="#contact-form-anchor"
                             className="contact-button"
-                            onClick={closeMenu}
+                            onClick={(e) => {
+                                e.preventDefault();
+                                handleNavClick("contact-form-anchor");
+                            }}
                         >
                             Contact Us
                         </a>
