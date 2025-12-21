@@ -7,11 +7,11 @@ import GoogleAnalytics from "../components/GoogleAnalytics";
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body>
-        <Header />   {/* <---- HEADER MUST BE HERE */}
+    <html lang="en" style={{ margin: 0, padding: 0 }}>
+      <body style={{ margin: 0, padding: 0 }}>
+        <Header />
 
-        <main>
+        <main style={{ margin: 0, padding: 0 }}>
           {children}
         </main>
 

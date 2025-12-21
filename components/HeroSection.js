@@ -1,55 +1,50 @@
 // components/HeroSection.js
 "use client";
+import React from "react";
+import Image from "next/image";
 
 export default function HeroSection() {
-    const primaryColor = "#1f3e66";
+  return (
+    <section id="home" className="hero-section">
+      {/* Background image */}
+      <div className="hero-background">
+        <Image
+          src="/background_safety.jpg"
+          alt="InSafety Services - Building safety resilience"
+          className="hero-image"
+          fill
+          priority
+        />
+        {/* Refined overlay for better text contrast */}
+        <div className="hero-overlay"></div>
+      </div>
 
-    return (
-        <section
-            className="hero-section"
-            style={{
-                padding: "100px 5%",
-                textAlign: "center",
-                backgroundImage:
-                    'linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url("/background_safety.jpg")',
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                minHeight: "60vh",
-                color: primaryColor,
-            }}
-        >
-            <h1
-                style={{
-                    fontSize: "3em",
-                    marginBottom: "20px",
-                    color: primaryColor,
-                }}
-            >
-                Transforming Safety from Policy to Practice
-            </h1>
+      {/* Hero Content */}
+      <div className="hero-content">
+        <h1 className="hero-title">
+          Transforming Safety from Policy to Practice
+        </h1>
+        
+        <div className="hero-subtitle">
+          <p>Safety should enable performance.</p>
+          <p>Not exist as paperwork.</p>
+          <p>
+            At <strong>InSafety Services</strong>, we help organisations convert
+            intent into execution.
+          </p>
+          <p>Across design, projects, and operations.</p>
+          <p>
+            Founded and led by <strong>Chandarsingh Mehta</strong>.
+          </p>
+          <p>With 34+ years of global experience.</p>
+          <p>We deliver practical HSSEF solutions.</p>
+          <p>That work on the ground.</p>
+        </div>
 
-            <p
-                style={{
-                    fontSize: "1.2em",
-                    maxWidth: "800px",
-                    margin: "0 auto 40px",
-                    lineHeight: "1.6",
-                    color: "#555",
-                }}
-            >
-                At InSafety Services, we view safety not as a regulatory burden,
-                but as a core design principle and a driver of operational
-                excellence. Founded and led by Mr. Chandarsingh Mehta, a global
-                safety professional with over 34 years of international
-                experience, we deliver comprehensive and practical solutions
-                through Health, Safety, Security, Environment, Fire, and Risk
-                Management (HSSEF).
-            </p>
-
-            {/* UPDATED CTA BUTTON */}
-            <a href="#contact-form-anchor" className="cta-btn">
-                Request a Free Compliance Review
-            </a>
-        </section>
-    );
+        <a href="#contact-form-anchor" className="cta-btn">
+          Start a Risk Conversation
+        </a>
+      </div>
+    </section>
+  );
 }

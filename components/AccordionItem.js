@@ -56,15 +56,22 @@ export default function AccordionItem({
                     fontWeight: "600"
                 }}
             >
-                <span>
-                    {icon} &nbsp; {title}
-                </span>
+                {/* Render title (can be string or JSX element) */}
+                <div style={{ flex: 1 }}>
+                    {typeof title === 'string' ? (
+                        <span>{icon} &nbsp; {title}</span>
+                    ) : (
+                        title
+                    )}
+                </div>
 
                 {/* Arrow */}
                 <span
                     style={{
                         transition: "transform 0.3s",
-                        transform: isActive ? "rotate(90deg)" : "rotate(0deg)"
+                        transform: isActive ? "rotate(90deg)" : "rotate(0deg)",
+                        marginLeft: "15px",
+                        flexShrink: 0
                     }}
                 >
                     ▶

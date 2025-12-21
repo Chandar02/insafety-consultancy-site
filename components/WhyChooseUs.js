@@ -7,28 +7,29 @@ const lightBgColor = '#e9f1fa';
 
 const cardData = [
     {
-        icon: '🏆',
         title: 'Unmatched Global Expertise & Leadership',
         description:
-            "Our firm is founded and led by Mr. Chandarsingh Mehta, a global safety professional with over 34 years of international experience across diverse sectors. You don't just hire a consultant; you gain access to decades of strategic insight applied across Health, Safety, Security, Environment, Fire, and Risk Management (HSSEF). We bring proven solutions that work in any regulatory environment.",
+            "InSafety Services is founded and led by Mr. Chandarsingh Mehta, a global HSSEF leader with over 34 years of experience across high-risk, highly regulated, and operationally complex environments. Our leadership experience spans strategy, design, operations, crisis response, and regulatory engagement — ensuring decisions made at the top translate into protection where work actually happens.",
     },
     {
-        icon: '🔗',
         title: 'Strategic Integration: Safety is Built-In, Not Bolted On',
         description:
-            "Unlike firms that offer retroactive fixes, our core philosophy is to embed safety at the design stage. We work across your entire business lifecycle, from concept and planning through governance, ensuring your systems are inherently safe and compliant. This proactive, transformative approach minimizes risk, prevents costly redesigns, and future-proofs your assets.",
+            "We embed safety and risk at the earliest possible stage — strategy, policy, and design — while remaining equally effective in operational, corrective, and post-incident environments. From concept and planning to governance, operations, and audits, our approach reduces systemic risk, avoids costly rework, and strengthens long-term resilience.",
     },
     {
-        icon: '📝',
-        title: 'Comprehensive, Practical Solutions',
+        title: 'Standard Where Required. Customised Where It Matters.',
         description:
-            "We deliver solutions that are not only compliant but also practical and customized for your organization's unique challenges and goals. Our focus is on achieving a sustainable, continuously improving safety culture that is manageable, effective, and fully integrated into your operations, ensuring tangible results and protected reputation.",
+            "We deliver proven, industry-accepted HSSEF frameworks — and tailor their depth, focus, and execution to your business, risk profile, and operating reality. Whether implementing standard compliance programs or designing bespoke risk controls, our solutions are practical, scalable, and grounded in how work is actually performed.",
     },
     {
-        icon: '💰',
-        title: 'Direct Impact on Business Value',
-        description:
-            "Our services are an investment that goes beyond saving money on fines or accidents. We help you unlock your business's true potential by: Safeguarding key assets (people, equipment, data); Enhancing operational efficiency through well-designed safety systems; Maintaining trust with regulators, stakeholders, and the public.",
+        title: 'Direct Impact on Business & Risk Outcomes',
+        description: null,
+        listItems: [
+            'Reducing high-consequence safety and operational risks',
+            'Protecting people, assets, and business continuity',
+            'Improving operational efficiency and decision quality',
+            'Strengthening credibility with regulators, clients, and stakeholders'
+        ]
     },
 ];
 
@@ -38,14 +39,17 @@ export default function WhyChooseUs() {
             
             {/* Header */}
             <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-                <h2 style={{ fontSize: '2.5em', color: primaryColor, margin: '0 0 10px 0' }}>
+                <h2 style={{ fontSize: '2.5em', color: primaryColor, margin: '0 0 20px 0' }}>
                     Why Choose InSafety Services?
                 </h2>
-                <p style={{ fontSize: '1.1em', color: '#555', maxWidth: '800px', margin: '0 auto' }}>
-                    Choosing a safety partner isn't just about compliance, it's about strategic advantage. 
-                    Businesses worldwide choose InSafety Services because we transform your safety function 
-                    into a driver of operational excellence.
-                </p>
+                <div style={{ maxWidth: '900px', margin: '0 auto' }}>
+                    <p style={{ fontSize: '1.08em', color: '#555', lineHeight: '1.7', marginBottom: '12px' }}>
+                        Choosing a safety partner is not just about compliance — it is about how risk is understood, designed out, managed, and controlled across your business.
+                    </p>
+                    <p style={{ fontSize: '1.08em', color: '#555', lineHeight: '1.7', marginBottom: '0' }}>
+                        Organisations choose InSafety Services because we connect leadership intent, regulatory expectations, and frontline realities into one integrated, risk-led HSSEF approach.
+                    </p>
+                </div>
             </div>
 
             {/* Cards Grid */}
@@ -61,37 +65,91 @@ export default function WhyChooseUs() {
             >
                 {cardData.map((card, index) => (
                     <div 
-    key={index}
-    className="why-card"
-    style={{
-        padding: '30px',
-        border: '1px solid #ddd',
-        borderRadius: '8px',
-        backgroundColor: lightBgColor
-    }}
->
-                        <div style={{ fontSize: '2.5em', marginBottom: '15px' }}>{card.icon}</div>
-                        
+                        key={index}
+                        className="why-card"
+                        style={{
+                            padding: '30px',
+                            border: '1px solid #ddd',
+                            borderRadius: '8px',
+                            backgroundColor: lightBgColor
+                        }}
+                    >
                         <h3 
-                            style={{ color: primaryColor, fontSize: '1.4em', marginTop: 0, marginBottom: '10px' }}
+                            style={{ 
+                                color: primaryColor, 
+                                fontSize: '1.4em', 
+                                marginTop: 0, 
+                                marginBottom: '18px',
+                                fontWeight: '600'
+                            }}
                         >
                             {card.title}
                         </h3>
 
-                        <p style={{ color: '#555', fontSize: '0.95em', lineHeight: '1.5' }}>
-                            {card.description}
-                        </p>
+                        {/* Regular description or list */}
+                        {card.description ? (
+                            <p style={{ 
+                                color: '#555', 
+                                fontSize: '1.05em', 
+                                lineHeight: '1.7', 
+                                margin: '0' 
+                            }}>
+                                {card.description}
+                            </p>
+                        ) : (
+                            <div>
+                                <p style={{ 
+                                    color: '#555', 
+                                    fontSize: '1.05em', 
+                                    lineHeight: '1.7', 
+                                    marginBottom: '12px' 
+                                }}>
+                                    Our work delivers measurable value by:
+                                </p>
+                                <ul style={{ 
+                                    margin: '0', 
+                                    paddingLeft: '20px',
+                                    color: '#555',
+                                    fontSize: '1.05em',
+                                    lineHeight: '1.7'
+                                }}>
+                                    {card.listItems.map((item, i) => (
+                                        <li key={i} style={{ marginBottom: '10px' }}>{item}</li>
+                                    ))}
+                                </ul>
+                            </div>
+                        )}
                     </div>
                 ))}
             </div>
 
+            {/* Closing Line */}
+            <div style={{ 
+                textAlign: 'center', 
+                maxWidth: '950px', 
+                margin: '50px auto 40px',
+                padding: '25px 30px',
+                backgroundColor: '#f8f9fa',
+                borderRadius: '8px'
+            }}>
+                <p style={{ 
+                    fontSize: '1.08em', 
+                    color: '#555', 
+                    lineHeight: '1.7', 
+                    margin: '0',
+                    fontWeight: '500'
+                }}>
+                    We operate across the full risk spectrum — from boardroom decisions to frontline execution — ensuring risk is controlled where it is created and where it is experienced.
+                </p>
+            </div>
+
             {/* CTA Button */}
-            <div style={{ textAlign: 'center', margin: '40px 0' }}>
+            <div style={{ textAlign: 'center', margin: '0' }}>
                 <a 
                     href="#contact-form-anchor"
                     className="cta-btn"
                 >
-                    Contact InSafety Services Today
+                    Start a Risk Conversation
                 </a>
             </div>
         </section>

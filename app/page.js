@@ -55,7 +55,7 @@ export default function Home() {
                     </p>
 
                     <a href="#contact-form-anchor" className="cta-btn">
-                        Request a Free Compliance Review
+                        Start a Risk Conversation
                     </a>
                 </section>
 

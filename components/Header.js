@@ -1,41 +1,11 @@
 "use client";
 
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 export default function Header() {
-    const [activeSection, setActiveSection] = useState("home");
+    const [clickedSection, setClickedSection] = useState("home");
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-    // Detect active section while scrolling
-    useEffect(() => {
-        const handleScroll = () => {
-            const sections = [
-                "home",
-                "services",
-                "industries",
-                "why-us",
-                "methodology",
-                "leadership",
-                "success-stories",
-                "resources",
-            ];
-
-            for (let section of sections) {
-                const el = document.getElementById(section);
-                if (el) {
-                    const rect = el.getBoundingClientRect();
-                    if (rect.top <= 150 && rect.bottom >= 150) {
-                        setActiveSection(section);
-                        break;
-                    }
-                }
-            }
-        };
-
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
 
     const navItems = [
         { name: "Home", href: "#home" },
@@ -51,13 +21,18 @@ export default function Header() {
     const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
     const closeMenu = () => setIsMenuOpen(false);
 
+    const handleNavClick = (sectionId) => {
+        setClickedSection(sectionId);
+        closeMenu();
+    };
+
     return (
         <header className="main-header">
             {/* LOGO */}
             <Link
                 href="#home"
                 className="header-logo-link"
-                onClick={closeMenu}
+                onClick={() => handleNavClick("home")}
             >
                 <div className="site-title">InSafety Services</div>
                 <div className="site-tagline">
@@ -77,21 +52,22 @@ export default function Header() {
             {/* NAV MENU */}
             <nav className={`main-nav ${isMenuOpen ? "nav-open" : ""}`}>
                 <ul className="nav-list">
-                    {navItems.map((item) => (
-                        <li key={item.name} className="nav-item">
-                            <Link
-                                href={item.href}
-                                className={`nav-link ${
-                                    activeSection === item.href.replace("#", "")
-                                        ? "active"
-                                        : ""
-                                }`}
-                                onClick={closeMenu}
-                            >
-                                {item.name}
-                            </Link>
-                        </li>
-                    ))}
+                    {navItems.map((item) => {
+                        const sectionId = item.href.replace("#", "");
+                        const isActive = clickedSection === sectionId;
+                        
+                        return (
+                            <li key={item.name} className="nav-item">
+                                <Link
+                                    href={item.href}
+                                    className={`nav-link ${isActive ? "active" : ""}`}
+                                    onClick={() => handleNavClick(sectionId)}
+                                >
+                                    {item.name}
+                                </Link>
+                            </li>
+                        );
+                    })}
 
                     {/* CONTACT BUTTON */}
                     <li className="nav-item contact-button-wrapper">
