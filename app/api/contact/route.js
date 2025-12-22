@@ -3,9 +3,12 @@ import { NextResponse } from "next/server";
 import mongoose from "mongoose";
 import nodemailer from "nodemailer";
 
+// ✅ Load environment variables automatically (Next.js does this in production)
 const MONGO_URI = process.env.MONGO_URI;
+const GMAIL_USER = process.env.GMAIL_USER;
+const GMAIL_PASS = process.env.GMAIL_PASS;
 
-// 1️⃣ Define the schema for MongoDB
+// ✅ Define MongoDB schema & model
 const contactSchema = new mongoose.Schema({
   name: String,
   email: String,
@@ -17,29 +20,32 @@ const contactSchema = new mongoose.Schema({
 const Contact =
   mongoose.models.Contact || mongoose.model("Contact", contactSchema);
 
-// 2️⃣ Handle POST requests (form submissions)
+// ✅ Handle POST requests
 export async function POST(req) {
   try {
     const { name, email, mobile, message } = await req.json();
 
-    // ✅ Connect to MongoDB
-    await mongoose.connect(MONGO_URI);
+    // Connect to MongoDB if not already connected
+    if (mongoose.connection.readyState === 0) {
+      await mongoose.connect(MONGO_URI);
+    }
 
-    // ✅ Save data in MongoDB
+    // Save message to database
     await Contact.create({ name, email, mobile, message });
 
-    // ✅ Send you an email notification
+    // Configure email transport (Gmail App Password)
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
-        user: process.env.EMAIL_USER, // your Gmail address
-        pass: process.env.EMAIL_PASS, // your app password (not normal password)
+        user: GMAIL_USER,
+        pass: GMAIL_PASS,
       },
     });
 
+    // Email message details
     const mailOptions = {
-      from: process.env.EMAIL_USER,
-      to: process.env.EMAIL_USER,
+      from: `"InSafety Services" <${GMAIL_USER}>`,
+      to: GMAIL_USER, // sends to yourself
       subject: `New Inquiry from ${name}`,
       text: `
 Name: ${name}
@@ -50,6 +56,7 @@ ${message}
       `,
     };
 
+    // Send email
     await transporter.sendMail(mailOptions);
 
     return NextResponse.json(
@@ -65,7 +72,7 @@ ${message}
   }
 }
 
-// 3️⃣ Optional: Block GET requests for safety
+// ✅ Block GET requests for safety
 export function GET() {
   return NextResponse.json({ message: "Method Not Allowed" }, { status: 405 });
 }
