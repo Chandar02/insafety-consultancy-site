@@ -37,8 +37,8 @@ export default function HeroSection() {
             Founded and led by <strong>Chandarsingh Mehta</strong>.
           </p>
           <p>With 34+ years of global experience.</p>
-          <p>We deliver practical HSSEF solutions.</p>
-          <p>That work on the ground.</p>
+          <p style={{ marginBottom: '4px' }}>We deliver practical HSSEF solutions.</p>
+<p style={{ fontWeight: '600' }}>That work on the ground.</p>
         </div>
 
         <a href="#contact-form-anchor" className="cta-btn">

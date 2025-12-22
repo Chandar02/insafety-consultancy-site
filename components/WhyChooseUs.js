@@ -65,15 +65,17 @@ export default function WhyChooseUs() {
             >
                 {cardData.map((card, index) => (
                     <div 
-                        key={index}
-                        className="why-card"
-                        style={{
-                            padding: '30px',
-                            border: '1px solid #ddd',
-                            borderRadius: '8px',
-                            backgroundColor: lightBgColor
-                        }}
-                    >
+    key={index}
+    className="why-card"
+    style={{
+        padding: '30px',
+        border: '1px solid #ddd',
+        borderRadius: '8px',
+        backgroundColor: lightBgColor,
+        display: 'flex',
+        flexDirection: 'column'
+    }}
+>
                         <h3 
                             style={{ 
                                 color: primaryColor, 

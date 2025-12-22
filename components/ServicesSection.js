@@ -20,7 +20,7 @@ export default function ServicesSection() {
                 paddingLeft: '20px', 
                 margin: '0', 
                 display: 'grid',
-                gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+                gridTemplateColumns: 'repeat(2, 1fr)',
                 gap: '8px'
             }}>
                 {items.map((item, i) => (
