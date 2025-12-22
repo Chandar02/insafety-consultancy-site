@@ -1,14 +1,7 @@
-// app/api/contact/route.js
 import { NextResponse } from "next/server";
 import mongoose from "mongoose";
 import nodemailer from "nodemailer";
 
-// ✅ Load environment variables automatically (Next.js does this in production)
-const MONGO_URI = process.env.MONGO_URI;
-const GMAIL_USER = process.env.GMAIL_USER;
-const GMAIL_PASS = process.env.GMAIL_PASS;
-
-// ✅ Define MongoDB schema & model
 const contactSchema = new mongoose.Schema({
   name: String,
   email: String,
@@ -17,62 +10,46 @@ const contactSchema = new mongoose.Schema({
   createdAt: { type: Date, default: Date.now },
 });
 
-const Contact =
-  mongoose.models.Contact || mongoose.model("Contact", contactSchema);
+const Contact = mongoose.models.Contact || mongoose.model("Contact", contactSchema);
 
-// ✅ Handle POST requests
 export async function POST(req) {
+  // This line is the most important: it pulls the data from your Vercel Dashboard
+  const MONGODB_URI = process.env.MONGODB_URI;
+  const GMAIL_USER = process.env.GMAIL_USER;
+  const GMAIL_PASS = process.env.GMAIL_PASS;
+
   try {
     const { name, email, mobile, message } = await req.json();
 
-    // Connect to MongoDB if not already connected
-    if (mongoose.connection.readyState === 0) {
-      await mongoose.connect(MONGO_URI);
+    // If this fails, it means Vercel's dashboard is still not talking to the code
+    if (!MONGODB_URI) {
+      throw new Error("Vercel Dashboard variable MONGODB_URI is missing.");
     }
 
-    // Save message to database
+    if (mongoose.connection.readyState === 0) {
+      await mongoose.connect(MONGODB_URI);
+    }
+
     await Contact.create({ name, email, mobile, message });
 
-    // Configure email transport (Gmail App Password)
     const transporter = nodemailer.createTransport({
       service: "gmail",
-      auth: {
-        user: GMAIL_USER,
-        pass: GMAIL_PASS,
-      },
+      auth: { user: GMAIL_USER, pass: GMAIL_PASS },
     });
 
-    // Email message details
-    const mailOptions = {
+    await transporter.sendMail({
       from: `"InSafety Services" <${GMAIL_USER}>`,
-      to: GMAIL_USER, // sends to yourself
+      to: GMAIL_USER,
       subject: `New Inquiry from ${name}`,
-      text: `
-Name: ${name}
-Email: ${email}
-Mobile: ${mobile}
-Message:
-${message}
-      `,
-    };
+      text: `Name: ${name}\nEmail: ${email}\nMobile: ${mobile}\nMessage:\n${message}`,
+    });
 
-    // Send email
-    await transporter.sendMail(mailOptions);
-
-    return NextResponse.json(
-      { success: true, message: "Message saved and emailed successfully!" },
-      { status: 200 }
-    );
+    return NextResponse.json({ success: true }, { status: 200 });
   } catch (error) {
-    console.error("🛑 Contact API Error:", error);
+    console.error("🛑 Error details:", error.message);
     return NextResponse.json(
       { success: false, error: error.message },
       { status: 500 }
     );
   }
-}
-
-// ✅ Block GET requests for safety
-export function GET() {
-  return NextResponse.json({ message: "Method Not Allowed" }, { status: 405 });
 }
