@@ -10,14 +10,14 @@ const contactSchema = new mongoose.Schema({
 const Contact = mongoose.models.Contact || mongoose.model("Contact", contactSchema);
 
 export async function POST(req) {
-  // This looks for EVERY possible way you might have named the variable
+  // Checks both common names in case of a dashboard typo
   const URI = process.env.MONGODB_URI || process.env.MONGO_URI;
 
   try {
     const { name, email, mobile, message } = await req.json();
 
     if (!URI) {
-      return NextResponse.json({ success: false, error: "Database string missing on Vercel" }, { status: 500 });
+      return NextResponse.json({ success: false, error: "DB string missing on Vercel" }, { status: 500 });
     }
 
     if (mongoose.connection.readyState === 0) {
