@@ -12,7 +12,12 @@ const Contact = mongoose.models.Contact || mongoose.model("Contact", contactSche
 export async function POST(req) {
   // Checks both common names in case of a dashboard typo
   const URI = process.env.MONGODB_URI || process.env.MONGO_URI;
-
+// 🔍 ADD THESE LINES HERE - RIGHT AFTER URI
+  console.log("🔍 Debug Info:");
+  console.log("MONGODB_URI exists?", !!process.env.MONGODB_URI);
+  console.log("MONGO_URI exists?", !!process.env.MONGO_URI);
+  console.log("URI value:", URI ? "✅ Found" : "❌ Missing");
+  // 🔍 END OF NEW CODE
   try {
     const { name, email, mobile, message } = await req.json();
 
