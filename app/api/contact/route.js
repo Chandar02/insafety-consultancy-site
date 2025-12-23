@@ -5,7 +5,12 @@ import nodemailer from "nodemailer";
 export async function POST(req) {
   try {
     const { name, email, mobile, message } = await req.json();
-
+ // 🔍 DEBUG (TEMPORARY – SAFE)
+    console.log("MONGODB_URI EXISTS:", !!process.env.MONGODB_URI);
+    console.log(
+      "MONGODB_URI PREFIX:",
+      process.env.MONGODB_URI?.slice(0, 30)
+    );
     // 1️⃣ Connect to MongoDB
     const client = await clientPromise;
     const db = client.db("contactdb"); // you can rename later
