@@ -9,8 +9,8 @@ const contactSchema = new mongoose.Schema({
 
 const Contact = mongoose.models.Contact || mongoose.model("Contact", contactSchema);
 
-export async function POST(req) {
-  const URI = process.env.MONGODB_URI || process.env.MONGO_URI;
+const URI = process.env.MONGODB_URI || process.env.MONGO_URI;
+console.log("🔍 URI in Vercel:", URI ? URI.substring(0, 30) + "..." : "MISSING");
  
   console.log("🔍 URI found:", !!URI);
 
