@@ -1,45 +1,50 @@
 import { NextResponse } from "next/server";
-import mongoose from "mongoose";
+import clientPromise from "@/lib/mongodb";
 import nodemailer from "nodemailer";
 
-const contactSchema = new mongoose.Schema({
-  name: String, email: String, mobile: String, message: String,
-  createdAt: { type: Date, default: Date.now },
-});
-
-const Contact = mongoose.models.Contact || mongoose.model("Contact", contactSchema);
-
 export async function POST(req) {
-  const URI = process.env.MONGODB_URI || process.env.MONGO_URI;
-  
   try {
     const { name, email, mobile, message } = await req.json();
-    
-    if (!URI) {
-      return NextResponse.json({ success: false, error: "No DB URI" }, { status: 500 });
-    }
 
-    if (mongoose.connection.readyState === 0) {
-      await mongoose.connect(URI);
-    }
+    // 1️⃣ Connect to MongoDB
+    const client = await clientPromise;
+    const db = client.db("contactdb"); // you can rename later
+    const collection = db.collection("contacts");
 
-    await Contact.create({ name, email, mobile, message });
+    // 2️⃣ Save form data
+    await collection.insertOne({
+      name,
+      email,
+      mobile,
+      message,
+      createdAt: new Date(),
+    });
 
+    // 3️⃣ Send email notification
     const transporter = nodemailer.createTransport({
       service: "gmail",
-      auth: { user: process.env.GMAIL_USER, pass: process.env.GMAIL_PASS },
+      auth: {
+        user: process.env.GMAIL_USER,
+        pass: process.env.GMAIL_PASS,
+      },
     });
 
     await transporter.sendMail({
       from: `"InSafety Services" <${process.env.GMAIL_USER}>`,
       to: process.env.GMAIL_USER,
       subject: `New Inquiry: ${name}`,
-      text: `Name: ${name}\nEmail: ${email}\nMobile: ${mobile}\nMessage: ${message}`,
+      text: `Name: ${name}
+Email: ${email}
+Mobile: ${mobile}
+Message: ${message}`,
     });
 
-    return NextResponse.json({ success: true }, { status: 200 });
+    return NextResponse.json({ success: true });
   } catch (err) {
-    console.log("❌ ERROR:", err.message);
-    return NextResponse.json({ success: false, error: err.message }, { status: 500 });
+    console.error("❌ API ERROR:", err);
+    return NextResponse.json(
+      { success: false, error: err.message },
+      { status: 500 }
+    );
   }
 }
