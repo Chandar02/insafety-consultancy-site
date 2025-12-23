@@ -1,4 +1,3 @@
-// force rebuild
 import { NextResponse } from "next/server";
 import clientPromise from "@/lib/mongodb";
 import nodemailer from "nodemailer";
@@ -6,29 +5,30 @@ import nodemailer from "nodemailer";
 export async function POST(req) {
   try {
     const { name, email, mobile, message } = await req.json();
- // 🔍 DEBUG (TEMPORARY – SAFE)
-    console.log("MONGODB_URI EXISTS:", !!process.env.MONGODB_URI);
-    console.log(
-      "MONGODB_URI PREFIX:",
-      process.env.MONGODB_URI?.slice(0, 30)
-    );
-    console.log("VERCEL_PROJECT_ID:", process.env.VERCEL_PROJECT_ID);
-console.log("VERCEL_ENV:", process.env.VERCEL_ENV);
-    // 1️⃣ Connect to MongoDB
+
+    // Basic validation
+    if (!name || !email || !message) {
+      return NextResponse.json(
+        { success: false, error: "Missing required fields" },
+        { status: 400 }
+      );
+    }
+
+    // Connect to MongoDB
     const client = await clientPromise;
-    const db = client.db("contactdb"); // you can rename later
+    const db = client.db("contactdb");
     const collection = db.collection("contacts");
 
-    // 2️⃣ Save form data
+    // Save form data
     await collection.insertOne({
       name,
       email,
-      mobile,
+      mobile: mobile || "",
       message,
       createdAt: new Date(),
     });
 
-    // 3️⃣ Send email notification
+    // Send email notification
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
@@ -40,18 +40,22 @@ console.log("VERCEL_ENV:", process.env.VERCEL_ENV);
     await transporter.sendMail({
       from: `"InSafety Services" <${process.env.GMAIL_USER}>`,
       to: process.env.GMAIL_USER,
-      subject: `New Inquiry: ${name}`,
-      text: `Name: ${name}
+      subject: `New Inquiry from ${name}`,
+      text: `
+Name: ${name}
 Email: ${email}
-Mobile: ${mobile}
-Message: ${message}`,
+Mobile: ${mobile || "N/A"}
+
+Message:
+${message}
+      `,
     });
 
-    return NextResponse.json({ success: true });
-  } catch (err) {
-    console.error("❌ API ERROR:", err);
+    return NextResponse.json({ success: true }, { status: 200 });
+  } catch (error) {
+    console.error("❌ Contact API error:", error);
     return NextResponse.json(
-      { success: false, error: err.message },
+      { success: false, error: "Internal Server Error" },
       { status: 500 }
     );
   }
