@@ -12,6 +12,8 @@ export async function POST(req) {
       "MONGODB_URI PREFIX:",
       process.env.MONGODB_URI?.slice(0, 30)
     );
+    console.log("VERCEL_PROJECT_ID:", process.env.VERCEL_PROJECT_ID);
+console.log("VERCEL_ENV:", process.env.VERCEL_ENV);
     // 1️⃣ Connect to MongoDB
     const client = await clientPromise;
     const db = client.db("contactdb"); // you can rename later
