@@ -574,3 +574,16 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1em;
   }
 }
+/* Fix mobile header top white gap */
+@media (max-width: 768px) {
+  .main-header {
+    top: 0;
+    margin-top: 0;
+  }
+}
+/* Remove excess mobile top padding caused by fixed header */
+@media (max-width: 600px) {
+  body {
+    padding-top: 0 !important;
+  }
+}
