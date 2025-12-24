@@ -26,20 +26,26 @@ export default function HeroSection() {
         </h1>
         
         <div className="hero-subtitle">
-          <p>Safety should enable performance.</p>
-          <p>Not exist as paperwork.</p>
-          <p>
-            At <strong>InSafety Services</strong>, we help organisations convert
-            intent into execution.
-          </p>
-          <p>Across design, projects, and operations.</p>
-          <p>
-            Founded and led by <strong>Chandarsingh Mehta</strong>.
-          </p>
-          <p>With 34+ years of global experience.</p>
-          <p style={{ marginBottom: '4px' }}>We deliver practical HSSEF solutions.</p>
-<p style={{ fontWeight: '600' }}>That work on the ground.</p>
-        </div>
+  <p>
+    At <strong>InSafety Services</strong>, we help you translate intent into
+    execution across the entire lifecycle of design, projects, and operations.
+  </p>
+
+  <p>
+    Led by industry veteran{" "}
+    <strong>Chandarsingh Mehta (34+ years of global experience)</strong>, we
+    deliver pragmatic{" "}
+    <strong>
+      HSSEF (Health, Safety, Security, Environment &amp; Fire)
+    </strong>{" "}
+    solutions designed to meet the unique challenges of any landscape.
+  </p>
+
+  <p style={{ fontWeight: 600 }}>
+    We bring safety solutions that actually work on the ground.
+  </p>
+</div>
+
 
         <a href="#contact-form-anchor" className="cta-btn">
           Start a Risk Conversation
