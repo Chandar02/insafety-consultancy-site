@@ -535,12 +535,20 @@ h1, h2, h3, h4, h5, h6 {
   .hero-title {
     font-size: 2.2em;
     margin-bottom: 24px;
-    white-space: normal;
+    white-space: normal; /* KEEP — critical for mobile wrapping */
   }
 
   .hero-subtitle {
     font-size: 1.05em;
-    line-height: 1.7;
+    line-height: 1.55; /* tightened for mobile */
+  }
+
+  .hero-subtitle p {
+    margin-bottom: 10px; /* consistent paragraph rhythm */
+  }
+
+  .hero-subtitle p:last-child {
+    margin-bottom: 0; /* no extra gap before CTA */
   }
 
   .hero-content {
