@@ -97,13 +97,10 @@ export default function Header() {
                                 <a
                                     href={item.href}
                                     className={`nav-link ${isActive ? "active" : ""}`}
-                                    onClick={(e) => {
-                                        e.preventDefault();
-                                        handleNavClick(sectionId);
-                                    }}
-                                >
-                                    {item.name}
-                                </a>
+                                    onClick={() => handleNavClick(sectionId)}
+>
+  {item.name}
+</a>
                             </li>
                         );
                     })}

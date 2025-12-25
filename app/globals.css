@@ -160,7 +160,9 @@ body {
     display: none; /* Removes underline on mobile */
   }
 }
-
+html {
+  scroll-behavior: smooth;
+}
 /* =========================================================
    MOBILE PORTRAIT (<= 600px) — FINAL STABLE VERSION
 ========================================================= */
