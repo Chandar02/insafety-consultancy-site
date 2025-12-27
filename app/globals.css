@@ -615,3 +615,52 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
   }
 }
+/* =========================================================
+   DESKTOP HEADER — ZOOM-SAFE SCALING (FINAL)
+========================================================= */
+@media (min-width: 1024px) and (max-width: 1366px) {
+
+  .main-header {
+    height: auto;
+    padding: 16px 5%;
+    flex-wrap: wrap;
+    row-gap: 10px;
+  }
+
+  /* Logo block */
+  .header-logo-link {
+    flex: 1 1 auto;
+  }
+
+  .site-title {
+    font-size: clamp(1.35rem, 1.4vw, 1.5rem);
+    line-height: 1.2;
+  }
+
+  .site-tagline {
+    font-size: clamp(0.65rem, 0.85vw, 0.75rem);
+    white-space: normal;
+  }
+
+  /* Navigation block */
+  .main-nav {
+    flex: 1 1 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .nav-list {
+    gap: 20px;
+  }
+
+  .nav-link {
+    font-size: clamp(0.9rem, 0.95vw, 1rem);
+  }
+
+  /* CTA button */
+  .contact-button {
+    font-size: 0.95rem;
+    padding: 8px 18px;
+    white-space: nowrap;
+  }
+}
