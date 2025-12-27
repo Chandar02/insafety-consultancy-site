@@ -22,13 +22,14 @@ export default function ContactFooter() {
             }}
         >
             <div style={{ 
-                maxWidth: '1200px', 
-                margin: '0 auto', 
-                display: 'grid', 
-                gridTemplateColumns: '1fr 1.2fr 1fr',
-                gap: '50px', 
-                textAlign: 'left' 
-            }}>
+    maxWidth: '1200px',
+    margin: '0 auto',
+    display: 'grid',
+    gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+    gap: '50px',
+    textAlign: 'left'
+}}>
+
                 
                 {/* Column 1: Header Text */}
                 <div>

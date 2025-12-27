@@ -48,16 +48,16 @@ export default function LeadershipSection() {
 
             {/* MAIN CONTENT GRID */}
             <div 
-                style={{ 
-                    maxWidth: '1200px', 
-                    margin: '0 auto',
-                    display: 'grid', 
-                    gridTemplateColumns: '3fr 2fr', 
-                    gap: '50px',
-                    textAlign: 'left',
-                    alignItems: 'start'
-                }}
-            >
+  style={{ 
+    maxWidth: '1200px',
+    margin: '0 auto',
+    display: 'grid',
+    gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+    gap: '50px',
+    textAlign: 'left',
+    alignItems: 'start'
+  }}
+>
                 {/* Left Column: Biography */}
                 <div>
                     <h3 style={{ fontSize: '1.8em', marginBottom: '15px', color: accentColor }}>
@@ -66,14 +66,13 @@ export default function LeadershipSection() {
                     
                     {/* PROFILE IMAGE */}
                     <div style={{ 
-                        float: 'right', 
-                        marginLeft: '25px', 
-                        marginBottom: '15px', 
-                        width: '200px', 
-                        height: '200px', 
-                        borderRadius: '50%', 
-                        overflow: 'hidden' 
-                    }}>
+  margin: '0 auto 20px',
+  width: '200px',
+  height: '200px',
+  borderRadius: '50%',
+  overflow: 'hidden'
+}}>
+
                         <img 
                             src="/Chandar Profile Image.jpg" 
                             alt="Chandar Profile Image" 

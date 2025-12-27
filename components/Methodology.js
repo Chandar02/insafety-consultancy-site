@@ -58,12 +58,13 @@ export default function Methodology() {
             
             {/* PDCA Steps Grid */}
             <div style={{ 
-                display: 'grid', 
-                gridTemplateColumns: 'repeat(4, 1fr)', 
-                gap: '20px', 
-                maxWidth: '1200px', 
-                margin: '0 auto 50px' 
-            }}>
+  display: 'grid',
+  gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
+  gap: '20px',
+  maxWidth: '1200px',
+  margin: '0 auto 50px'
+}}>
+
                 {methodologySteps.map((step, index) => (
                     <div 
                         key={index}
