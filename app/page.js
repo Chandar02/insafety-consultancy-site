@@ -1,4 +1,16 @@
 // app/page.js
+
+/* ============================
+   PAGE-LEVEL SEO METADATA
+   (STEP 3 – HOME PAGE)
+   ============================ */
+export const metadata = {
+  title:
+    "Safety & Risk Consulting | HSSEF, HSE, EHS & OHS – InSafety Services",
+  description:
+    "Enterprise safety and risk consulting covering HSSEF, HSE, EHS and OHS domains. Expertise in safety governance, enterprise risk management, audits, process safety, fire & life safety and regulatory compliance across India and global operations.",
+};
+
 import React from 'react';
 
 // 1. Core Component Imports
