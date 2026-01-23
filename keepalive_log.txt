@@ -1,0 +1,24 @@
+[dotenv@17.2.3] injecting env (4) from .env.local -- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`
+✅ MongoDB Keepalive ping successful at 2026-01-20T06:51:33.493Z
+20-01-2026 12:21:33.49 
+[dotenv@17.2.3] injecting env (4) from .env.local -- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] }
+✅ MongoDB Keepalive ping successful at 2026-01-20T06:53:51.484Z
+20-01-2026 12:23:51.50 
+[dotenv@17.2.3] injecting env (4) from .env.local -- tip: ⚙️  suppress all logs with { quiet: true }
+✅ MongoDB Keepalive ping successful at 2026-01-20T06:54:04.724Z
+20-01-2026 12:24:04.74 
+[dotenv@17.2.3] injecting env (4) from .env.local -- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com
+❌ MongoDB Keepalive failed: Error: querySrv ECONNREFUSED _mongodb._tcp.cluster0.4uzardt.mongodb.net
+    at QueryReqWrap.onresolve [as oncomplete] (node:internal/dns/promises:293:17) {
+  errno: undefined,
+  code: 'ECONNREFUSED',
+  syscall: 'querySrv',
+  hostname: '_mongodb._tcp.cluster0.4uzardt.mongodb.net'
+}
+21-01-2026 10:45:16.66 
+[dotenv@17.2.3] injecting env (4) from .env.local -- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] }
+✅ MongoDB Keepalive ping successful at 2026-01-22T05:15:23.931Z
+22-01-2026 10:45:23.95 
+[dotenv@17.2.3] injecting env (4) from .env.local -- tip: ⚙️  override existing env vars with { override: true }
+✅ MongoDB Keepalive ping successful at 2026-01-23T05:15:26.744Z
+23-01-2026 10:45:26.79 

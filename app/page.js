@@ -84,7 +84,7 @@ export default function Home() {
                     </p>
 
                     <a 
-                        href="/e-brochure InSafety Services.pdf"
+                        href="/e-brochure InSafety Services RS.pdf"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="cta-btn"

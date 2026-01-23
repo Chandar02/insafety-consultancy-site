@@ -4,7 +4,7 @@ export default function Resources() {
       <h2>Resources</h2>
       <p>Explore our publications, brochures, and technical resources.</p>
       <a
-        href="/e-brochure InSafety Services.pdf"
+        href="/e-brochure InSafety Services RS.pdf"
         target="_blank"
         rel="noopener noreferrer"
         className="cta-btn"
