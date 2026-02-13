@@ -1,61 +1,83 @@
 import { NextResponse } from "next/server";
-import clientPromise from "@/lib/mongodb";
-import nodemailer from "nodemailer";
+import { Resend } from "resend";
+
+// Basic in-memory rate limiter
+const rateLimitMap = new Map();
+
+function rateLimit(ip) {
+  const now = Date.now();
+  const windowSize = 60 * 1000; // 1 minute
+  const maxRequests = 5;
+
+  if (!rateLimitMap.has(ip)) {
+    rateLimitMap.set(ip, []);
+  }
+
+  const timestamps = rateLimitMap.get(ip).filter(
+    (time) => now - time < windowSize
+  );
+
+  if (timestamps.length >= maxRequests) {
+    return false;
+  }
+
+  timestamps.push(now);
+  rateLimitMap.set(ip, timestamps);
+  return true;
+}
 
 export async function POST(req) {
   try {
-    const { name, email, mobile, message } = await req.json();
+    const ip =
+      req.headers.get("x-forwarded-for") ||
+      req.headers.get("x-real-ip") ||
+      "unknown";
 
-    // Basic validation
+    if (!rateLimit(ip)) {
+      return NextResponse.json(
+        { success: false, message: "Too many requests. Try again later." },
+        { status: 429 }
+      );
+    }
+
+    const body = await req.json();
+    const { name, email, message, website } = body;
+
+    // Honeypot (spam protection)
+    if (website) {
+      return NextResponse.json({ success: true });
+    }
+
+    // Validation
     if (!name || !email || !message) {
       return NextResponse.json(
-        { success: false, error: "Missing required fields" },
+        { success: false, message: "All fields are required." },
         { status: 400 }
       );
     }
 
-    // Connect to MongoDB
-    const client = await clientPromise;
-    const db = client.db("contactdb");
-    const collection = db.collection("contacts");
+    const resend = new Resend(process.env.RESEND_API_KEY);
 
-    // Save form data
-    await collection.insertOne({
-      name,
-      email,
-      mobile: mobile || "",
-      message,
-      createdAt: new Date(),
-    });
-
-    // Send email notification
-    const transporter = nodemailer.createTransport({
-      service: "gmail",
-      auth: {
-        user: process.env.GMAIL_USER,
-        pass: process.env.GMAIL_PASS,
-      },
-    });
-
-    await transporter.sendMail({
-      from: `"InSafety Services" <${process.env.GMAIL_USER}>`,
+    await resend.emails.send({
+      from: "Contact Form <contact@insafetyservices.com>",
       to: process.env.GMAIL_USER,
-      subject: `New Inquiry from ${name}`,
+      reply_to: email,
+      subject: `New Contact Form Submission from ${name}`,
       text: `
 Name: ${name}
 Email: ${email}
-Mobile: ${mobile || "N/A"}
 
 Message:
 ${message}
       `,
     });
 
-    return NextResponse.json({ success: true }, { status: 200 });
+    return NextResponse.json({ success: true });
+
   } catch (error) {
-    console.error("❌ Contact API error:", error);
+    console.error("Contact form error:", error);
     return NextResponse.json(
-      { success: false, error: "Internal Server Error" },
+      { success: false, message: "Something went wrong." },
       { status: 500 }
     );
   }
