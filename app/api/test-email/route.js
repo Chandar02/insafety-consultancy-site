@@ -1,10 +1,10 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 export async function GET() {
   try {
+    const resend = new Resend(process.env.RESEND_API_KEY);
+
     const data = await resend.emails.send({
       from: "onboarding@resend.dev",
       to: process.env.GMAIL_USER,
@@ -17,7 +17,7 @@ export async function GET() {
   } catch (error) {
     console.error("Resend test error:", error);
     return NextResponse.json(
-      { success: false, error },
+      { success: false, error: error.message },
       { status: 500 }
     );
   }
