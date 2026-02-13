@@ -8,6 +8,7 @@ export default function ContactForm() {
         email: "",
         mobile: "",
         message: "",
+        company: "", // ⭐ Honeypot field
     });
 
     const [status, setStatus] = useState("");
@@ -32,7 +33,13 @@ export default function ContactForm() {
 
             if (res.ok) {
                 setStatus("Message sent successfully!");
-                setFormData({ name: "", email: "", mobile: "", message: "" });
+                setFormData({
+                    name: "",
+                    email: "",
+                    mobile: "",
+                    message: "",
+                    company: "", // ⭐ reset honeypot
+                });
             } else {
                 setStatus("Failed to send message.");
             }
@@ -44,6 +51,17 @@ export default function ContactForm() {
 
     return (
         <form onSubmit={handleSubmit}>
+            
+            {/* ⭐ Honeypot Field (Hidden from users) */}
+            <input
+                type="text"
+                name="company"
+                value={formData.company}
+                onChange={handleChange}
+                style={{ display: "none" }}
+                autoComplete="off"
+            />
+
             {/* Name */}
             <input
                 type="text"
@@ -86,7 +104,6 @@ export default function ContactForm() {
                 style={{ ...inputStyle, resize: "none" }}
             />
 
-            {/* ⭐ The CTA button — now unified */}
             <button 
                 type="submit"
                 className="cta-btn"
@@ -95,13 +112,11 @@ export default function ContactForm() {
                 Start a Risk Conversation
             </button>
 
-            {/* Status message */}
             <p style={{ marginTop: "10px", color: "white" }}>{status}</p>
         </form>
     );
 }
 
-// Shared input styling
 const inputStyle = {
     width: "100%",
     padding: "10px",
