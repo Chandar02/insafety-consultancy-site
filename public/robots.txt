@@ -1,0 +1,12 @@
+# robots.txt – InSafety Services
+# https://www.insafetyservices.com/
+
+User-agent: *
+Allow: /
+
+# Block Next.js internals from crawling
+Disallow: /_next/
+Disallow: /api/
+
+# Sitemap location
+Sitemap: https://www.insafetyservices.com/sitemap.xml
