@@ -18,7 +18,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 100px; /* ← Add this line */
+  scroll-padding-top: 30px; /* ← Add this line */
 }
 
 body {

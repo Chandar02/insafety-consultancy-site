@@ -25,7 +25,7 @@ export default function Header() {
         const element = document.getElementById(sectionId);
         if (!element) return;
 
-        const targetScroll = element.offsetTop - 100; // 100px offset from top
+        const targetScroll = element.offsetTop - 30; // offset matches header height minus section padding
         const startScroll = window.scrollY;
         const distance = targetScroll - startScroll;
         const duration = 2500; // 2.5 seconds for luxurious glide

@@ -20,7 +20,7 @@ export default function HeroSection() {
       </div>
 
       {/* Hero Content */}
-      <div className="hero-content">
+      <div className="hero-content" style={{ paddingTop: '80px' }}>
         <h1 className="hero-title">
           Transforming Safety from Policy to Practice
         </h1>
