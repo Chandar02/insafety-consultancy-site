@@ -106,19 +106,16 @@ export default function Header() {
                     })}
 
                    {/* CONTACT BUTTON */}
-                    <li className="nav-item contact-button-wrapper">
-                        <a
-                            href="#contact-form-anchor"
-                            className="contact-button"
-                            style={{ position: "relative", zIndex: 9999 }}
-                            onClick={(e) => {
-                                e.preventDefault();
-                                handleNavClick("contact-form-anchor");
-                            }}
-                        >
-                            Contact Us
-                        </a>
-                    </li>
+<li className="nav-item contact-button-wrapper">
+    <a
+        href="#contact-form-anchor"
+        className="contact-button"
+        style={{ display: "inline-block" }}
+        onClick={() => handleNavClick("contact-form-anchor")}
+    >
+        Contact Us
+    </a>
+</li>
                 </ul>
             </nav>
         </header>
