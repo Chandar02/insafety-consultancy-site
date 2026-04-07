@@ -72,7 +72,7 @@ export default function Header() {
             >
                 <div className="site-title">InSafety Services</div>
                 <div className="site-tagline">
-                    Solutions for Today's Challenges, Assurance for Tomorrow
+                    Solutions for Today's Challenges,<br /> Assurance for Tomorrow
                 </div>
             </a>
 

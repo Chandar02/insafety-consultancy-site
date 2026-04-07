@@ -43,7 +43,7 @@ export default function ContactFooter() {
                         lineHeight: '1.3',
                         fontWeight: '500'
                     }}>
-                        SOLUTIONS FOR TODAY'S CHALLENGES, ASSURANCE FOR TOMORROW
+                        SOLUTIONS FOR TODAY'S CHALLENGES,<br />ASSURANCE FOR TOMORROW
                     </p>
                     
                     <p style={{ lineHeight: '1.7', color: whiteText, marginBottom: '20px', fontSize: '1.02em' }}>
