@@ -41,10 +41,10 @@ export async function POST(req) {
     }
 
     const body = await req.json();
-    const { name, email, message, website } = body;
+    const { name, email, message, company } = body;
 
     // Honeypot (spam protection)
-    if (website) {
+    if (company) {
       return NextResponse.json({ success: true });
     }
 
