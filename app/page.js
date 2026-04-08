@@ -21,6 +21,7 @@ import ServicesSection from "../components/ServicesSection";
 import ContactFooter from '@/components/ContactFooter';
 import WhyChooseUs from '../components/WhyChooseUs';
 import Methodology from '../components/Methodology';
+import RiskCalculator from '../components/RiskCalculator';
 
 export default function Home() {
   return (
@@ -56,22 +57,10 @@ export default function Home() {
           <LeadershipSection />
         </section>
 
-        {/* SUCCESS STORIES */}
-        <section
-          id="success-stories"
-          aria-label="Client Testimonials"
-          style={{ padding: '80px 5%', textAlign: 'center', backgroundColor: '#e0eaff' }}
-        >
-          <h2 style={{ fontSize: '2.5em', color: '#1f3e66' }}>
-            Success Stories &amp; Client Testimonials
-          </h2>
-          <p style={{ fontSize: '1.2em', color: '#555', marginTop: '10px', marginBottom: '30px' }}>
-            This section is reserved for client statements and acknowledgments.
-          </p>
-          <a href="#contact-form-anchor" className="cta-btn">
-            Start a Risk Conversation
-          </a>
-        </section>
+        {/* SAFETY RISK CALCULATOR */}
+<section id="risk-calculator" style={{ padding: '40px 5%', backgroundColor: '#ffffff' }}>
+    <RiskCalculator />
+</section>
 
         {/* RESOURCES */}
         <section

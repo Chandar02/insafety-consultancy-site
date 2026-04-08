@@ -13,7 +13,7 @@ export default function Header() {
         { name: "Why Choose Us", href: "#why-us" },
         { name: "Methodology", href: "#methodology" },
         { name: "Leadership", href: "#leadership" },
-        { name: "Success Stories", href: "#success-stories" },
+        { name: "Risk Calculator", href: "#risk-calculator" },
         { name: "Resources", href: "#resources" },
     ];
 
