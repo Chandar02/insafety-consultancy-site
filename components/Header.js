@@ -25,7 +25,7 @@ export default function Header() {
         const element = document.getElementById(sectionId);
         if (!element) return;
 
-        const targetScroll = element.offsetTop - 100; // 100px offset from top
+        const targetScroll = element.offsetTop - 30; // offset matches header height minus section padding
         const startScroll = window.scrollY;
         const distance = targetScroll - startScroll;
         const duration = 2500; // 2.5 seconds for luxurious glide
@@ -72,7 +72,7 @@ export default function Header() {
             >
                 <div className="site-title">InSafety Services</div>
                 <div className="site-tagline">
-                    Solutions for Today's Challenges, Assurance for Tomorrow
+                    Solutions for Today's Challenges, <br className="hidden md:block" />Assurance for Tomorrow
                 </div>
             </a>
 
@@ -105,19 +105,17 @@ export default function Header() {
                         );
                     })}
 
-                    {/* CONTACT BUTTON */}
-                    <li className="nav-item contact-button-wrapper">
-                        <a
-                            href="#contact-form-anchor"
-                            className="contact-button"
-                            onClick={(e) => {
-                                e.preventDefault();
-                                handleNavClick("contact-form-anchor");
-                            }}
-                        >
-                            Contact Us
-                        </a>
-                    </li>
+                   {/* CONTACT BUTTON */}
+<li className="nav-item contact-button-wrapper">
+    <a
+        href="#contact-form-anchor"
+        className="contact-button"
+        style={{ display: "inline-block" }}
+        onClick={() => handleNavClick("contact-form-anchor")}
+    >
+        Contact Us
+    </a>
+</li>
                 </ul>
             </nav>
         </header>
