@@ -1,56 +1,47 @@
 // components/ContactFooter.js
-
 import Link from 'next/link';
 import ContactForm from './ContactForm';
 
-const primaryColor = '#1e3a62'; 
-const secondaryColor = '#2a4d79'; 
+const primaryColor = '#1e3a62';
+const secondaryColor = '#2a4d79';
 const whiteText = '#ffffff';
-const yellowAccent = '#ffc107'; 
+const yellowAccent = '#ffc107';
 const linkColor = '#80bfff';
 
 export default function ContactFooter() {
-
     return (
-        <footer 
-            id="contact-form-anchor" 
-            style={{ 
-                backgroundColor: primaryColor, 
-                color: whiteText, 
-                padding: '50px 5%', 
+        <footer
+            id="contact-form-anchor"
+            style={{
+                backgroundColor: primaryColor,
+                color: whiteText,
+                padding: '50px 5%',
                 borderTop: '5px solid #007bff'
             }}
         >
-            <div style={{ 
-    maxWidth: '1200px',
-    margin: '0 auto',
-    display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
-    gap: '50px',
-    textAlign: 'left'
-}}>
-
-                
+            <div style={{
+                maxWidth: '1200px',
+                margin: '0 auto',
+                display: 'grid',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+                gap: '50px',
+                textAlign: 'left'
+            }}>
                 {/* Column 1: Header Text */}
                 <div>
                     <h3 style={{ fontSize: '1.8em', marginBottom: '8px', color: whiteText, fontWeight: '700' }}>
                         InSafety Services
                     </h3>
-                    <p style={{ 
-                        fontSize: '0.88em', 
-                        color: yellowAccent, 
-                        marginBottom: '22px', 
-                        lineHeight: '1.3',
-                        fontWeight: '500'
+                    <p style={{
+                        fontSize: '1em',
+                        color: '#b3d4ff',
+                        marginBottom: '25px',
+                        lineHeight: '1.6'
                     }}>
-                        SOLUTIONS FOR TODAY'S CHALLENGES,<br />ASSURANCE FOR TOMORROW
-                    </p>
-                    
-                    <p style={{ lineHeight: '1.7', color: whiteText, marginBottom: '20px', fontSize: '1.02em' }}>
-                        InSafety Services provides strategic HSSEF expertise across the globe, ensuring 
+                        We provide strategic HSSEF expertise across the globe, ensuring
                         <span style={{ fontWeight: 'bold', color: yellowAccent }}> safety is built-in, not bolted on.</span>
                     </p>
-                    
+
                     <p style={{ fontWeight: 'bold', color: yellowAccent, marginBottom: '8px', fontSize: '1.02em' }}>
                         Address:
                     </p>
@@ -62,13 +53,12 @@ export default function ContactFooter() {
 
                 {/* Column 2: Contact Form */}
                 <div style={{ backgroundColor: secondaryColor, padding: '28px', borderRadius: '8px' }}>
-                    <h3 style={{ fontSize: '1.5em', marginBottom: '15px', color: whiteText, borderBottom: `2px solid ${yellowAccent}`, paddingBottom: '8px' }}> 
+                    <h3 style={{ fontSize: '1.5em', marginBottom: '15px', color: whiteText, borderBottom: `2px solid ${yellowAccent}`, paddingBottom: '8px' }}>
                         Start a Risk Conversation
                     </h3>
                     <p style={{ color: whiteText, marginBottom: '20px', fontSize: '1.02em', lineHeight: '1.6' }}>
                         Get in touch for a confidential consultation on your risk and compliance challenges.
                     </p>
-
                     <ContactForm />
                 </div>
 
@@ -77,9 +67,8 @@ export default function ContactFooter() {
                     <h3 style={{ fontSize: '1.5em', marginBottom: '15px', color: whiteText, borderBottom: `2px solid ${yellowAccent}`, paddingBottom: '8px' }}>
                         Contact US
                     </h3>
-                    
                     <p style={{ margin: '10px 0', color: whiteText, fontSize: '1.02em', lineHeight: '1.6' }}>
-                        <span style={{ fontWeight: 'bold', color: whiteText, marginRight: '5px' }}>Email:</span> 
+                        <span style={{ fontWeight: 'bold', color: whiteText, marginRight: '5px' }}>Email:</span>
                         <Link href="mailto:chandarsingh@live.com" style={{ color: linkColor, textDecoration: 'none' }}>chandarsingh@live.com</Link>
                     </p>
                     <p style={{ margin: '10px 0', color: whiteText, fontSize: '1.02em', lineHeight: '1.6' }}>
@@ -89,22 +78,31 @@ export default function ContactFooter() {
                         <span style={{ fontWeight: 'bold', color: whiteText, marginRight: '5px' }}>WhatsApp:</span> +91 90827 66847
                     </p>
                     <p style={{ margin: '10px 0', color: whiteText, fontSize: '1.02em', lineHeight: '1.6' }}>
-                        <span style={{ fontWeight: 'bold', color: whiteText, marginRight: '5px' }}>LinkedIn:</span> 
+                        <span style={{ fontWeight: 'bold', color: whiteText, marginRight: '5px' }}>LinkedIn:</span>
                         <Link href="https://linkedin.com/in/chandarsingh-mehta-3232516" target="_blank" rel="noopener noreferrer" style={{ color: linkColor, textDecoration: 'none' }}>View Profile</Link>
                     </p>
 
-                    <h3 style={{ fontSize: '1.5em', marginBottom: '15px', color: whiteText, borderBottom: `2px solid ${yellowAccent}`, paddingBottom: '8px', marginTop: '35px' }}>
-                        Regulatory Compliances
-                    </h3>
-                    <p style={{ margin: '8px 0', color: whiteText, fontSize: '0.98em', lineHeight: '1.6' }}>
-                        Shop & Establishment License: 2510 2003 2043 0562
-                    </p>
-                    <p style={{ margin: '8px 0', color: whiteText, fontSize: '0.98em', lineHeight: '1.6' }}>
-                        GSTIN: 27 ABXPM 5408 L1 ZK
-                    </p>
-                    <p style={{ margin: '8px 0', color: whiteText, fontSize: '0.98em', lineHeight: '1.6' }}>
-                        Udyam-MSME: MH-33-0070 049
-                    </p>
+                    {/* ELEVATED VENDOR COMPLIANCE BOX */}
+                    <div style={{
+                        marginTop: '35px',
+                        backgroundColor: 'rgba(255, 255, 255, 0.05)',
+                        padding: '20px',
+                        borderRadius: '6px',
+                        borderLeft: `4px solid ${yellowAccent}`
+                    }}>
+                        <h3 style={{ fontSize: '1.2em', marginBottom: '12px', color: yellowAccent, fontWeight: '700' }}>
+                            Registered & Certified Vendor
+                        </h3>
+                        <p style={{ margin: '6px 0', color: whiteText, fontSize: '0.95em', lineHeight: '1.6' }}>
+                            <strong>Shop & Establishment:</strong> 2510 2003 2043 0562
+                        </p>
+                        <p style={{ margin: '6px 0', color: whiteText, fontSize: '0.95em', lineHeight: '1.6' }}>
+                            <strong>GSTIN:</strong> 27 ABXPM 5408 L1 ZK
+                        </p>
+                        <p style={{ margin: '6px 0', color: whiteText, fontSize: '0.95em', lineHeight: '1.6' }}>
+                            <strong>Udyam-MSME:</strong> MH-33-0070 049
+                        </p>
+                    </div>
                 </div>
             </div>
 

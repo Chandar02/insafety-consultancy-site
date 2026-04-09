@@ -146,57 +146,56 @@ export default function LeadershipSection() {
             </div>
             
             {/* COMPANY LOGOS */}
-            <div style={{ 
-                width: '100%', 
+            <div style={{
+                width: '100%',
                 maxWidth: '1200px',
-                margin: '0 auto', 
-                display: 'flex', 
-                flexDirection: 'column', 
+                margin: '0 auto',
+                display: 'flex',
+                flexDirection: 'column',
                 alignItems: 'center',
-                paddingTop: '60px', 
+                paddingTop: '60px',
                 paddingBottom: '30px',
                 textAlign: 'center',
             }}>
-                
-                <h4 style={{ 
-                    fontSize: '1.4em', 
-                    color: primaryTextColor, 
-                    marginBottom: '20px', 
+                <h4 style={{
+                    fontSize: '1.4em',
+                    color: primaryTextColor,
+                    marginBottom: '20px',
                     fontWeight: '600',
                     borderBottom: `2px solid ${yellowAccent}`,
-                    paddingBottom: '5px' 
+                    paddingBottom: '5px'
                 }}>
-                    Trusted by Leading Global Organizations
+                    Safety Leadership & Execution Experience Across Global Brands
                 </h4>
-                
-                <div style={{ 
-                    width: '100%', 
-                    maxWidth: '900px', 
-                    height: 'auto', 
-                    padding: '20px', 
-                    backgroundColor: '#ffffff',
-                    borderRadius: '8px', 
+                <div style={{
+                    width: '100%',
+                    maxWidth: '900px',
+                    height: 'auto',
+                    padding: '25px',
+                    backgroundColor: '#f8f9fa', /* Light grey background to make it pop */
+                    borderRadius: '8px',
                     margin: '0 auto',
-                    boxShadow: '0 4px 8px rgba(0,0,0,0.1)'
+                    boxShadow: '0 6px 15px rgba(0,0,0,0.08)', /* Softer, wider shadow */
+                    border: '1px solid #eaeaea'
                 }}>
-                    <Image 
-                        src="/Companies.png" 
-                        alt="Logos of companies trusted by InSafety Services" 
+                    <Image
+                        src="/Companies.png"
+                        alt="Global brands where our principal consultant has led safety initiatives"
                         layout="responsive"
-                        width={900} 
-                        height={300} 
+                        width={900}
+                        height={300}
                         objectFit="contain"
                     />
                 </div>
             </div>
 
             {/* CONTACT BLOCK */}
-            <div 
-                style={{ 
-                    marginTop: '60px', 
-                    padding: '30px', 
+            <div
+                style={{
+                    marginTop: '60px',
+                    padding: '30px',
                     backgroundColor: lightGreyBackground,
-                    borderRadius: '8px', 
+                    borderRadius: '8px',
                     border: `1px solid ${accentColor}`,
                     maxWidth: '800px',
                     margin: '60px auto 0',
@@ -215,9 +214,8 @@ export default function LeadershipSection() {
                 <p style={{ margin: '5px 0 20px 0', color: '#555', lineHeight: '1.7', fontSize: '1.02em' }}>
                     <strong>LinkedIn:</strong> <Link href="https://linkedin.com/in/chandarsingh-mehta-3232516" target="_blank" rel="noopener noreferrer" style={{ color: accentColor, textDecoration: 'none' }}>linkedin.com/in/chandarsingh-mehta-3232516</Link>
                 </p>
-                
                 {/* CTA Button */}
-                <a 
+                <a
                     href="#contact-form-anchor"
                     className="cta-btn"
                     style={{
