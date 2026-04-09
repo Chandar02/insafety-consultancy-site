@@ -93,16 +93,18 @@ export default function Methodology() {
                         <p style={{ color: primaryColor, fontWeight: 'bold', marginBottom: '14px', fontSize: '0.98em' }}>
                             Core Focus: {step.coreFocus}
                         </p>
-                        <p style={{ color: '#555', fontSize: '1.02em', lineHeight: '1.7', flexGrow: 1, margin: '0' }}>
+                        <p style={{ color: '#555', fontSize: '1.02em', lineHeight: '1.7', margin: '0' }}>
+                            {/* REMOVED flexGrow: 1 from this line */}
                             {step.description}
                         </p>
                         <div style={{ 
-                            marginTop: '18px', 
+                            marginTop: 'auto', 
                             paddingTop: '18px', 
                             borderTop: '1px solid #eee', 
                             fontSize: '0.92em', 
                             color: '#777',
-                            lineHeight: '1.6'
+                            lineHeight: '1.6',
+                            minHeight: '190px' /* Increased from 130px to 190px */
                         }}>
                             <strong>Key Services:</strong> {step.keyServices}
                         </div>
