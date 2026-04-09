@@ -10,7 +10,7 @@ const methodologySteps = [
         title: 'P: Strategic Plan & Design',
         coreFocus: 'Risk is Designed Out Early',
         description: "We integrate safety and risk into your project's DNA, assessing exposure from concept through detailed design and early decision-making. This approach reduces high-consequence risk, ensures regulatory compliance, and prevents costly retrofits later.",
-        keyServices: 'Risk Quantification, Life Safety Code Design (NFPA 101 / NBC), Design Safety Reviews, HAZOP Studies.',
+        keyServices: 'Safety by Design, Life Safety Code (NFPA-101 and NBC) Design & Audit, Risk Management (QRA & HAZOP), Process Safety Management (PSM).',
         bgColor: '#e3f2fd' 
     },
     {
@@ -18,7 +18,7 @@ const methodologySteps = [
         title: 'D: Execute & Implement',
         coreFocus: 'Translating Risk Controls into Daily Operations',
         description: "We implement HSSEF management systems, procedures, supervision models, and training that translate strategy into consistent operational practice — across employees, contractors, and transport operations.",
-        keyServices: 'SMS Implementation (ISO 45001), Operational Controls, Contractor & Transport Safety Programs.',
+        keyServices: 'Safety Management System (SMS), Permit to Work System (PTW), Work at Height, Transportation Safety.',
         bgColor: '#cfe8fc' 
     },
     {
@@ -26,7 +26,7 @@ const methodologySteps = [
         title: 'C: Audit & Check Assurance',
         coreFocus: 'Risk Assurance & Performance Verification',
         description: "We verify that risk controls are working as intended through audits, inspections, performance benchmarking, and incident analysis across sites, assets, and operations.",
-        keyServices: 'Compliance Audits, Performance Benchmarking, Incident Investigation & Learning.',
+        keyServices: 'Safety Audits, Incident Management, Performance Benchmarking.',
         bgColor: '#b2d9ff' 
     },
     {
@@ -34,7 +34,7 @@ const methodologySteps = [
         title: 'A: Act for Continuous Improvement',
         coreFocus: 'Resilience, Recovery & Learning',
         description: "We strengthen organisational resilience by converting incidents, audits, and disruptions into system improvements — ensuring rapid recovery, stronger controls, and sustained risk reduction.",
-        keyServices: 'Crisis & Emergency Management, Business Continuity, Technical Risk Upgrades.',
+        keyServices: 'Safety Leadership, Cultural Transformation, Training & Education, Emergency & Crisis Management.',
         bgColor: '#94c8ff' 
     },
 ];
