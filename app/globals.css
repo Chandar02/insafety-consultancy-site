@@ -16,16 +16,16 @@
   box-sizing: border-box;
 }
 
-hhtml {
+html {
   scroll-behavior: smooth;
-  scroll-padding-top: 130px;
+  scroll-padding-top: 130px; /* 90px header + 40px breathing room */
 }
 
 body {
   font-family: Arial, Helvetica, sans-serif;
   color: var(--text-dark);
   background: var(--background);
-  overflow-x: hidden;
+  /* overflow-x: hidden; <--- COMPLETELY REMOVED */
   padding-top: 90px; /* Prevents content hiding behind header */
 }
 

@@ -24,9 +24,9 @@ import Methodology from '../components/Methodology';
 import RiskCalculator from '../components/RiskCalculator';
 
 export default function Home() {
-  return (
-    <div id="home-wrapper">
-      <main id="home">
+    return (
+        <div id="home-wrapper" style={{ overflowX: 'hidden' }}>
+            <main id="home">
 
         {/* SECTION 1 – Hero */}
         <HeroSection />
