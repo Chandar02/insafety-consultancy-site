@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 export default function Header() {
     const [clickedSection, setClickedSection] = useState("home");
@@ -14,7 +15,7 @@ export default function Header() {
         { name: "Methodology", href: "#methodology" },
         { name: "Leadership", href: "#leadership" },
         { name: "Risk Calculator", href: "#risk-calculator" },
-        { name: "Resources", href: "#resources" },
+        
     ];
 
     const toggleMenu = () => setIsMenuOpen(!isMenuOpen);

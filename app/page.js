@@ -62,28 +62,7 @@ export default function Home() {
     <RiskCalculator />
 </section>
 
-        {/* RESOURCES */}
-        <section
-          id="resources"
-          aria-label="Resources and Knowledge"
-          style={{ padding: '80px 5%', textAlign: 'center', backgroundColor: '#f9f9f9' }}
-        >
-          <h2 style={{ fontSize: '2.5em', color: '#1f3e66' }}>
-            Resources &amp; Knowledge
-          </h2>
-          <p style={{ fontSize: '1.2em', color: '#555', marginTop: '10px', marginBottom: '30px' }}>
-            Explore our brochures, publications, and technical resources.
-          </p>
-          <a
-            href="/e-brochure InSafety Services RS.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="cta-btn"
-          >
-            Download Our E-Brochure
-          </a>
-        </section>
-
+        
         {/* FAQ SECTION – Boosts Google Featured Snippets */}
         <section
           id="faq"
