@@ -120,10 +120,11 @@ export default function LeadershipSection() {
                                 <span style={{ 
                                     position: 'absolute', 
                                     left: 0, 
-                                    color: accentColor, 
+                                    top: '-2px',
+                                    color: yellowAccent, 
                                     fontSize: '1.2em' 
                                 }}>
-                                    ✅
+                                    ■
                                 </span>
                                 {item}
                             </li>
