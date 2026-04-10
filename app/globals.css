@@ -369,13 +369,7 @@ h1, h2, h3, h4, h5, h6 {
 ========================================================= */
 @supports (-moz-appearance: none) or (-webkit-touch-callout: none) {
   @media (max-width: 600px) {
-    html, body {
-      height: 100%;
-      overflow-y: auto !important;
-      overflow-x: hidden !important;
-      -webkit-overflow-scrolling: touch;
-    }
-
+    
     .main-header {
       position: sticky !important;
       top: 0 !important;
