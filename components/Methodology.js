@@ -111,27 +111,30 @@ export default function Methodology() {
                             height: '100%'
                         }}
                     >
-                        {/* NEW: Sleek Icon Container */}
-                        <div style={{
-                            display: 'inline-flex',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            width: '50px',
-                            height: '50px',
-                            backgroundColor: primaryColor,
-                            color: 'white',
-                            borderRadius: '10px',
-                            marginBottom: '16px',
-                            boxShadow: '0 4px 6px rgba(31, 62, 102, 0.2)'
-                        }}>
-                            {step.icon}
+                        {/* POLISHED: Icon and Title side-by-side */}
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '18px' }}>
+                            <div style={{
+                                display: 'flex',
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                                width: '46px',
+                                height: '46px',
+                                backgroundColor: primaryColor,
+                                color: 'white',
+                                borderRadius: '8px',
+                                flexShrink: 0, /* Prevents the box from squishing */
+                                boxShadow: '0 4px 6px rgba(31, 62, 102, 0.2)'
+                            }}>
+                                {step.icon}
+                            </div>
+                            <h3 style={{ color: primaryColor, fontSize: '1.15em', margin: 0, fontWeight: '700', lineHeight: '1.3' }}>
+                                {step.title}
+                            </h3>
                         </div>
 
-                        <h3 style={{ color: primaryColor, fontSize: '1.2em', marginTop: 0, marginBottom: '10px', fontWeight: '600' }}>
-                            {step.title}
-                        </h3>
-                        <p style={{ color: primaryColor, fontWeight: 'bold', marginBottom: '14px', fontSize: '0.98em' }}>
-                            Core Focus: {step.coreFocus}
+                        {/* Softened Subtitle */}
+                        <p style={{ color: '#2a4d79', fontWeight: '600', marginBottom: '15px', fontSize: '0.92em' }}>
+                            Core Focus: <span style={{ fontWeight: 'normal', color: '#555' }}>{step.coreFocus}</span>
                         </p>
                         <p style={{ color: '#555', fontSize: '1.02em', lineHeight: '1.7', margin: '0' }}>
                             {/* REMOVED flexGrow: 1 from this line */}
