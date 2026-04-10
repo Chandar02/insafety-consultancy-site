@@ -16,9 +16,9 @@
   box-sizing: border-box;
 }
 
-html {
+hhtml {
   scroll-behavior: smooth;
-  scroll-padding-top: 30px; /* ← Add this line */
+  scroll-padding-top: 90px;
 }
 
 body {
