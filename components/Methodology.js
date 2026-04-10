@@ -11,7 +11,17 @@ const methodologySteps = [
         coreFocus: 'Risk is Designed Out Early',
         description: "We integrate safety and risk into your project's DNA, assessing exposure from concept through detailed design and early decision-making. This approach reduces high-consequence risk, ensures regulatory compliance, and prevents costly retrofits later.",
         keyServices: 'Safety by Design, Life Safety Code (NFPA-101 and NBC) Design & Audit, Risk Management (QRA & HAZOP), Process Safety Management (PSM).',
-        bgColor: '#e3f2fd' 
+        bgColor: '#e3f2fd',
+        // NEW: Professional Clipboard/Blueprint Icon
+        icon: (
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+            </svg>
+        )
     },
     {
         letter: 'D',
@@ -19,7 +29,14 @@ const methodologySteps = [
         coreFocus: 'Translating Risk Controls into Daily Operations',
         description: "We implement HSSEF management systems, procedures, supervision models, and training that translate strategy into consistent operational practice — across employees, contractors, and transport operations.",
         keyServices: 'Safety Management System (SMS), Permit to Work System (PTW), Work at Height, Transportation Safety.',
-        bgColor: '#cfe8fc' 
+        bgColor: '#cfe8fc',
+        // NEW: Professional Gears/Execution Icon
+        icon: (
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="12" cy="12" r="3"></circle>
+                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+            </svg>
+        )
     },
     {
         letter: 'C',
@@ -27,7 +44,14 @@ const methodologySteps = [
         coreFocus: 'Risk Assurance & Performance Verification',
         description: "We verify that risk controls are working as intended through audits, inspections, performance benchmarking, and incident analysis across sites, assets, and operations.",
         keyServices: 'Safety Audits, Incident Management, Performance Benchmarking.',
-        bgColor: '#b2d9ff' 
+        bgColor: '#b2d9ff',
+        // NEW: Professional Audit/Checklist Icon
+        icon: (
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <polyline points="9 11 12 14 22 4"></polyline>
+                <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+            </svg>
+        )
     },
     {
         letter: 'A',
@@ -35,7 +59,15 @@ const methodologySteps = [
         coreFocus: 'Resilience, Recovery & Learning',
         description: "We strengthen organisational resilience by converting incidents, audits, and disruptions into system improvements — ensuring rapid recovery, stronger controls, and sustained risk reduction.",
         keyServices: 'Safety Leadership, Cultural Transformation, Training & Education, Emergency & Crisis Management.',
-        bgColor: '#94c8ff' 
+        bgColor: '#94c8ff',
+        // NEW: Professional Refresh/Continuous Improvement Icon
+        icon: (
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <polyline points="23 4 23 10 17 10"></polyline>
+                <polyline points="1 20 1 14 7 14"></polyline>
+                <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+            </svg>
+        )
     },
 ];
 
@@ -79,14 +111,22 @@ export default function Methodology() {
                             height: '100%'
                         }}
                     >
+                        {/* NEW: Sleek Icon Container */}
                         <div style={{
-                            fontSize: '2em',
-                            fontWeight: 'bold',
-                            color: primaryColor, 
-                            marginBottom: '12px'
+                            display: 'inline-flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            width: '50px',
+                            height: '50px',
+                            backgroundColor: primaryColor,
+                            color: 'white',
+                            borderRadius: '10px',
+                            marginBottom: '16px',
+                            boxShadow: '0 4px 6px rgba(31, 62, 102, 0.2)'
                         }}>
-                            {step.letter}
+                            {step.icon}
                         </div>
+
                         <h3 style={{ color: primaryColor, fontSize: '1.2em', marginTop: 0, marginBottom: '10px', fontWeight: '600' }}>
                             {step.title}
                         </h3>
