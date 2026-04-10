@@ -18,19 +18,14 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 30px; /* The magic number: slides the 80px padding under the header */
 }
 
 body {
   font-family: Arial, Helvetica, sans-serif;
   color: var(--text-dark);
   background: var(--background);
-  /* overflow-x: hidden; <-- THIS WAS THE PHANTOM CULPRIT. IT IS NOW DELETED. */
   padding-top: 90px;
-}
-
-/* THE BULLETPROOF ANCHOR OFFSET */
-section {
-  scroll-margin-top: 90px; /* Exact height of the desktop header */
 }
 
 /* =========================================================
