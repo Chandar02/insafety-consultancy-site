@@ -111,8 +111,14 @@ export default function Methodology() {
                             height: '100%'
                         }}
                     >
-                        {/* POLISHED: Icon and Title side-by-side */}
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '18px' }}>
+                        {/* POLISHED AND ALIGNED: Icon and Title side-by-side */}
+                        <div style={{ 
+                            display: 'flex', 
+                            alignItems: 'flex-start', /* Aligns icon to the top so it doesn't float down if title is 3 lines */
+                            gap: '16px', 
+                            marginBottom: '18px',
+                            minHeight: '80px' /* ALIGNMENT FIX 1: Forces all title rows to reserve the same space */
+                        }}>
                             <div style={{
                                 display: 'flex',
                                 alignItems: 'center',
@@ -123,7 +129,8 @@ export default function Methodology() {
                                 color: 'white',
                                 borderRadius: '8px',
                                 flexShrink: 0, /* Prevents the box from squishing */
-                                boxShadow: '0 4px 6px rgba(31, 62, 102, 0.2)'
+                                boxShadow: '0 4px 6px rgba(31, 62, 102, 0.2)',
+                                marginTop: '2px' /* Tweaks the icon to align perfectly with the first line of text */
                             }}>
                                 {step.icon}
                             </div>
@@ -132,10 +139,17 @@ export default function Methodology() {
                             </h3>
                         </div>
 
-                        {/* Softened Subtitle */}
-                        <p style={{ color: '#2a4d79', fontWeight: '600', marginBottom: '15px', fontSize: '0.92em' }}>
+                        {/* Softened Subtitle - ALIGNED */}
+                        <p style={{ 
+                            color: '#2a4d79', 
+                            fontWeight: '600', 
+                            marginBottom: '15px', 
+                            fontSize: '0.92em',
+                            minHeight: '45px' /* ALIGNMENT FIX 2: Forces all Core Focus subtitles to reserve space for 2 lines */
+                        }}>
                             Core Focus: <span style={{ fontWeight: 'normal', color: '#555' }}>{step.coreFocus}</span>
                         </p>
+                        
                         <p style={{ color: '#555', fontSize: '1.02em', lineHeight: '1.7', margin: '0' }}>
                             {/* REMOVED flexGrow: 1 from this line */}
                             {step.description}
