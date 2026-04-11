@@ -612,48 +612,22 @@ h1, h2, h3, h4, h5, h6 {
    DESKTOP HEADER — ZOOM-SAFE SCALING (FINAL)
 ========================================================= */
 @media (min-width: 1024px) and (max-width: 1366px) {
-
-  .main-header {
-    height: auto;
-    padding: 16px 5%;
-    flex-wrap: wrap;
-    row-gap: 10px;
-  }
-
-  /* Logo block */
-  .header-logo-link {
-    flex: 1 1 auto;
-  }
-
-  .site-title {
-    font-size: clamp(1.35rem, 1.4vw, 1.5rem);
-    line-height: 1.2;
-  }
-
-  .site-tagline {
-    font-size: clamp(0.65rem, 0.85vw, 0.75rem);
-    white-space: normal;
-  }
-
-  /* Navigation block */
-  .main-nav {
-    flex: 1 1 100%;
-    display: flex;
-    justify-content: flex-end;
-  }
-
-  .nav-list {
-    gap: 20px;
-  }
-
-  .nav-link {
-    font-size: clamp(0.9rem, 0.95vw, 1rem);
-  }
-
-  /* CTA button */
-  .contact-button {
-    font-size: 0.95rem;
-    padding: 8px 18px;
-    white-space: nowrap;
-  }
+    .main-header { 
+        height: 90px; /* Locks the header height so it doesn't cover your titles */
+        padding: 12px 3%; /* Gives slightly more horizontal room on smaller screens */
+        flex-wrap: nowrap; /* FORCES everything to stay perfectly on one line */
+    }
+    
+    /* Logo block */ 
+    .header-logo-link { flex: 0 0 auto; }
+    .site-title { font-size: 1.35rem; line-height: 1.2; }
+    .site-tagline { font-size: 0.65rem; white-space: nowrap; }
+    
+    /* Navigation block */ 
+    .main-nav { flex: 1 1 auto; display: flex; justify-content: flex-end; }
+    .nav-list { gap: 15px; } /* Tighter gap so the menu links fit easily */
+    .nav-link { font-size: 0.9rem; }
+    
+    /* CTA button */ 
+    .contact-button { font-size: 0.9rem; padding: 8px 14px; white-space: nowrap; }
 }
