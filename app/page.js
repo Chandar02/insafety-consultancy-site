@@ -4,9 +4,9 @@
    PAGE-LEVEL SEO METADATA
    ============================ */
 export const metadata = {
-  title: "Safety Consultant India | QRA, HAZOP, Risk Assessment, HSE Training – InSafety Services",
+  title: "HSE Consultant India | Risk Management, Process Safety & Compliance – InSafety Services",
   description:
-    "InSafety Services – 34+ years of global HSSEF expertise. QRA & HAZOP studies, DISH/CIMAH/PNGRB safety reports, ISO 45001, industrial hygiene, work at height, PTW, emergency response planning, and safety culture training across Mumbai, Pune, Ahmedabad, Hyderabad, Chennai and all of India.",
+    "Safety audits, risk management, process safety, legal compliance and crisis management — strategic to executional, for Indian and global clients.",
   alternates: {
     canonical: "https://www.insafetyservices.com/",
   },
