@@ -87,9 +87,9 @@ export const metadata = {
     canonical: "https://www.insafetyservices.com/",
   },
   openGraph: {
-    title: "Safety Consultant India | QRA, HAZOP, Risk Assessment – InSafety Services",
+    title: "HSE Consultant India | Risk Management, Process Safety & Compliance – InSafety Services",
     description:
-      "India's trusted HSSEF consulting firm. QRA, HAZOP, DISH/CIMAH safety reports, ISO 45001, industrial hygiene, emergency response, and safety training across all of India.",
+      "Safety audits, risk management, process safety, legal compliance and crisis management — strategic to executional, for Indian and global clients.",
     url: "https://www.insafetyservices.com/",
     siteName: "InSafety Services",
     locale: "en_IN",
@@ -105,9 +105,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Safety Consultant India | QRA, HAZOP, Risk Assessment – InSafety Services",
+    title: "HSE Consultant India | Risk Management, Process Safety & Compliance – InSafety Services",
     description:
-      "India's trusted HSSEF consulting firm. QRA, HAZOP, DISH/CIMAH safety reports, ISO 45001, and safety training across pan-India.",
+      "Safety audits, risk management, process safety, legal compliance and crisis management — strategic to executional, for Indian and global clients.",
     images: ["https://www.insafetyservices.com/InSafety_Logo_Full.svg"],
   },
   robots: {
