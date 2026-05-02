@@ -6,13 +6,14 @@ export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const navItems = [
-        { name: "Home", href: "#home" },
-        { name: "Services", href: "#services" },
-        { name: "Industries", href: "#industries" },
-        { name: "Why Choose Us", href: "#why-us" },
-        { name: "Methodology", href: "#methodology" },
-        { name: "Leadership", href: "#leadership" },
-        { name: "Risk Calculator", href: "#risk-calculator" }
+        { name: "Home", href: "/#home" },
+        { name: "Services", href: "/#services" },
+        { name: "Industries", href: "/#industries" },
+        { name: "Why Choose Us", href: "/#why-us" },
+        { name: "Methodology", href: "/#methodology" },
+        { name: "Leadership", href: "/#leadership" },
+        { name: "Risk Calculator", href: "/#risk-calculator" },
+        { name: "MNC Desk", href: "/mnc-desk" }
     ];
 
     // Intersection Observer perfectly tracks where you are on the screen
@@ -30,7 +31,7 @@ export default function Header() {
         });
 
         navItems.forEach((item) => {
-            const sectionId = item.href.replace("#", "");
+            const sectionId = item.href.replace("/#", "");
             const element = document.getElementById(sectionId);
             if (element) {
                 observer.observe(element);
@@ -46,7 +47,7 @@ export default function Header() {
     return (
         <header className="main-header">
             {/* LOGO */}
-            <a href="#home" className="header-logo-link" onClick={closeMenu}>
+            <a href="/#home" className="header-logo-link" onClick={closeMenu}>
                 <div className="site-title">InSafety Services</div>
                 <div className="site-tagline">
                     Solutions for Today's Challenges, <br className="hidden md:block" />Assurance for Tomorrow
@@ -66,7 +67,7 @@ export default function Header() {
             <nav className={`main-nav ${isMenuOpen ? "nav-open" : ""}`}>
                 <ul className="nav-list">
                     {navItems.map((item) => {
-                        const sectionId = item.href.replace("#", "");
+                        const sectionId = item.href.replace("/#", "");
                         const isActive = activeSection === sectionId;
 
                         return (
@@ -84,7 +85,7 @@ export default function Header() {
                     {/* CONTACT BUTTON */}
                     <li className="nav-item contact-button-wrapper">
                         <a
-                            href="#contact-form-anchor"
+                            href="/#contact-form-anchor"
                             className="contact-button"
                             style={{ display: "inline-block" }}
                             onClick={closeMenu}
