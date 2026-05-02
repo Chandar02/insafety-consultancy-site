@@ -1,5 +1,6 @@
+app/mnc-desk/page.js
 // app/mnc-desk/page.js
-
+export const dynamic = "force-static";
 /* ============================
    SEO METADATA
    ============================ */
@@ -192,7 +193,7 @@ export default function MNCDeskPage() {
             }}
           >
             Strategic HSSEF Integration for Multinational Corporations
-            Establishing Operations in India
+            Operating or Expanding in India
           </p>
         </div>
       </section>
