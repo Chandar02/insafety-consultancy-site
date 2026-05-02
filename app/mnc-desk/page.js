@@ -6,7 +6,7 @@
 export const metadata = {
   title: "Global MNC Desk | HSE Compliance for Foreign Companies in India",
   description:
-    "Strategic HSSEF integration for multinational corporations entering India. Risk management, legal compliance, process safety and crisis management bridging international standards with Indian statutory requirements.",
+    "Strategic HSSEF Integration for Multinational Corporations Operating or Expanding in India. Risk management, legal compliance, process safety and crisis management bridging international standards with Indian statutory requirements.",
   keywords: [
     "HSE consultant for MNC India",
     "EHS compliance foreign companies India",
