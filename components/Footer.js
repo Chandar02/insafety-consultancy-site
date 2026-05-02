@@ -60,7 +60,7 @@ export default function ContactFooter() {
                     
                     {/* Motto (FIXED: Clean bolding) */}
                     <p style={{ fontSize: '0.9em', lineHeight: '1.4', marginBottom: '15px' }}>
-                        InSafety Services provides strategic HSSEF expertise across the globe, ensuring safety is <strong>built-in, not bolted on</strong>.
+                        InSafety Services provides strategic HSE expertise across the globe, ensuring safety is <strong>built-in, not bolted on</strong>.
                     </p>
                     
                     <strong style={{ color: accentColor, fontSize: '1em' }}>Address:</strong>

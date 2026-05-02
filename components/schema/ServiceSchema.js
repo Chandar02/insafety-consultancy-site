@@ -5,8 +5,8 @@ export default function ServiceSchema() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    "name": "HSSEF Services by InSafety Services India",
-    "description": "Comprehensive HSSEF consulting services for Indian industries",
+    "name": "HSE Services by InSafety Services India",
+    "description": "Comprehensive HSE consulting services for Indian industries",
     "itemListElement": [
       {
         "@type": "ListItem",

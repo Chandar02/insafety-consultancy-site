@@ -27,7 +27,7 @@ const methodologySteps = [
         letter: 'D',
         title: 'D: Execute & Implement',
         coreFocus: 'Translating Risk Controls into Daily Operations',
-        description: "We implement HSSEF management systems, procedures, supervision models, and training that translate strategy into consistent operational practice — across employees, contractors, and transport operations.",
+        description: "We implement HSE management systems, procedures, supervision models, and training that translate strategy into consistent operational practice — across employees, contractors, and transport operations.",
         keyServices: 'Safety Management System (SMS), Permit to Work System (PTW), Work at Height, Transportation Safety.',
         bgColor: '#cfe8fc',
         // NEW: Professional Gears/Execution Icon
@@ -81,7 +81,7 @@ export default function Methodology() {
                     Our Strategic Methodology
                 </h2>
                 <p style={{ fontSize: '1.15em', color: '#555', fontWeight: '500', margin: '0 auto 10px', maxWidth: '900px', lineHeight: '1.6' }}>
-                    A Risk-Led, End-to-End Approach to HSSEF Transformation
+                    A Risk-Led, End-to-End Approach to HSE Transformation
                 </p>
                 <p style={{ fontSize: '1.08em', color: '#666', margin: '0 auto', maxWidth: '900px', lineHeight: '1.7' }}>
                     From leadership intent and design decisions to frontline execution, incident response, and continuous improvement.

@@ -12,7 +12,7 @@ export default function OrganizationSchema() {
     "alternateName": [
       "InSafety",
       "InSafety Services India",
-      "InSafety HSSEF Consulting"
+      "InSafety HSE Consulting"
     ],
     "url": "https://www.insafetyservices.com/",
     "logo": {
@@ -22,7 +22,7 @@ export default function OrganizationSchema() {
       "height": 100
     },
     "image": "https://www.insafetyservices.com/InSafety_Logo_Full.svg",
-    "description": "InSafety Services is India's trusted HSSEF (Health, Safety, Security, Environment & Fire) consulting firm, delivering risk-led safety solutions across QRA, HAZOP, process safety, industrial hygiene, emergency response planning, safety training, and ISO 45001 implementation for industries across India and global markets.",
+    "description": "InSafety Services is India's trusted HSE (Health, Safety and Environment) consulting firm, delivering risk-led safety solutions across QRA, HAZOP, process safety, industrial hygiene, emergency response planning, safety training, and ISO 45001 implementation for industries across India and global markets.",
     "slogan": "Solutions for Today's Challenges, Assurance for Tomorrow",
     "foundingDate": "2020",
     "address": {
@@ -153,7 +153,7 @@ export default function OrganizationSchema() {
     },
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
-      "name": "HSSEF Consulting Services",
+      "name": "HSE Consulting Services",
       "itemListElement": [
         { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Quantitative Risk Assessment (QRA)" } },
         { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "HAZOP Study & Facilitation" } },

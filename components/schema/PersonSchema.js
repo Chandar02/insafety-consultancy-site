@@ -8,8 +8,8 @@ export default function PersonSchema() {
     "@id": "https://www.insafetyservices.com/#chandarsingh-mehta",
     "name": "Chandarsingh Mehta",
     "alternateName": "Chandar Mehta",
-    "jobTitle": "Founder & Principal Consultant – HSSEF",
-    "description": "Chandarsingh Mehta is a globally recognised HSSEF leader with 34+ years of international experience in safety consulting, process safety, risk management, and operational resilience. He has advised multinational organisations including UBS, Credit Suisse, Maersk, IBM, and Nokia, and has delivered safety solutions across APAC, EMEA, and India.",
+    "jobTitle": "Founder & Principal Consultant – HSE",
+    "description": "Chandarsingh Mehta is a globally recognised HSE leader with 34+ years of international experience in safety consulting, process safety, risk management, and operational resilience. He has advised multinational organisations including UBS, Credit Suisse, Maersk, IBM, and Nokia, and has delivered safety solutions across APAC, EMEA, and India.",
     "url": "https://www.insafetyservices.com/",
     "image": "https://www.insafetyservices.com/Chandar Profile Image.jpg",
     "email": "chandarsingh@live.com",
@@ -57,7 +57,7 @@ export default function PersonSchema() {
     "hasCredential": [
       {
         "@type": "EducationalOccupationalCredential",
-        "name": "34+ Years Global HSSEF Experience",
+        "name": "34+ Years Global HSE Experience",
         "description": "Over 34 years of hands-on experience in health, safety, security, environment and fire consulting across high-hazard industries globally."
       }
     ],

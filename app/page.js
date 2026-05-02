@@ -33,7 +33,7 @@ export default function Home() {
         <VisionMissionSection />
 
         {/* SECTION 2 – Services */}
-        <section id="services" aria-label="HSSEF Services">
+        <section id="services" aria-label="HSE Services">
           <ServicesSection />
         </section>
 
@@ -48,7 +48,7 @@ export default function Home() {
         </section>
 
         {/* SECTION 5 – Methodology */}
-        <section id="methodology" aria-label="Our HSSEF Methodology">
+        <section id="methodology" aria-label="Our HSE Methodology">
           <Methodology />
         </section>
 

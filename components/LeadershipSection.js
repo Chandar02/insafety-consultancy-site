@@ -43,7 +43,7 @@ export default function LeadershipSection() {
             </h2>
             <p style={{ fontSize: '1.15em', marginBottom: '60px', color: secondaryTextColor, fontWeight: '500', lineHeight: '1.5' }}>
                 Chandarsingh Mehta<br/>
-                Founder & Principal Consultant – Risk-Led HSSEF Transformation
+                Founder & Principal Consultant – Risk-Led HSE Transformation
             </p>
 
             {/* MAIN CONTENT GRID */}
@@ -86,7 +86,7 @@ export default function LeadershipSection() {
                     </div>
 
                     <p style={{ lineHeight: '1.7', color: '#555', marginBottom: '18px', fontSize: '1.05em' }}>
-                        A globally recognized HSSEF leader, Chandarsingh Mehta has led enterprise-wide safety, risk, and operational resilience transformations across highly regulated and high-risk industries.
+                        A globally recognized HSE leader, Chandarsingh Mehta has led enterprise-wide safety, risk, and operational resilience transformations across highly regulated and high-risk industries.
                     </p>
                     <p style={{ lineHeight: '1.7', color: '#555', marginBottom: '18px', fontSize: '1.05em' }}>
                         Over a <strong>34+ year international career</strong>, he has advised and led safety programs for multinational organizations including <strong>UBS, Credit Suisse, Maersk, IBM, Nokia</strong>, and leading manufacturing, logistics, chemical, and infrastructure enterprises.

@@ -67,7 +67,7 @@ export default function ServicesSection() {
         { 
             title: '2. Compliance Assurance & Operational Systems',
             subLine: 'Where risk controls, systems, and governance are embedded into daily operations.',
-            subtitle: 'Core Focus: Implementing, Certifying, and Governing Robust HSSEF Management Systems to Ensure Sustainable Compliance and Continuous Improvement.',
+            subtitle: 'Core Focus: Implementing, Certifying, and Governing Robust HSE Management Systems to Ensure Sustainable Compliance and Continuous Improvement.',
             summary: `This category moves beyond initial design to focus on the daily execution and long-term sustainability of your safety and risk programs. We provide the systems and assurance necessary to meet regulatory mandates and achieve global standards like ISO certification. We handle the "D" (Do) and "C" (Check) of your safety cycle.`,
             detailedServices: [
                 {
@@ -231,17 +231,17 @@ export default function ServicesSection() {
                 Services & Solutions
             </h2>
             <p style={{ fontSize: '1.08em', color: '#555', maxWidth: '900px', margin: '0 auto 50px', lineHeight: '1.7' }}>
-    Transforming Your Safety & Risk Lifecycle: The categories below group our HSSEF services across the full risk lifecycle — from strategy and design to operations and response — aligned with the Plan-Do-Check-Act framework and adapted to how your business actually works.
+    Transforming Your Safety & Risk Lifecycle: The categories below group our HSE services across the full risk lifecycle — from strategy and design to operations and response — aligned with the Plan-Do-Check-Act framework and adapted to how your business actually works.
 </p>
             {/* NEW: How We Work Section */}
             <div style={{ maxWidth: '1000px', margin: '0 auto 60px', textAlign: 'left', padding: '30px', backgroundColor: 'white', borderRadius: '8px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)' }}>
                 <h2 style={{ fontSize: '2em', color: primaryColor, marginBottom: '20px' }}>
-                    How We Work: Risk-Led HSSEF Solutions Designed Around Your Business
+                    How We Work: Risk-Led HSE Solutions Designed Around Your Business
                 </h2>
                 
                 <div style={{ fontSize: '1.08em', lineHeight: '1.7', color: '#555', marginBottom: '25px' }}>
                     <p style={{ marginBottom: '12px' }}>We deliver proven safety and risk frameworks — and adapt them to fit how your business actually operates.</p>
-                    <p style={{ marginBottom: '12px' }}>Every engagement begins with understanding your business model, risk exposure, operating realities, and decision environment. Only then do we design and implement HSSEF solutions that are practical, compliant, and effective.</p>
+                    <p style={{ marginBottom: '12px' }}>Every engagement begins with understanding your business model, risk exposure, operating realities, and decision environment. Only then do we design and implement HSE solutions that are practical, compliant, and effective.</p>
                     <p style={{ marginBottom: '0' }}>We work across the full risk journey — from intent, to translation, to impact.</p>
                 </div>
 

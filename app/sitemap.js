@@ -10,6 +10,12 @@ export default function sitemap() {
       priority: 1.0,
     },
     {
+      url: `${baseUrl}/mnc-desk`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
       url: `${baseUrl}/#services`,
       lastModified: new Date(),
       changeFrequency: "monthly",

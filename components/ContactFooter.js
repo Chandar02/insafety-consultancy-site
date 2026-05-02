@@ -38,7 +38,7 @@ export default function ContactFooter() {
                         marginBottom: '25px',
                         lineHeight: '1.6'
                     }}>
-                        We provide strategic HSSEF expertise across the globe, ensuring
+                        We provide strategic HSE expertise across the globe, ensuring
                         <span style={{ fontWeight: 'bold', color: yellowAccent }}> safety is built-in, not bolted on.</span>
                     </p>
 

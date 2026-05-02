@@ -34,7 +34,7 @@ export default function HeroSection() {
                         <strong>Chandarsingh Mehta (34+ years of global experience)</strong>, we
                         deliver pragmatic{" "}
                         <strong>
-                            HSSEF (Health, Safety, Security, Environment &amp; Fire)
+                            HSE (Health, Safety and Environment)
                         </strong>{" "}
                         solutions designed to meet the unique challenges of any landscape.
                     </p>

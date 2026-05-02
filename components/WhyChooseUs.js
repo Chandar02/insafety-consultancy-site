@@ -9,7 +9,7 @@ const cardData = [
     {
         title: 'Unmatched Global Expertise & Leadership',
         description:
-            "InSafety Services is founded and led by Mr. Chandarsingh Mehta, a global HSSEF leader with over 34 years of experience across high-risk, highly regulated, and operationally complex environments. Our leadership experience spans strategy, design, operations, crisis response, and regulatory engagement — ensuring decisions made at the top translate into protection where work actually happens.",
+            "InSafety Services is founded and led by Mr. Chandarsingh Mehta, a global HSE leader with over 34 years of experience across high-risk, highly regulated, and operationally complex environments. Our leadership experience spans strategy, design, operations, crisis response, and regulatory engagement — ensuring decisions made at the top translate into protection where work actually happens.",
     },
     {
         title: 'Strategic Integration: Safety is Built-In, Not Bolted On',
@@ -19,7 +19,7 @@ const cardData = [
     {
         title: 'Standard Where Required. Customised Where It Matters.',
         description:
-            "We deliver proven, industry-accepted HSSEF frameworks — and tailor their depth, focus, and execution to your business, risk profile, and operating reality. Whether implementing standard compliance programs or designing bespoke risk controls, our solutions are practical, scalable, and grounded in how work is actually performed.",
+            "We deliver proven, industry-accepted HSE frameworks — and tailor their depth, focus, and execution to your business, risk profile, and operating reality. Whether implementing standard compliance programs or designing bespoke risk controls, our solutions are practical, scalable, and grounded in how work is actually performed.",
     },
     {
         title: 'Direct Impact on Business & Risk Outcomes',
@@ -47,7 +47,7 @@ export default function WhyChooseUs() {
                         Choosing a safety partner is not just about compliance — it is about how risk is understood, designed out, managed, and controlled across your business.
                     </p>
                     <p style={{ fontSize: '1.08em', color: '#555', lineHeight: '1.7', marginBottom: '0' }}>
-                        Organisations choose InSafety Services because we connect leadership intent, regulatory expectations, and frontline realities into one integrated, risk-led HSSEF approach.
+                        Organisations choose InSafety Services because we connect leadership intent, regulatory expectations, and frontline realities into one integrated, risk-led HSE approach.
                     </p>
                 </div>
             </div>

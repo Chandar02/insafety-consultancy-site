@@ -145,7 +145,7 @@ export default function IndustriesSection() {
                     We support organisations across diverse industries by addressing risk where it is created, managed, and experienced — from leadership intent and regulatory obligations to frontline operations and emergency response.
                 </p>
                 <p style={{ fontSize: '1.08em', color: '#555', lineHeight: '1.7', marginBottom: '0' }}>
-                    Our HSSEF solutions span the full business and risk lifecycle, combining proven frameworks with customised execution aligned to each industry's operating reality.
+                    Our HSE solutions span the full business and risk lifecycle, combining proven frameworks with customised execution aligned to each industry's operating reality.
                 </p>
             </div>
             
@@ -196,7 +196,7 @@ export default function IndustriesSection() {
                 textAlign: 'center'
             }}>
                 <p style={{ fontSize: '1.08em', lineHeight: '1.7', color: '#555', margin: '0', fontWeight: '500' }}>
-                    If your industry is not listed, our risk-led HSSEF principles remain fully applicable — every engagement begins with understanding your business, risk exposure, and operating context.
+                    If your industry is not listed, our risk-led HSE principles remain fully applicable — every engagement begins with understanding your business, risk exposure, and operating context.
                 </p>
             </div>
         </section>

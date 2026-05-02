@@ -126,7 +126,7 @@ export default function VisionMissionSection() {
                             }}
                         >
                             To deliver integrated, practical, and forward-looking
-                            HSSEF solutions that strengthen business performance and
+                            HSE solutions that strengthen business performance and
                             safeguard stakeholder trust.
                         </p>
                     </div>

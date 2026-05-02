@@ -7,7 +7,7 @@ export const dynamic = "force-static";
 export const metadata = {
   title: "Global MNC Desk | HSE Compliance for Foreign Companies in India",
   description:
-    "Strategic HSSEF Integration for Multinational Corporations Operating or Expanding in India. Risk management, legal compliance, process safety and crisis management bridging international standards with Indian statutory requirements.",
+    "Strategic HSE Integration for Multinational Corporations Operating or Expanding in India. Risk management, legal compliance, process safety and crisis management bridging international standards with Indian statutory requirements.",
   keywords: [
     "HSE consultant for MNC India",
     "EHS compliance foreign companies India",
@@ -31,7 +31,7 @@ export const metadata = {
   openGraph: {
     title: "Global MNC Desk | HSE Compliance for Foreign Companies in India",
     description:
-      "Strategic HSSEF Integration for Multinational Corporations Operating or Expanding in India. Bridging international standards with Indian statutory requirements.",
+      "Strategic HSE Integration for Multinational Corporations Operating or Expanding in India. Bridging international standards with Indian statutory requirements.",
     url: "https://www.insafetyservices.com/mnc-desk",
     siteName: "InSafety Services",
     locale: "en_IN",
@@ -49,7 +49,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Global MNC Desk | HSE Compliance for Foreign Companies in India",
     description:
-      "Strategic HSSEF Integration for Multinational Corporations Operating or Expanding in India. Bridging international standards with Indian statutory requirements.",
+      "Strategic HSE Integration for Multinational Corporations Operating or Expanding in India. Bridging international standards with Indian statutory requirements.",
     images: ["https://www.insafetyservices.com/InSafety_Logo_Full.svg"],
   },
 };
@@ -192,7 +192,7 @@ export default function MNCDeskPage() {
               fontWeight: "400",
             }}
           >
-            Strategic HSSEF Integration for Multinational Corporations
+            Strategic HSE Integration for Multinational Corporations
             Operating or Expanding in India
           </p>
         </div>
@@ -550,7 +550,7 @@ export default function MNCDeskPage() {
               margin: "0 auto",
             }}
           >
-            35+ years of global HSSEF experience, including enterprise-wide
+            35+ years of global HSE experience, including enterprise-wide
             safety programmes delivered across APAC, EMEA, and India for
             multinational organisations in banking, shipping, technology,
             chemical, and heavy industry sectors.
