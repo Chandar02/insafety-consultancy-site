@@ -49,7 +49,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Global MNC Desk | HSE Compliance for Foreign Companies in India",
     description:
-      "Strategic HSSEF integration for multinational corporations entering India. Bridging international standards with Indian statutory requirements.",
+      "Strategic HSSEF Integration for Multinational Corporations Operating or Expanding in India. Bridging international standards with Indian statutory requirements.",
     images: ["https://www.insafetyservices.com/InSafety_Logo_Full.svg"],
   },
 };
