@@ -6,7 +6,7 @@
 export const metadata = {
   title: "Global MNC Desk | HSE Compliance for Foreign Companies in India",
   description:
-    "Strategic HSSEF integration for multinational corporations entering India. Risk management, legal compliance, process safety and crisis management — bridging international standards with Indian statutory requirements.",
+    "Strategic HSSEF integration for multinational corporations entering India. Risk management, legal compliance, process safety and crisis management bridging international standards with Indian statutory requirements.",
   keywords: [
     "HSE consultant for MNC India",
     "EHS compliance foreign companies India",
@@ -30,7 +30,7 @@ export const metadata = {
   openGraph: {
     title: "Global MNC Desk | HSE Compliance for Foreign Companies in India",
     description:
-      "Strategic HSSEF integration for multinational corporations entering India. Bridging international standards with Indian statutory requirements.",
+      "Strategic HSSEF Integration for Multinational Corporations Operating or Expanding in India. Bridging international standards with Indian statutory requirements.",
     url: "https://www.insafetyservices.com/mnc-desk",
     siteName: "InSafety Services",
     locale: "en_IN",
@@ -81,7 +81,7 @@ export default function MNCDeskPage() {
       label: "Technology · Finance · Data Centres · Corporate Campuses",
       title: "Data Centre & Tech Campus Safety",
       challenge:
-        "Global technology and finance firms expanding into India are investing heavily in data centres, NOCs, and large corporate campuses. These mission-critical facilities carry unique fire, electrical, and physical security risks that generic safety consultants are not equipped to handle — and where a single failure can trigger multi-jurisdictional liability.",
+        "Global technology and finance firms expanding into India are investing heavily in data centres, NOCs, and large corporate campuses. These mission-critical facilities carry unique fire, electrical, and physical security risks that generic safety consultants are not equipped to handle and where a single failure can trigger multi-jurisdictional liability.",
       solution:
         "We provide end-to-end life safety design and audit for mission-critical facilities, applying NFPA 75 and NFPA 76 (protection of IT and telecommunications equipment), NFPA 101 Life Safety Code, and the National Building Code of India. We cover clean agent fire suppression systems, emergency power safety, physical access control integration, and pre-occupancy compliance sign-off.",
       services: [
@@ -98,9 +98,9 @@ export default function MNCDeskPage() {
       label: "Engineering · Automotive · Manufacturing · EPC",
       title: "Machine Safety & Export Compliance",
       challenge:
-        "European engineering and manufacturing firms bringing CE-marked machinery and automated systems into India must satisfy both their home-country directives and the Indian Factories Act. These two frameworks are not the same — and the gap between them is where incidents and regulatory violations happen.",
+        "European engineering and manufacturing firms bringing CE-marked machinery and automated systems into India must satisfy both their home-country directives and the Indian Factories Act. These two frameworks are not the same and the gap between them is where incidents and regulatory violations happen.",
       solution:
-        "We guide global firms through the full machine safety lifecycle in India — from design review and risk assessment through to factory inspector sign-off. We bridge CE marking, ISO 12100 (Risk Assessment for Machinery), and ISO 13849-1 (Safety of Control Systems) with India's Factories Act and state-level regulatory requirements, ensuring your machinery is accepted by both your global auditors and local inspectors.",
+        "We guide global firms through the full machine safety lifecycle in India from design review and risk assessment through to factory inspector sign-off. We bridge CE marking, ISO 12100 (Risk Assessment for Machinery), and ISO 13849-1 (Safety of Control Systems) with India's Factories Act and state-level regulatory requirements, ensuring your machinery is accepted by both your global auditors and local inspectors.",
       services: [
         "ISO 12100 Machine Risk Assessment",
         "ISO 13849-1 Control System Safety",
@@ -121,7 +121,7 @@ export default function MNCDeskPage() {
       <section
         style={{
           backgroundColor: "#1f3e66",
-          padding: "80px 5% 70px",
+          padding: "90px 5% 70px",
           textAlign: "center",
           position: "relative",
           overflow: "hidden",
@@ -234,7 +234,7 @@ export default function MNCDeskPage() {
             }}
           >
             Establishing a corporate or industrial footprint in India requires
-            navigating a complex web of regional regulations — without
+            navigating a complex web of regional regulations without
             compromising your global corporate safety mandates. Two frameworks,
             two sets of expectations, one operation.
           </p>
@@ -247,9 +247,9 @@ export default function MNCDeskPage() {
             }}
           >
             As Principal Safety Consultant with 35 years of global experience
-            across APAC, EMEA, and Indian operations — including assignments for
+            across APAC, EMEA, and Indian operations including assignments for
             multinational organisations in banking, shipping, technology, and
-            manufacturing — I act as the critical technical and regulatory bridge
+            manufacturing I act as the critical technical and regulatory bridge
             for MNCs entering the Indian market.
           </p>
           <p
@@ -263,7 +263,7 @@ export default function MNCDeskPage() {
           >
             My core value: seamlessly harmonising your international corporate
             standards with NBC, the Factories Act, and state-specific statutory
-            laws — across all 28 Indian states and union territories.
+            laws across all 28 Indian states and union territories.
           </p>
         </div>
       </section>
@@ -575,25 +575,25 @@ export default function MNCDeskPage() {
               icon: "⚖",
               title: "One Principal. Full Accountability.",
               body:
-                "No junior consultants. No subcontracted thinking. You work directly with the Principal Consultant — from boardroom briefing to site execution.",
+                "No junior consultants. No subcontracted thinking. You work directly with the Principal Consultant from boardroom briefing to site execution.",
             },
             {
               icon: "🌐",
               title: "Both Ends of the Stick.",
               body:
-                "Strategic advisory at VP and MD level, operational execution at site level. We work across your entire risk hierarchy — not just the comfortable middle.",
+                "Strategic advisory at VP and MD level, operational execution at site level. We work across your entire risk hierarchy not just the comfortable middle.",
             },
             {
               icon: "📋",
               title: "Indian Regulatory Depth.",
               body:
-                "DISH, CIMAH, PNGRB, PESO, OISD, Factories Act, NBC — real working knowledge of Indian statutory frameworks that most international consultants simply do not have.",
+                "DISH, CIMAH, PNGRB, PESO, OISD, Factories Act, NBC real working knowledge of Indian statutory frameworks that most international consultants simply do not have.",
             },
             {
               icon: "✅",
               title: "Built-In, Not Bolted On.",
               body:
-                "Safety integrated at the earliest decision point — strategy, design, procurement — so compliance is never a last-minute scramble before your facility opens.",
+                "Safety integrated at the earliest decision point strategy, design, procurement so compliance is never a last-minute scramble before your facility opens.",
             },
           ].map((point, i) => (
             <div
@@ -671,7 +671,7 @@ export default function MNCDeskPage() {
             }}
           >
             Start with a confidential conversation. No obligations, no
-            templates — just an honest assessment of what your India operations
+            templates just an honest assessment of what your India operations
             need to be safe, compliant, and protected.
           </p>
           <a
