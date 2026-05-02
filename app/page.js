@@ -73,7 +73,7 @@ export default function Home() {
             Frequently Asked Questions
           </h2>
           <p style={{ textAlign: 'center', color: '#555', marginBottom: '40px', fontSize: '1.1em' }}>
-            Common questions from safety managers, EHS heads, and factory operators across India.
+            Common questions from EHS heads, operations leaders, procurement teams and multinational corporations operating in India.
           </p>
 
           {[
@@ -102,8 +102,8 @@ export default function Home() {
               a: "HAZOP (Hazard and Operability Study) studies are required for oil refineries, petrochemical plants, chemical manufacturing, fertiliser plants, pharmaceutical API units, LPG/CNG storage and handling facilities, and any process covered under the MSIHC Rules 1989. OISD-GDN-206 and OISD-STD-118 reference HAZOP as a process hazard analysis tool. HAZOP is also increasingly required by insurers and lenders for capital project approvals.",
             },
             {
-              q: "What cities and regions does InSafety Services operate in?",
-              a: "InSafety Services operates pan-India, serving clients across all major industrial hubs including Mumbai, Navi Mumbai, Thane, Pune, Nagpur, Nashik, Aurangabad (Maharashtra), Ahmedabad, Baroda (Vadodara), Surat, Ankleshwar, Dahej, Hazira (Gujarat), Hyderabad, Visakhapatnam (Andhra Pradesh & Telangana), Chennai, Manali, Cuddalore (Tamil Nadu), Bengaluru, Mangalore (Karnataka), Delhi NCR, Faridabad, Gurugram, Panipat (Haryana/Delhi), Kolkata, Haldia, Durgapur (West Bengal), Jamnagar, Rajkot (Gujarat), Kochi, Ernakulam (Kerala), Bhopal, Indore, Ratlam (Madhya Pradesh), Raipur, Bhilai (Chhattisgarh), Jaipur, Kota (Rajasthan), Lucknow, Kanpur, Varanasi, Agra (Uttar Pradesh), Bhubaneswar, Paradip (Odisha), Guwahati, Numaligarh, Digboi (Assam), and all MIDC, GIDC, SIPCOT, APIIC, and KIADB industrial zones.",
+              q: "Does InSafety Services work with multinational corporations entering or operating in India?",
+              a: "Yes, and this has been a core part of our work for many years. We work with global organisations in banking, shipping, technology, chemical and heavy industry who are setting up, expanding or already running operations in India. The real challenge for most international firms is not understanding safety. It is navigating the gap between what their corporate standards require and what Indian law actually demands on the ground. That gap is exactly where we operate, working across your entire organisation from boardroom to site level. We have a dedicated Global MNC Desk for this purpose.",
             },
             {
               q: "What is behavioural safety (BBS) training and does InSafety Services provide it in India?",
@@ -116,6 +116,18 @@ export default function Home() {
             {
               q: "How long does it take to develop a safety management system for ISO 45001 in India?",
               a: "Developing and implementing an ISO 45001 Occupational Health & Safety Management System (OHSMS) typically takes 6 to 18 months depending on the size and complexity of the organisation, existing system maturity, and employee readiness. The process covers gap analysis, documentation, training, internal audits, management review, and pre-certification assessment before the external certification audit by an accredited body such as Bureau Veritas, DNV, TUV, or BVQI.",
+            },
+            {
+              q: "How does InSafety Services help global companies meet both international standards and Indian regulations simultaneously?",
+              a: "Most international safety frameworks and Indian statutory requirements are written for different contexts, and the gap between them is where compliance failures and incidents actually happen. We act as the technical bridge between your global standards such as ISO 45001, NFPA 101, ISO 12100 and CE marking requirements, and Indian law including the Factories Act, NBC, DISH, CIMAH, PNGRB and OISD. This covers design and risk assessment, safety management systems, audits, training, emergency planning and regulatory submissions, so your Indian operations satisfy both your global HSE auditors and local Indian inspectors without running two parallel compliance programmes.",
+            },
+            {
+              q: "What types of safety audits and training does InSafety Services deliver?",
+              a: "Our audits cover the full range. Statutory compliance audits as per IS 14489:2018 covering the Factories Act, DISH, OISD and state regulations. Safety management system audits against ISO 45001. Process safety audits including HAZOP and risk assessments. Electrical safety audits. Fire and life safety audits against NFPA 101 and NBC. Work at height audits as per IS 3696. And specialised IRATA rope access audits. Training is delivered in English, Hindi and Marathi across all levels from frontline workers to senior leadership, covering work at height, permit to work, confined space entry, fire safety, emergency response, behavioural safety and safety leadership. Every programme is built around how your people actually work.",
+            },
+            {
+              q: "How does InSafety Services approach work at height differently from conventional methods?",
+              a: "We use IRATA industrial rope access as our standard approach for work at height, and the difference it makes to our clients is real. Less time on site. Fewer people needed. Significantly lower cost. And the facility stays operational throughout. Conventional scaffolding means months of erection, certification and dismantling before any actual work begins. IRATA gets the same job done safely, with full documentation and compliance, in a fraction of the time. Beyond the access work, we also provide dedicated emergency rescue services for every work at height engagement. If something goes wrong at elevation, you need people who can respond immediately at that height. That capability is built in from day one.",
             },
           ].map(({ q, a }, i) => (
             <details
