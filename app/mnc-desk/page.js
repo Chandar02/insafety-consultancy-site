@@ -567,7 +567,7 @@ export default function MNCDeskPage() {
             maxWidth: "1000px",
             margin: "0 auto",
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+            gridTemplateColumns: "repeat(auto-fit, minmax(400px, 1fr))",
             gap: "28px",
           }}
         >
@@ -661,7 +661,7 @@ export default function MNCDeskPage() {
               lineHeight: "1.3",
             }}
           >
-            Ready to Establish Safe, Compliant Operations in India?
+            Ready to Build Safe, Compliant Operations in India?
           </h2>
           <p
             style={{
@@ -671,8 +671,7 @@ export default function MNCDeskPage() {
               marginBottom: "36px",
             }}
           >
-            Start with a confidential conversation. No obligations, no
-            templates just an honest assessment of what your India operations
+            Start with a confidential conversation. No obligations, no templates, just an honest assessment of what your India operations
             need to be safe, compliant, and protected.
           </p>
           <a
