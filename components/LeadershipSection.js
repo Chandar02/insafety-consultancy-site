@@ -89,7 +89,7 @@ export default function LeadershipSection() {
                         A globally recognized HSE leader, Chandarsingh Mehta has led enterprise-wide safety, risk, and operational resilience transformations across highly regulated and high-risk industries.
                     </p>
                     <p style={{ lineHeight: '1.7', color: '#555', marginBottom: '18px', fontSize: '1.05em' }}>
-                        Over a <strong>34+ year international career</strong>, he has advised and led safety programs for multinational organizations including <strong>UBS, Credit Suisse, Maersk, IBM, Nokia</strong>, and leading manufacturing, logistics, chemical, and infrastructure enterprises.
+                        Over a <strong>35+ year international career</strong>, he has advised and led safety programs for multinational organizations including <strong>UBS, Credit Suisse, Maersk, IBM, Nokia</strong>, and leading manufacturing, logistics, chemical, and infrastructure enterprises.
                     </p>
                     <p style={{ lineHeight: '1.7', color: '#555', marginBottom: '18px', fontSize: '1.05em' }}>
                         His experience spans strategy, design, operations, crisis response, and regulatory engagement—ensuring leadership decisions translate into real risk reduction where work is actually performed.

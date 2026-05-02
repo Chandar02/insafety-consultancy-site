@@ -31,7 +31,7 @@ export default function HeroSection() {
                     </p>
                     <p>
                         Led by industry veteran{" "}
-                        <strong>Chandarsingh Mehta (34+ years of global experience)</strong>, we
+                        <strong>Chandarsingh Mehta (35+ years of global experience)</strong>, we
                         deliver pragmatic{" "}
                         <strong>
                             HSE (Health, Safety and Environment)
