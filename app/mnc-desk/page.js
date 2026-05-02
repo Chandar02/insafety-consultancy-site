@@ -121,7 +121,7 @@ export default function MNCDeskPage() {
       <section
         style={{
           backgroundColor: "#1f3e66",
-          padding: "90px 5% 70px",
+          padding: "130px 5% 70px",
           textAlign: "center",
           position: "relative",
           overflow: "hidden",
