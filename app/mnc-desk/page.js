@@ -1,4 +1,4 @@
-app/mnc-desk/page.js
+//app/mnc-desk/page.js
 // app/mnc-desk/page.js
 export const dynamic = "force-static";
 /* ============================
