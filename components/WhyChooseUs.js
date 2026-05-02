@@ -9,7 +9,7 @@ const cardData = [
     {
         title: 'Unmatched Global Expertise & Leadership',
         description:
-            "InSafety Services is founded and led by Mr. Chandarsingh Mehta, a global HSE leader with over 34 years of experience across high-risk, highly regulated, and operationally complex environments. Our leadership experience spans strategy, design, operations, crisis response, and regulatory engagement — ensuring decisions made at the top translate into protection where work actually happens.",
+            "InSafety Services is founded and led by Mr. Chandarsingh Mehta, a global HSE leader with over 35 years of experience across high-risk, highly regulated, and operationally complex environments. Our leadership experience spans strategy, design, operations, crisis response, and regulatory engagement — ensuring decisions made at the top translate into protection where work actually happens.",
     },
     {
         title: 'Strategic Integration: Safety is Built-In, Not Bolted On',
