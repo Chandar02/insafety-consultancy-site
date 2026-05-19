@@ -97,7 +97,7 @@ export default function ContactFooter() {
                             <strong>Shop & Establishment:</strong> 2510 2003 2043 0562
                         </p>
                         <p style={{ margin: '6px 0', color: whiteText, fontSize: '0.95em', lineHeight: '1.6' }}>
-                            <strong>GSTIN:</strong> 27 ABXPM 5408 L1 ZK
+                            <strong>GSTIN:</strong> 27 ABXPM 5408 L1 ZX
                         </p>
                         <p style={{ margin: '6px 0', color: whiteText, fontSize: '0.95em', lineHeight: '1.6' }}>
                             <strong>Udyam-MSME:</strong> MH-33-0070 049

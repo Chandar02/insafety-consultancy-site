@@ -120,7 +120,7 @@ export default function ContactFooter() {
                     
                     {/* Compliance Details (License number assumed correct now) */}
                     <p style={contactDetailStyle}><strong>Shop & Establishment License:</strong> 25 10 2003 2043 0562</p>
-                    <p style={contactDetailStyle}><strong>GSTIN:</strong> 27 ABXPM 5408 L1 ZK</p>
+                    <p style={contactDetailStyle}><strong>GSTIN:</strong> 27 ABXPM 5408 L1 ZX</p>
                     <p style={contactDetailStyle}><strong>Udyam-MSME:</strong> MH-33-0670 049</p>
                 </div>
 

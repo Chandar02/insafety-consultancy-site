@@ -61,12 +61,12 @@ export default function OrganizationSchema() {
       "https://www.linkedin.com/in/chandarsingh-mehta-3232516",
       "https://www.linkedin.com/company/insafety-services"
     ],
-    "vatID": "27ABXPM5408L1ZK",
+    "vatID": "27ABXPM5408L1ZX",
     "identifier": [
       {
         "@type": "PropertyValue",
         "name": "GSTIN",
-        "value": "27ABXPM5408L1ZK"
+        "value": "27ABXPM5408L1ZX"
       },
       {
         "@type": "PropertyValue",
