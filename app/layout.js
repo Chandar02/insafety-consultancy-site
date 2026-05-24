@@ -6,7 +6,7 @@ export const dynamic = "force-dynamic";
    ============================ */
 export const metadata = {
   title: {
-    default: "HSE Consultant India | Risk Management, Process Safety & Compliance – InSafety Services",
+    default: "HSE & Process Safety Consultant India | InSafety Services",
     template: "%s | InSafety Services",
   },
   description:
@@ -87,7 +87,7 @@ export const metadata = {
     canonical: "https://www.insafetyservices.com/",
   },
   openGraph: {
-    title: "HSE Consultant India | Risk Management, Process Safety & Compliance – InSafety Services",
+    title: "HSE & Process Safety Consultant India | InSafety Services",
     description:
       "Safety audits, risk management, process safety, legal compliance and crisis management — strategic to executional, for Indian and global clients.",
     url: "https://www.insafetyservices.com/",
@@ -105,7 +105,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "HSE Consultant India | Risk Management, Process Safety & Compliance – InSafety Services",
+    title: "HSE & Process Safety Consultant India | InSafety Services",
     description:
       "Safety audits, risk management, process safety, legal compliance and crisis management — strategic to executional, for Indian and global clients.",
     images: ["https://www.insafetyservices.com/og-image.png"],
