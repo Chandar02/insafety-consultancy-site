@@ -96,7 +96,7 @@ export const metadata = {
     type: "website",
     images: [
       {
-        url: "https://www.insafetyservices.com/InSafety_Logo_Full.svg",
+        url: "https://www.insafetyservices.com/og-image.png",
         width: 1200,
         height: 630,
         alt: "InSafety Services – Safety Consultant India",
@@ -108,7 +108,7 @@ export const metadata = {
     title: "HSE Consultant India | Risk Management, Process Safety & Compliance – InSafety Services",
     description:
       "Safety audits, risk management, process safety, legal compliance and crisis management — strategic to executional, for Indian and global clients.",
-    images: ["https://www.insafetyservices.com/InSafety_Logo_Full.svg"],
+    images: ["https://www.insafetyservices.com/og-image.png"],
   },
   robots: {
     index: true,
