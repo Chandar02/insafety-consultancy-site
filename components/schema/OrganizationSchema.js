@@ -55,7 +55,7 @@ export default function OrganizationSchema() {
         "availableLanguage": ["English", "Hindi"]
       }
     ],
-    "email": "chandarsingh@live.com",
+    "email": "chandarsingh@insafetyservices.com",
     "telephone": "+91-90827-66847",
     "sameAs": [
       "https://www.linkedin.com/in/chandarsingh-mehta-3232516",

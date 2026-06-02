@@ -207,7 +207,7 @@ export default function LeadershipSection() {
                     Connect Directly
                 </h3>
                 <p style={{ margin: '5px 0', color: '#555', lineHeight: '1.7', fontSize: '1.02em' }}>
-                    <strong>Email:</strong> <Link href="mailto:chandarsingh@live.com" style={{ color: accentColor, textDecoration: 'none' }}>chandarsingh@live.com</Link>
+                    <strong>Email:</strong> <Link href="mailto:chandarsingh@insafetyservices.com" style={{ color: accentColor, textDecoration: 'none' }}>chandarsingh@insafetyservices.com</Link>
                 </p>
                 <p style={{ margin: '5px 0', color: '#555', lineHeight: '1.7', fontSize: '1.02em' }}>
                     <strong>Mobile:</strong> +91 90827 66847

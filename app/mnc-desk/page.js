@@ -690,14 +690,14 @@ export default function MNCDeskPage() {
           >
             Direct access to Principal Consultant &nbsp;·&nbsp; Chandarsingh Mehta CSP &nbsp;·&nbsp;{" "}
             <a
-              href="mailto:chandarsingh@live.com"
+              href="mailto:chandarsingh@insafetyservices.com"
               style={{
                 color: "#ffc107",
                 textDecoration: "none",
                 fontWeight: "600",
               }}
             >
-              chandarsingh@live.com
+              chandarsingh@insafetyservices.com
             </a>
           </p>
         </div>

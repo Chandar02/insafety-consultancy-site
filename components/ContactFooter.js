@@ -69,7 +69,7 @@ export default function ContactFooter() {
                     </h3>
                     <p style={{ margin: '10px 0', color: whiteText, fontSize: '1.02em', lineHeight: '1.6' }}>
                         <span style={{ fontWeight: 'bold', color: whiteText, marginRight: '5px' }}>Email:</span>
-                        <Link href="mailto:chandarsingh@live.com" style={{ color: linkColor, textDecoration: 'none' }}>chandarsingh@live.com</Link>
+                        <Link href="mailto:chandarsingh@insafetyservices.com" style={{ color: linkColor, textDecoration: 'none' }}>chandarsingh@insafetyservices.com</Link>
                     </p>
                     <p style={{ margin: '10px 0', color: whiteText, fontSize: '1.02em', lineHeight: '1.6' }}>
                         <span style={{ fontWeight: 'bold', color: whiteText, marginRight: '5px' }}>Mobile:</span> +91 90827 66847

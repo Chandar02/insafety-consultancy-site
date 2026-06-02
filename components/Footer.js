@@ -110,7 +110,7 @@ export default function ContactFooter() {
                     <div style={{ width: '80px', height: '3px', backgroundColor: accentColor, marginBottom: '15px' }}></div> 
                     
                     {/* Contact Details */}
-                    <p style={contactDetailStyle}><strong>Email:</strong> <a href="mailto:chandarsingh@live.com" style={linkStyle}>chandarsingh@live.com</a></p>
+                    <p style={contactDetailStyle}><strong>Email:</strong> <a href="mailto:chandarsingh@insafetyservices.com" style={linkStyle}>chandarsingh@insafetyservices.com</a></p>
                     <p style={contactDetailStyle}><strong>Mobile:</strong> +91 90827 66847</p>
                     <p style={contactDetailStyle}><strong>WhatsApp:</strong> +91 90827 66847</p>
                     <p style={contactDetailStyle}><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/chandarsingh-mehta-3232516" style={linkStyle} target="_blank" rel="noopener noreferrer">View Profile</a></p>

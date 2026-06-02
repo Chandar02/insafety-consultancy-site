@@ -12,7 +12,7 @@ export default function PersonSchema() {
     "description": "Chandarsingh Mehta is a globally recognised HSE leader with 35+ years of international experience in safety consulting, process safety, risk management, and operational resilience. He has advised multinational organisations including UBS, Credit Suisse, Maersk, IBM, and Nokia, and has delivered safety solutions across APAC, EMEA, and India.",
     "url": "https://www.insafetyservices.com/",
     "image": "https://www.insafetyservices.com/Chandar Profile Image.jpg",
-    "email": "chandarsingh@live.com",
+    "email": "chandarsingh@insafetyservices.com",
     "telephone": "+91-90827-66847",
     "sameAs": [
       "https://www.linkedin.com/in/chandarsingh-mehta-3232516"
