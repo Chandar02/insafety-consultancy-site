@@ -27,7 +27,7 @@ export default function Header() {
         };
 
         const observer = new IntersectionObserver(handleIntersect, {
-            rootMargin: "-40% 0px -60% 0px"
+            rootMargin: "-15% 0px -75% 0px"
         });
 
         navItems.forEach((item) => {
@@ -38,7 +38,16 @@ export default function Header() {
             }
         });
 
-        return () => observer.disconnect();
+        const handleScroll = () => {
+    if (window.scrollY < 50) {
+        setActiveSection("home");
+    }
+};
+window.addEventListener("scroll", handleScroll);
+return () => {
+    observer.disconnect();
+    window.removeEventListener("scroll", handleScroll);
+};
     }, []);
 
     const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
