@@ -4,8 +4,7 @@
 User-agent: *
 Allow: /
 
-# Block Next.js internals from crawling
-Disallow: /_next/
+# Block API routes only. Do not block /_next/ (Google needs it to load images and styles)
 Disallow: /api/
 
 # Sitemap location
