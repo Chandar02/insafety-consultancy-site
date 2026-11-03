@@ -688,7 +688,7 @@ export default function MNCDeskPage() {
               color: "rgba(255,255,255,0.5)",
             }}
           >
-            Direct access to Principal Consultant &nbsp;·&nbsp; Chandarsingh Mehta CSP &nbsp;·&nbsp;{" "}
+            Direct access to Principal Consultant &nbsp;·&nbsp; Chandarsingh Mehta &nbsp;·&nbsp;{" "}
             <a
               href="mailto:chandarsingh@insafetyservices.com"
               style={{
