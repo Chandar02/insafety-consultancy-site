@@ -27,7 +27,6 @@ export default function OrganizationSchema() {
     "foundingDate": "2020",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "B-2/502, Green Acres-2 CHS Ltd, Wagbhil Road, Kavesar",
       "addressLocality": "Thane",
       "addressRegion": "Maharashtra",
       "postalCode": "400615",
@@ -67,16 +66,6 @@ export default function OrganizationSchema() {
         "@type": "PropertyValue",
         "name": "GSTIN",
         "value": "27ABXPM5408L1ZX"
-      },
-      {
-        "@type": "PropertyValue",
-        "name": "MSME/Udyam",
-        "value": "MH-33-0070049"
-      },
-      {
-        "@type": "PropertyValue",
-        "name": "Shop & Establishment License",
-        "value": "2510200320430562"
       }
     ],
     "areaServed": [

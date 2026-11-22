@@ -46,8 +46,7 @@ export default function ContactFooter() {
                         Address:
                     </p>
                     <p style={{ color: whiteText, lineHeight: '1.6', fontSize: '0.98em' }}>
-                        B-2/502, Green Acres-2 CHS Ltd, Wagbhil Road, <br/>
-                        Kavesar, Thane-Maharashtra-400615
+                        Thane, Maharashtra
                     </p>
                 </div>
 
@@ -91,16 +90,13 @@ export default function ContactFooter() {
                         borderLeft: `4px solid ${yellowAccent}`
                     }}>
                         <h3 style={{ fontSize: '1.2em', marginBottom: '12px', color: yellowAccent, fontWeight: '700' }}>
-                            Registered & Certified Vendor
+                            Registered Business
                         </h3>
-                        <p style={{ margin: '6px 0', color: whiteText, fontSize: '0.95em', lineHeight: '1.6' }}>
-                            <strong>Shop & Establishment:</strong> 2510 2003 2043 0562
-                        </p>
                         <p style={{ margin: '6px 0', color: whiteText, fontSize: '0.95em', lineHeight: '1.6' }}>
                             <strong>GSTIN:</strong> 27 ABXPM 5408 L1 ZX
                         </p>
                         <p style={{ margin: '6px 0', color: whiteText, fontSize: '0.95em', lineHeight: '1.6' }}>
-                            <strong>Udyam-MSME:</strong> MH-33-0070 049
+                            Vendor registration documents available on request.
                         </p>
                     </div>
                 </div>

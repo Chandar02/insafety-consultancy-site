@@ -65,7 +65,7 @@ export default function ContactFooter() {
                     
                     <strong style={{ color: accentColor, fontSize: '1em' }}>Address:</strong>
                     <p style={{ fontSize: '0.9em', lineHeight: '1.4' }}>
-                        B-2 / 502, Green Acres-2 CHS Ltd., Waghbil Road, Kavesar, Thane-Maharashtra-400615
+                        Thane, Maharashtra
                     </p>
                 </div>
 
@@ -116,14 +116,12 @@ export default function ContactFooter() {
                     <p style={contactDetailStyle}><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/chandarsingh-mehta-3232516" style={linkStyle} target="_blank" rel="noopener noreferrer">View Profile</a></p>
 
                     {/* Regulatory Compliances Heading */}
-                    <h4 style={{ color: accentColor, fontSize: '1em', marginTop: '25px', marginBottom: '10px' }}>Regulatory Compliances:</h4>
+                    <h4 style={{ color: accentColor, fontSize: '1em', marginTop: '25px', marginBottom: '10px' }}>Registered Business:</h4>
                     
                     {/* Compliance Details (License number assumed correct now) */}
-                    <p style={contactDetailStyle}><strong>Shop & Establishment License:</strong> 25 10 2003 2043 0562</p>
                     <p style={contactDetailStyle}><strong>GSTIN:</strong> 27 ABXPM 5408 L1 ZX</p>
-                    <p style={contactDetailStyle}><strong>Udyam-MSME:</strong> MH-33-0670 049</p>
+                    <p style={contactDetailStyle}>Vendor registration documents available on request.</p>
                 </div>
-
             </div>
             {/* Copyright Line */}
             <div style={{ textAlign: 'center', marginTop: '40px', paddingTop: '10px', borderTop: '1px solid #3d6796', fontSize: '0.8em', color: '#aaa' }}>
