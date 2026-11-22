@@ -24,7 +24,7 @@ export default function OrganizationSchema() {
     "image": "https://www.insafetyservices.com/InSafety_Logo_Full.svg",
     "description": "InSafety Services is India's trusted HSE (Health, Safety and Environment) consulting firm, delivering risk-led safety solutions across QRA, HAZOP, process safety, industrial hygiene, emergency response planning, safety training, and ISO 45001 implementation for industries across India and global markets.",
     "slogan": "Solutions for Today's Challenges, Assurance for Tomorrow",
-    "foundingDate": "2020",
+    "foundingDate": "2025",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Thane",
@@ -34,8 +34,8 @@ export default function OrganizationSchema() {
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": 19.2183,
-      "longitude": 72.9781
+      "latitude": 19.22,
+      "longitude": 72.98
     },
     "contactPoint": [
       {
@@ -50,7 +50,6 @@ export default function OrganizationSchema() {
         "telephone": "+91-90827-66847",
         "contactType": "sales",
         "areaServed": "IN",
-        "contactOption": "TollFree",
         "availableLanguage": ["English", "Hindi"]
       }
     ],
